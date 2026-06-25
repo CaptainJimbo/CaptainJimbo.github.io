@@ -1,0 +1,54 @@
+This repository contains two distinctly licensed parts:
+
+================================================================================
+1. WEBSITE CODE & THEME — MIT License
+================================================================================
+
+Applies to the website's code and theme (the al-folio Jekyll starter and its
+configuration: layouts, styling, build and deployment scripts).
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Maruan Al-Shedivat.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+================================================================================
+2. SITE CONTENT — © Dimitris Kogias, CC BY-NC-SA 4.0
+================================================================================
+
+Applies to all original site content authored by Dimitris Kogias, including but
+not limited to: the pages under _pages/ (teaching notes, formula sheets,
+exercises and their solutions, diagrams/SVG figures), the project descriptions
+under _projects/, and the original images under assets/img/.
+
+Copyright (c) 2026 Dimitris Kogias.
+
+This content is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).
+You are free to share and adapt it for NON-COMMERCIAL purposes, provided you
+give appropriate credit (attribution to Dimitris Kogias, captainjimbo.github.io)
+and distribute any derivatives under the same license.
+
+Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Exceptions: third-party materials referenced or embedded on the site remain
+under their own licenses/terms — e.g. Greek school textbook excerpts and
+exercise sources attributed to their publishers (ΙΤΥΕ «Διόφαντος», Ι.Ε.Π.),
+PhET simulations (University of Colorado Boulder), and images credited to their
+respective authors (e.g. Wikimedia Commons, NASA) in the page footers/credits.
