@@ -1,3 +1,49 @@
+<!-- ============================================================ -->
+<!-- DIMITRIS'S PORTFOLIO SITE — WORKING NOTES (READ FIRST)        -->
+<!-- (al-folio theme guide follows below; these notes take priority) -->
+<!-- ============================================================ -->
+
+# 🧑‍💻 This is Dimitris Kogias's portfolio site
+
+Personal portfolio website (al-folio Jekyll), **live at https://captainjimbo.github.io**.
+
+## ⚠️ Working preferences — IMPORTANT
+- **ALWAYS ASK before deploying.** A deploy takes ~2–3 min (build + GitHub Pages CDN). Batch all local
+  edits, then ask "ready to deploy?" and do ONE deploy. CDN lag means a change can look un-applied for
+  ~1 min — wait/confirm, do NOT revert on first glance.
+- **Disable, don't delete.** For unused pages/content use `published: false` in front matter (keep the
+  file). Already disabled this way: example pages (blog, publications, teaching, profiles, dropdown,
+  books, news, plugins, about_einstein), the Repositories page, and the 9 example `_projects/*_project.md`.
+- **NDA-safe:** client work is *described, not named or linked*.
+
+## 🚀 Deploy process (proven)
+1. Make batched local edits.
+2. `git add -A && git commit --amend --no-edit` (single-commit "Option B") → `git push -f origin main`.
+3. Force-push does NOT auto-trigger the build (path filter) → manually trigger:
+   `gh workflow run deploy.yml --repo CaptainJimbo/CaptainJimbo.github.io --ref main`
+4. Wait ~90s: the "Deploy site" run builds and pushes to the `gh-pages` branch.
+5. If Pages doesn't refresh: `gh api -X POST repos/CaptainJimbo/CaptainJimbo.github.io/pages/builds`.
+6. Verify after giving the CDN ~1 min.
+- Pages serves from `gh-pages`. `gh` has the `workflow` scope. Git auth = HTTPS via gh credential helper.
+
+## ✅ Done so far
+_config.yml (name/desc, url=captainjimbo.github.io) · _data/socials.yml (email/GitHub/LinkedIn) ·
+about page (bio, round profile photo, present-tense tutoring, "good for the world" interests:
+EO/climate ML + AI safety) · navbar trimmed to **about · projects · CV** · Projects page with 10 real
+cards in 2 categories (AI/ML Systems; Physics & Research) · CV from `_data/cv.yml` (cv_format: rendercv).
+
+## ⬜ To do next
+- Add the **Milky Way map image** → placeholder comment in `_projects/milky-way.md`; put image in `assets/img/`.
+- Optional: real CV PDF (then re-add `cv_pdf:` in `_pages/cv.md`); re-enable Repositories if wanted;
+  project card images; accent-color/theme tweak; a blog post or two.
+
+## 📁 Content sources (in the OTHER repo)
+`~/Documents/GitHub/polish-my-profile/`: `profile-README-draft.md` (full README — main content source),
+`profile-README-thin.md`, `PORTFOLIO_PLAN.md`, `CAREER_DIRECTION.md`, `EO_RESEARCH_FINDINGS.md`.
+Memory (background, career pivot, these prefs) lives under that repo's path and does NOT auto-load here.
+
+---
+
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
