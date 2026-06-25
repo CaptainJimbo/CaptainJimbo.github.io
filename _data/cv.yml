@@ -1,0 +1,109 @@
+cv:
+  name: Dimitris Kogias
+  label: AI / ML Systems Engineer · Physicist
+  email: dimitriskogias@gmail.com
+  location: Athens, Greece
+  image: ""
+  summary: >
+    AI / ML Systems Engineer with a physics background. I build and rigorously evaluate production AI
+    systems — matching & recommendation systems, LLM / RAG applications, and the cloud + data
+    infrastructure behind them. Self-taught engineer; physicist by training; tutor by long habit.
+
+  social_networks:
+    - network: GitHub
+      username: CaptainJimbo
+    - network: LinkedIn
+      username: dimitris-kogias-273559287
+
+  sections:
+    Education:
+      - institution: European University of Cyprus
+        area: Artificial Intelligence
+        studyType: MSc
+        start_date: 2022
+        end_date: 2024
+        courses: "Machine Learning, Neural Networks, Natural Language Processing"
+
+      - institution: National & Kapodistrian University of Athens (NKUA)
+        location: Athens, Greece
+        area: Physics — specialization in Astrophysics, Astronomy & Mechanics
+        studyType: BSc
+        start_date: 2010
+        end_date: 2017
+
+    Experience:
+      - company: Freelance / Contract
+        position: AI / ML Systems Engineer
+        location: Remote · Athens, Greece
+        start_date: 2023
+        end_date: "Present"
+        summary: >
+          Design and ship production AI systems for clients (most work under NDA).
+        highlights:
+          - "AI matching & recommendation systems across several domains — vector search + cross-encoder reranking, served on AWS serverless."
+          - "Multi-agent LLM platforms (LangGraph), multi-provider models, with rigorous evaluation (golden datasets, sensitivity/specificity, grid search)."
+          - "Semantic search at scale (Django + pgvector), full-stack AI platforms, and the serverless APIs / ETL / RAG plumbing behind them."
+
+      - company: Petros-Web Web Design Services
+        position: Python Backend Developer
+        location: London, UK · Remote
+        start_date: 2021
+        end_date: 2023
+        summary: >
+          Built Python plugins and backend features to extend website functionality.
+
+      - company: Kaldellis I. Kleanthis Data Analysis Services
+        position: Data Scientist
+        location: Athens, Greece
+        start_date: 2019
+        end_date: 2021
+        summary: >
+          Turned large datasets into actionable insights through analysis and modeling.
+
+      - company: Private Tutoring
+        position: Physics & Math Tutor
+        location: Athens, Greece
+        start_date: 2013
+        end_date: "Present"
+        summary: >
+          Tutoring Physics & Math to Gymnasio and Lykeio students — Greek curriculum & IB. 13+ years.
+
+    Skills:
+      - name: Languages
+        icon: fa-solid fa-code
+        keywords: "Python, JavaScript, SQL, C#"
+
+      - name: AI / ML
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, scikit-learn, LLM / RAG, vector search & reranking, OpenAI, Claude, Hugging Face, OpenCV, evaluation & benchmarking"
+
+      - name: Backend & Cloud
+        icon: fa-solid fa-server
+        keywords: "FastAPI, Django, AWS (Lambda, DynamoDB, API Gateway, S3), DigitalOcean, Docker, GitHub Actions, pgvector, Pinecone"
+
+      - name: Data
+        icon: fa-solid fa-database
+        keywords: "Pandas, NumPy, BigQuery, ETL pipelines, web scraping, PostgreSQL"
+
+    Languages:
+      - name: Greek
+        summary: "Native speaker"
+      - name: English
+        summary: "Fluent (C2) — full professional working proficiency"
+
+    Interests:
+      - name: Earth Observation / climate ML
+        icon: fa-solid fa-earth-europe
+        keywords: "satellite imagery, remote sensing, wildfire mapping"
+
+      - name: AI safety & guardrails research
+        icon: fa-solid fa-shield-halved
+        keywords: "alignment, evaluation, guardrails"
+
+      - name: Astrophysics
+        icon: fa-solid fa-star
+        keywords: "radio astronomy, celestial mechanics & N-body dynamics, exoplanet detection, astro-ML"
+
+      - name: Cooking student brains with physics
+        icon: fa-solid fa-fire
+        keywords: "mind-bending facts, 'wait... WHAT?!' moments, the universe is gloriously weird"
