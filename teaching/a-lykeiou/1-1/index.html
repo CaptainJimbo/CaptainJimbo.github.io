@@ -1,0 +1,575 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 1.1 Ευθύγραμμη κίνηση | Dimitris Kogias </title> <meta name="author" content="Dimitris Kogias"> <meta name="description" content="AI / ML Systems Engineer &amp; Physicist. I build and rigorously evaluate production AI systems — matching &amp; recommendation systems, LLM / RAG apps, and the cloud + data infrastructure behind them. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://captainjimbo.github.io/teaching/a-lykeiou/1-1/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Dimitris</span> Kogias </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/teaching/">teaching <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">1.1 Ευθύγραμμη κίνηση</h1> <p class="post-description"></p> </header> <article> <style>
+  /* Wider content area for the embedded PhET simulations (teaching page only) */
+  .container.mt-5 { max-width: 1400px; }
+  .qa { margin: 0.7rem 0; }
+  .qa summary { list-style: none; cursor: pointer; color: var(--global-text-color-light, #828282); font-size: 0.95em; }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::after { content: ' \25B8'; color: var(--global-theme-color); font-weight: 600; }
+  .qa[open] summary::after { content: ' \25BE'; color: var(--global-theme-color); }
+  .qa p { margin-top: 0.4rem; }
+  .book-link { font-size: 0.62em; margin-left: 0.5em; color: var(--global-theme-color); text-decoration: none; vertical-align: middle; opacity: 0.7; }
+  .book-link:hover { opacity: 1; }
+  .typ-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.6rem; margin: 1rem 0 1.6rem; background: rgba(127,127,127,0.04); }
+  .typ-box h5 { color: var(--global-theme-color); margin: 0.7rem 0 0.3rem; letter-spacing: 0.04em; }
+  .trap-box { border: 2px dashed var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.9rem; margin: 1.2rem 0 1.8rem; background: rgba(127,127,127,0.035); }
+  .trap-box h4 { color: var(--global-theme-color); margin: 0.8rem 0 0.5rem; font-size: 1.05rem; letter-spacing: 0.02em; }
+  .trap-box figure { margin: 0.6rem 0 0.2rem; }
+  .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+</style> <p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index1_1.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i> Βιβλίο μαθητή</a></p> <div class="typ-box"> <h5>Τυπολόγιο</h5> <ul> <li> <strong>Μετατόπιση:</strong> \(\Delta \vec{x} = \vec{x}_2 - \vec{x}_1\)</li> <li> <strong>Μέση ταχύτητα:</strong> \(\upsilon_{\text{μ}} = \dfrac{s}{\Delta t}\)</li> <li> <strong>Ταχύτητα:</strong> \(\vec{\upsilon} = \dfrac{\Delta \vec{x}}{\Delta t}\)</li> <li> <strong>Επιτάχυνση:</strong> \(\vec{a} = \dfrac{\Delta \vec{\upsilon}}{\Delta t}\)</li> <li> <strong>Ευθύγραμμη ομαλή Κίνηση— θέση:</strong> \(x = x_0 + \upsilon\, t\)</li> <li> <strong>Ομαλά μεταβαλλόμενη Κίνηση — ταχύτητα:</strong> \(\upsilon = \upsilon_0 + a\, t\)</li> <li> <strong>Ομαλά μεταβαλλόμενη Κίνηση— μετατόπιση:</strong> \(\Delta x = \upsilon_0\, t + \dfrac{1}{2}\, a\, t^2\)</li> </ul> </div> <p><strong>Γραφικές παραστάσεις</strong></p> <p><em>Ευθύγραμμη Ομαλή Κίνηση (Ε.Ο.Κ.) — σταθερή ταχύτητα</em></p> <div style="display:flex;flex-wrap:wrap;gap:1.2rem;align-items:flex-start;margin:0.4rem 0 1rem;"> <figure style="margin:0;text-align:center;"><svg width="210" height="162" viewbox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="145" x2="208" y2="145" stroke="#888" stroke-width="1.5"></line><line x1="38" y1="145" x2="38" y2="18" stroke="#888" stroke-width="1.5"></line><path d="M208,145 l-7,-3.5 M208,145 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,18 l-3.5,7 M38,18 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><line x1="38" y1="145" x2="195" y2="42" stroke="#2a66d9" stroke-width="2.5"></line><text x="199" y="163" font-size="14" font-style="italic" fill="currentColor">t</text><text x="22" y="16" font-size="14" font-style="italic" fill="currentColor">x</text><text x="26" y="160" font-size="11" fill="currentColor">O</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">x ~ t</figcaption></figure><figure style="margin:0;text-align:center;"><svg width="210" height="162" viewbox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="145" x2="208" y2="145" stroke="#888" stroke-width="1.5"></line><line x1="38" y1="145" x2="38" y2="18" stroke="#888" stroke-width="1.5"></line><path d="M208,145 l-7,-3.5 M208,145 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,18 l-3.5,7 M38,18 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><polygon points="38,145 38,72 195,72 195,145" fill="#2a66d9" fill-opacity="0.16"></polygon><line x1="38" y1="72" x2="195" y2="72" stroke="#2a66d9" stroke-width="2.5"></line><text x="116" y="112" font-size="11" text-anchor="middle" fill="#2a66d9">εμβαδόν = Δx</text><text x="199" y="163" font-size="14" font-style="italic" fill="currentColor">t</text><text x="22" y="16" font-size="14" font-style="italic" fill="currentColor">υ</text><text x="26" y="160" font-size="11" fill="currentColor">O</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">υ ~ t</figcaption></figure> </div> <p><em>Ευθύγραμμη Ομαλά Μεταβαλλόμενη Κίνηση (Ε.Ο.Μ.Κ.) — σταθερή επιτάχυνση</em></p> <div style="display:flex;flex-wrap:wrap;gap:1.2rem;align-items:flex-start;margin:0.4rem 0 1rem;"> <figure style="margin:0;text-align:center;"><svg width="210" height="162" viewbox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="145" x2="208" y2="145" stroke="#888" stroke-width="1.5"></line><line x1="38" y1="145" x2="38" y2="18" stroke="#888" stroke-width="1.5"></line><path d="M208,145 l-7,-3.5 M208,145 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,18 l-3.5,7 M38,18 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,145 Q120,145 192,45" stroke="#2a66d9" stroke-width="2.5" fill="none"></path><text x="199" y="163" font-size="14" font-style="italic" fill="currentColor">t</text><text x="22" y="16" font-size="14" font-style="italic" fill="currentColor">x</text><text x="26" y="160" font-size="11" fill="currentColor">O</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">x ~ t</figcaption></figure><figure style="margin:0;text-align:center;"><svg width="210" height="162" viewbox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="145" x2="208" y2="145" stroke="#888" stroke-width="1.5"></line><line x1="38" y1="145" x2="38" y2="18" stroke="#888" stroke-width="1.5"></line><path d="M208,145 l-7,-3.5 M208,145 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,18 l-3.5,7 M38,18 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><polygon points="38,145 38,120 195,38 195,145" fill="#2a66d9" fill-opacity="0.16"></polygon><line x1="38" y1="120" x2="195" y2="38" stroke="#2a66d9" stroke-width="2.5"></line><text x="120" y="126" font-size="11" text-anchor="middle" fill="#2a66d9">εμβαδόν = Δx</text><text x="199" y="163" font-size="14" font-style="italic" fill="currentColor">t</text><text x="22" y="16" font-size="14" font-style="italic" fill="currentColor">υ</text><text x="26" y="160" font-size="11" fill="currentColor">O</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">υ ~ t</figcaption></figure><figure style="margin:0;text-align:center;"><svg width="210" height="162" viewbox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="38" y1="145" x2="208" y2="145" stroke="#888" stroke-width="1.5"></line><line x1="38" y1="145" x2="38" y2="18" stroke="#888" stroke-width="1.5"></line><path d="M208,145 l-7,-3.5 M208,145 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M38,18 l-3.5,7 M38,18 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><line x1="38" y1="78" x2="195" y2="78" stroke="#2a66d9" stroke-width="2.5"></line><text x="199" y="163" font-size="14" font-style="italic" fill="currentColor">t</text><text x="22" y="16" font-size="14" font-style="italic" fill="currentColor">α</text><text x="26" y="160" font-size="11" fill="currentColor">O</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">α ~ t</figcaption></figure> </div> <div class="trap-box"> <h4>Ασκήσεις από Τράπεζα Θεμάτων</h4> <p><strong>Άσκηση 1 — Μέση ταχύτητα από γραφική παράσταση.</strong> Σε ένα πτηνό προσαρμόζεται πομπός GPS που καταγράφει διαρκώς τη θέση του. Το πτηνό αφήνεται ελεύθερο τη στιγμή $t=0$ από τη θέση $x=0$ και κινείται πάνω σε μια ευθεία. Η κίνησή του δίνεται στο παρακάτω διάγραμμα <strong>θέσης – χρόνου</strong>. Να υπολογίσετε:<br><strong>α)</strong> τη μέση ταχύτητα από $t=0$ έως $t=20\ \text{s}$ (σημείο Α),<br><strong>β)</strong> τη μέση ταχύτητα από $t=0$ έως $t=30\ \text{s}$,<br><strong>γ)</strong> τη θέση του πτηνού τη στιγμή $t=45\ \text{s}$ (σημείο Β),<br><strong>δ)</strong> το διάγραμμα <strong>ταχύτητας – χρόνου</strong> σε βαθμολογημένους άξονες.</p> <figure><svg width="100%" viewbox="0 0 470 290" style="max-width:440px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="205" x2="455" y2="205" stroke="#888" stroke-width="1.5"></line><line x1="52" y1="275" x2="52" y2="22" stroke="#888" stroke-width="1.5"></line><path d="M455,205 l-7,-3.5 M455,205 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M52,22 l-3.5,7 M52,22 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><line x1="49" y1="123" x2="55" y2="123" stroke="#888" stroke-width="1.2"></line><line x1="49" y1="40" x2="55" y2="40" stroke="#888" stroke-width="1.2"></line><text x="45" y="127" font-size="11" text-anchor="end" fill="currentColor">200</text><text x="45" y="44" font-size="11" text-anchor="end" fill="currentColor">400</text><text x="46" y="218" font-size="11" text-anchor="end" fill="currentColor">0</text><g stroke="#888" stroke-width="1"><line x1="96" y1="205" x2="96" y2="209"></line><line x1="139" y1="205" x2="139" y2="209"></line><line x1="183" y1="205" x2="183" y2="209"></line><line x1="227" y1="205" x2="227" y2="209"></line><line x1="270" y1="205" x2="270" y2="209"></line><line x1="314" y1="205" x2="314" y2="209"></line><line x1="358" y1="205" x2="358" y2="209"></line><line x1="401" y1="205" x2="401" y2="209"></line><line x1="445" y1="205" x2="445" y2="209"></line></g><g font-size="9" text-anchor="middle" fill="currentColor"><text x="96" y="219">5</text><text x="139" y="219">10</text><text x="183" y="219">15</text><text x="227" y="219">20</text><text x="270" y="219">25</text><text x="314" y="219">30</text><text x="358" y="219">35</text><text x="401" y="219">40</text><text x="445" y="219">45</text></g><polyline points="52,205 139,123 183,123 227,40 401,205 445,246" fill="none" stroke="#2a66d9" stroke-width="2.5"></polyline><circle cx="227" cy="40" r="3.2" fill="#2a66d9"></circle><circle cx="445" cy="246" r="3.2" fill="#2a66d9"></circle><text x="232" y="34" font-size="12" fill="currentColor">Α</text><text x="449" y="244" font-size="12" fill="currentColor">Β</text><text x="34" y="20" font-size="12" font-style="italic" fill="currentColor">x (m)</text><text x="436" y="200" font-size="12" font-style="italic" fill="currentColor">t (s)</text></svg></figure> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Από $t=0$ έως $t=20\ \text{s}$ το πτηνό διανύει $400\ \text{m}$, άρα $\upsilon_{\text{μ}}=\dfrac{400}{20}=20\ \text{m/s}$.</p> <p><strong>β)</strong> Διαδοχικά διαστήματα: $0\!-\!10\ \text{s}$: $200\ \text{m}$, $10\!-\!15\ \text{s}$: ακίνητο, $15\!-\!20\ \text{s}$: $200\ \text{m}$, $20\!-\!30\ \text{s}$: $200\ \text{m}$ (επιστρέφει). Συνολική απόσταση $600\ \text{m}$ σε $30\ \text{s}$, άρα $\upsilon_{\text{μ}}=\dfrac{600}{30}=20\ \text{m/s}$.</p> <p><strong>γ)</strong> Στο διάστημα $20\!-\!40\ \text{s}$ επιστρέφει στην αφετηρία με μέτρο ταχύτητας $20\ \text{m/s}$. Από $40$ έως $45\ \text{s}$ διανύει ακόμη $20\cdot 5 = 100\ \text{m}$ προς την αντίθετη κατεύθυνση, οπότε βρίσκεται στη θέση $x = -100\ \text{m}$.</p> <p><strong>δ)</strong> Οι ταχύτητες ανά διάστημα είναι: $+20\ \text{m/s}$ ($0\!-\!10$), $0$ ($10\!-\!15$), $+40\ \text{m/s}$ ($15\!-\!20$), $-20\ \text{m/s}$ ($20\!-\!45$):</p> <figure><svg width="100%" viewbox="0 0 400 230" style="max-width:380px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="48" y1="130" x2="388" y2="130" stroke="#888" stroke-width="1.5"></line><line x1="48" y1="215" x2="48" y2="20" stroke="#888" stroke-width="1.5"></line><path d="M388,130 l-7,-3.5 M388,130 l-7,3.5" stroke="#888" stroke-width="1.5" fill="none"></path><path d="M48,20 l-3.5,7 M48,20 l3.5,7" stroke="#888" stroke-width="1.5" fill="none"></path><text x="43" y="34" font-size="10" text-anchor="end" fill="currentColor">40</text><text x="43" y="84" font-size="10" text-anchor="end" fill="currentColor">20</text><text x="43" y="184" font-size="10" text-anchor="end" fill="currentColor">−20</text><line x1="45" y1="30" x2="48" y2="30" stroke="#888"></line><line x1="45" y1="80" x2="48" y2="80" stroke="#888"></line><line x1="45" y1="180" x2="48" y2="180" stroke="#888"></line><g font-size="9" text-anchor="middle" fill="currentColor"><text x="121" y="143">10</text><text x="195" y="143">20</text><text x="268" y="143">30</text><text x="341" y="143">40</text></g><polyline points="48,80 121,80" fill="none" stroke="#2a66d9" stroke-width="2.5"></polyline><polyline points="121,130 158,130" fill="none" stroke="#2a66d9" stroke-width="2.5"></polyline><polyline points="158,30 195,30" fill="none" stroke="#2a66d9" stroke-width="2.5"></polyline><polyline points="195,180 378,180" fill="none" stroke="#2a66d9" stroke-width="2.5"></polyline><g stroke="#2a66d9" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.7"><line x1="121" y1="80" x2="121" y2="130"></line><line x1="158" y1="130" x2="158" y2="30"></line><line x1="195" y1="30" x2="195" y2="180"></line></g><text x="30" y="22" font-size="11" font-style="italic" fill="currentColor">υ</text><text x="372" y="125" font-size="11" font-style="italic" fill="currentColor">t (s)</text></svg></figure> </details> <p><strong>Άσκηση 2 — Επιτάχυνση &amp; εξισώσεις κίνησης.</strong> <br><strong>2.1)</strong> Αθλητής κινείται διατηρώντας σταθερή την κατεύθυνση της κίνησής του. Σύστημα χρονοφωτογράφησης τίθεται σε λειτουργία τη στιγμή $t=0$ και καταγράφει: τη στιγμή $t_1=2\ \text{s}$ ταχύτητα μέτρου $4\ \text{m/s}$ και τη στιγμή $t_2=6\ \text{s}$ ταχύτητα μέτρου $12\ \text{m/s}$. Η κίνηση του αθλητή είναι:<br><strong>(α)</strong> ευθύγραμμη ομαλή με $\upsilon=2\ \text{m/s}$  <strong>(β)</strong> ομαλά επιταχυνόμενη με $a=1\ \text{m/s}^2$  <strong>(γ)</strong> ομαλά επιταχυνόμενη με $a=2\ \text{m/s}^2$. Να αιτιολογήσετε. <br><strong>2.2)</strong> Κινητό εκτελεί ευθύγραμμη ομαλά επιβραδυνόμενη κίνηση με επιβράδυνση $a$ και αρχική ταχύτητα $\upsilon_0$. Όταν το μέτρο της ταχύτητας υποδιπλασιαστεί, θα έχει διανύσει διάστημα:<br><strong>(α)</strong> $s=\dfrac{3\upsilon_0^2}{4a}$  <strong>(β)</strong> $s=\dfrac{3\upsilon_0^2}{8a}$  <strong>(γ)</strong> $s=\dfrac{2\upsilon_0^2}{3a}$. Να αιτιολογήσετε.</p> <details class="qa"><summary>Λύση</summary> <p><strong>2.1 → (γ).</strong> Η επιτάχυνση είναι $a=\dfrac{\Delta \upsilon}{\Delta t}=\dfrac{12-4}{6-2}=\dfrac{8}{4}=2\ \text{m/s}^2$. Αφού η ταχύτητα μεταβάλλεται με σταθερό ρυθμό, η κίνηση είναι ευθύγραμμη ομαλά επιταχυνόμενη.</p> <p><strong>2.2 → (β).</strong> Με $\upsilon=\dfrac{\upsilon_0}{2}$ στην $\upsilon^2=\upsilon_0^2-2as$ προκύπτει $\dfrac{\upsilon_0^2}{4}=\upsilon_0^2-2as \Rightarrow 2as=\dfrac{3\upsilon_0^2}{4} \Rightarrow s=\dfrac{3\upsilon_0^2}{8a}$.</p> </details> <p><strong>Άσκηση 3 — Στιγμιαία ταχύτητα (χρονοφωτογράφηση).</strong> Αμαξίδιο εκτελεί ευθύγραμμη επιταχυνόμενη κίνηση και σέρνει πίσω του χαρτοταινία, όπου κατάλληλος μηχανισμός αφήνει στίγμα <strong>κάθε $0{,}2\ \text{s}$</strong>. Οι μαθητές μετρούν με υποδεκάμετρο τις θέσεις των στιγμάτων (σε cm), με μηδέν στην πρώτη κουκίδα. Ο καθηγητής υποδεικνύει ότι η <strong>στιγμιαία ταχύτητα</strong> σε μια κουκίδα μπορεί να θεωρηθεί ίση με τη <strong>μέση ταχύτητα</strong> στη μετατόπιση από την προηγούμενη ως την επόμενη κουκίδα. Αν $\upsilon_1$ η στιγμιαία ταχύτητα στην κουκίδα $x_1=3\ \text{cm}$ και $\upsilon_2$ στην κουκίδα $x_2=8\ \text{cm}$, ο λόγος $\dfrac{\upsilon_1}{\upsilon_2}$ είναι:<br><strong>(α)</strong> $1$  <strong>(β)</strong> $0{,}48$  <strong>(γ)</strong> $0{,}2$. Να αιτιολογήσετε.</p> <figure><svg width="100%" viewbox="0 0 540 96" style="max-width:520px;height:auto;" xmlns="http://www.w3.org/2000/svg"><polyline points="28,26 39,26 54,26 76,26 116,26 160,26 222,26 292,26 380,26 512,26" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"></polyline><g fill="currentColor"><circle cx="28" cy="26" r="3.2"></circle><circle cx="39" cy="26" r="3.2"></circle><circle cx="54" cy="26" r="3.2"></circle><circle cx="76" cy="26" r="3.2"></circle><circle cx="116" cy="26" r="3.2"></circle><circle cx="160" cy="26" r="3.2"></circle><circle cx="222" cy="26" r="3.2"></circle><circle cx="292" cy="26" r="3.2"></circle><circle cx="380" cy="26" r="3.2"></circle><circle cx="512" cy="26" r="3.2"></circle></g><text x="160" y="14" font-size="10" text-anchor="middle" fill="#2a66d9">x₁=3</text><text x="380" y="14" font-size="10" text-anchor="middle" fill="#2a66d9">x₂=8</text><line x1="28" y1="58" x2="512" y2="58" stroke="currentColor" stroke-width="1.3"></line><g stroke="currentColor" stroke-width="1"><line x1="28" y1="58" x2="28" y2="65"></line><line x1="72" y1="58" x2="72" y2="65"></line><line x1="116" y1="58" x2="116" y2="65"></line><line x1="160" y1="58" x2="160" y2="65"></line><line x1="204" y1="58" x2="204" y2="65"></line><line x1="248" y1="58" x2="248" y2="65"></line><line x1="292" y1="58" x2="292" y2="65"></line><line x1="336" y1="58" x2="336" y2="65"></line><line x1="380" y1="58" x2="380" y2="65"></line><line x1="424" y1="58" x2="424" y2="65"></line><line x1="468" y1="58" x2="468" y2="65"></line><line x1="512" y1="58" x2="512" y2="65"></line></g><g font-size="9" text-anchor="middle" fill="currentColor"><text x="28" y="76">0</text><text x="72" y="76">1</text><text x="116" y="76">2</text><text x="160" y="76">3</text><text x="204" y="76">4</text><text x="248" y="76">5</text><text x="292" y="76">6</text><text x="336" y="76">7</text><text x="380" y="76">8</text><text x="424" y="76">9</text><text x="468" y="76">10</text><text x="512" y="76">11</text></g><text x="8" y="76" font-size="9" fill="currentColor">cm</text></svg></figure> <details class="qa"><summary>Λύση</summary> <p><strong>(β).</strong> Η χρονική απόσταση δύο διαδοχικών κουκίδων είναι $0{,}2\ \text{s}$, άρα η μετατόπιση «προηγούμενη → επόμενη» αντιστοιχεί σε χρόνο $\Delta t = 0{,}4\ \text{s}$.</p> <p>Στην κουκίδα $x_1=3\ \text{cm}$ (6η κουκίδα) η ταινία δείχνει την προηγούμενη στα $\approx 2\ \text{cm}$ και την επόμενη στα $\approx 4{,}4\ \text{cm}$, οπότε $\upsilon_1=\dfrac{(4{,}4-2)\ \text{cm}}{0{,}4\ \text{s}}=\dfrac{2{,}4}{0{,}4}=6\ \text{cm/s}$.</p> <p>Στην κουκίδα $x_2=8\ \text{cm}$ (9η κουκίδα) η προηγούμενη είναι στα $\approx 6\ \text{cm}$ και η επόμενη στα $\approx 11\ \text{cm}$, οπότε $\upsilon_2=\dfrac{(11-6)\ \text{cm}}{0{,}4\ \text{s}}=\dfrac{5}{0{,}4}=12{,}5\ \text{cm/s}$.</p> <p>Άρα $\dfrac{\upsilon_1}{\upsilon_2}=\dfrac{6}{12{,}5}=0{,}48$.</p> </details> <p><strong>Άσκηση 4 — Ευθύγραμμη ομαλή κίνηση (μέση ταχύτητα).</strong> <br><strong>4.1)</strong> Πλοίο μήκους $54\ \text{m}$ κινείται ευθύγραμμα με σταθερή ταχύτητα. Τη στιγμή που η πλώρη περνάει από ένα σταθερό σημείο, αφήνουμε ένα κομμάτι ξύλο να πέσει στο νερό· μέχρι να φτάσει η πρύμνη στο ίδιο σημείο, μια κλεψύδρα των $6\ \text{s}$ αδειάζει <strong>δύο φορές</strong>. Η ταχύτητα του πλοίου είναι:<br><strong>(α)</strong> $324\ \text{m/s}$  <strong>(β)</strong> $12\ \text{m/s}$  <strong>(γ)</strong> $4{,}5\ \text{m/s}$. Να αιτιολογήσετε. <br><strong>4.2)</strong> Το ίδιο πλοίο διανύει $80$ ναυτικά μίλια με σταθερή ταχύτητα $16$ κόμβων ($16$ ναυτικά μίλια ανά ώρα), ξεκινώντας στις $07{:}00$. Φτάνει στις:<br><strong>(α)</strong> $16{:}00$  <strong>(β)</strong> $12{:}00$  <strong>(γ)</strong> $00{:}00$. Να αιτιολογήσετε.</p> <details class="qa"><summary>Λύση</summary> <p><strong>4.1 → (γ).</strong> Όσο η κλεψύδρα αδειάζει δύο φορές, περνά χρόνος $\Delta t = 2\cdot 6 = 12\ \text{s}$. Στον χρόνο αυτό το πλοίο προχωράει όσο το μήκος του, $s=54\ \text{m}$. Άρα $\upsilon=\dfrac{s}{\Delta t}=\dfrac{54}{12}=4{,}5\ \text{m/s}$.</p> <p><strong>4.2 → (β).</strong> $\Delta t=\dfrac{s}{\upsilon}=\dfrac{80\ \text{ν.μ.}}{16\ \text{ν.μ./h}}=5\ \text{h}$. Άρα φτάνει $07{:}00 + 5\ \text{h} = 12{:}00$.</p> </details> <p><strong>Άσκηση 5 — Επιλογή γραφικής παράστασης $a-t$.</strong> Ένα ασανσέρ ξεκινά από το ισόγειο: αρχικά <strong>επιταχύνεται ομαλά</strong> μέχρι να αποκτήσει σταθερή ταχύτητα, στη συνέχεια κινείται με <strong>σταθερή ταχύτητα</strong>, και καθώς πλησιάζει στον 5ο όροφο <strong>επιβραδύνεται</strong> μέχρι να σταματήσει. Ποια γραφική παράσταση περιγράφει καλύτερα την <strong>αλγεβρική τιμή της επιτάχυνσης</strong> $a$ σε συνάρτηση με τον χρόνο $t$;</p> <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;margin:0.5rem 0 0.2rem;"> <figure style="margin:0;text-align:center;"><svg width="100%" viewbox="0 0 175 116" style="max-width:160px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="58" x2="168" y2="58" stroke="#888" stroke-width="1.3"></line><line x1="24" y1="104" x2="24" y2="12" stroke="#888" stroke-width="1.3"></line><path d="M168,58 l-6,-3 M168,58 l-6,3" stroke="#888" stroke-width="1.3" fill="none"></path><path d="M24,12 l-3,6 M24,12 l3,6" stroke="#888" stroke-width="1.3" fill="none"></path><polyline points="24,58 46,58 46,34 112,34 112,58 162,58" fill="none" stroke="#2a66d9" stroke-width="2.2"></polyline><text x="13" y="16" font-size="11" font-style="italic" fill="currentColor">a</text><text x="160" y="72" font-size="11" font-style="italic" fill="currentColor">t</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">α)</figcaption></figure><figure style="margin:0;text-align:center;"><svg width="100%" viewbox="0 0 175 116" style="max-width:160px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="58" x2="168" y2="58" stroke="#888" stroke-width="1.3"></line><line x1="24" y1="104" x2="24" y2="12" stroke="#888" stroke-width="1.3"></line><path d="M168,58 l-6,-3 M168,58 l-6,3" stroke="#888" stroke-width="1.3" fill="none"></path><path d="M24,12 l-3,6 M24,12 l3,6" stroke="#888" stroke-width="1.3" fill="none"></path><polyline points="24,58 42,58 42,34 82,34 82,58 120,58 120,84 150,84 150,58 162,58" fill="none" stroke="#2a66d9" stroke-width="2.2"></polyline><text x="13" y="16" font-size="11" font-style="italic" fill="currentColor">a</text><text x="160" y="72" font-size="11" font-style="italic" fill="currentColor">t</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">β)</figcaption></figure><figure style="margin:0;text-align:center;"><svg width="100%" viewbox="0 0 175 116" style="max-width:160px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="58" x2="168" y2="58" stroke="#888" stroke-width="1.3"></line><line x1="24" y1="104" x2="24" y2="12" stroke="#888" stroke-width="1.3"></line><path d="M168,58 l-6,-3 M168,58 l-6,3" stroke="#888" stroke-width="1.3" fill="none"></path><path d="M24,12 l-3,6 M24,12 l3,6" stroke="#888" stroke-width="1.3" fill="none"></path><polyline points="24,58 44,58 62,34 120,34 138,58 162,58" fill="none" stroke="#2a66d9" stroke-width="2.2"></polyline><text x="13" y="16" font-size="11" font-style="italic" fill="currentColor">a</text><text x="160" y="72" font-size="11" font-style="italic" fill="currentColor">t</text></svg><figcaption style="font-size:0.85em;color:var(--global-text-color-light);">γ)</figcaption></figure> </div> <details class="qa"><summary>Λύση</summary> <p><strong>(β).</strong> Η κίνηση έχει τρεις φάσεις: <strong>(1)</strong> επιτάχυνση → η $a$ είναι θετική, <strong>(2)</strong> σταθερή ταχύτητα → η $a$ είναι μηδέν, <strong>(3)</strong> επιβράδυνση → η $a$ είναι αρνητική. Μόνο η (β) δείχνει θετική, μετά μηδενική, μετά αρνητική επιτάχυνση. Η (α) δείχνει μόνο τη φάση της επιτάχυνσης (λείπει η επιβράδυνση), ενώ η (γ) είναι παντού θετική — θα σήμαινε ταχύτητα που διαρκώς αυξάνεται.</p> </details> <p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 12354, 14833, 13348, 38901, 38863). Τα σχήματα ξανασχεδιάστηκαν.</p> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dimitris Kogias. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script>
+  window.op =
+    window.op ||
+    function (...args) {
+      (window.op.q = window.op.q || []).push(args);
+    };
+  window.op("init", {
+    clientId: "894603ab-9aa7-41a5-a676-5f28baab38ec",
+    trackScreenViews: true,
+    trackOutgoingLinks: true,
+    trackAttributes: true,
+  });
+</script> <script async defer src="https://openpanel.dev/op1.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Production AI systems I build end-to-end — the models, the APIs, and the data pipelines that serve them — plus physics & research projects. Most client work is under NDA, so it's described, not linked.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "AI / ML Systems Engineer · Physicist — experience, education & skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Σημειώσεις και υλικό Φυσικής ανά τάξη.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march & april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-agentic-ai-platforms",
+          title: 'Agentic AI Platforms',
+          description: "Autonomous, multi-step agentic workflows — content & automation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-agents/";
+            },},{id: "projects-full-stack-ai-platforms",
+          title: 'Full-Stack AI Platforms',
+          description: "End-to-end AI products — interactive UIs & dashboards on top of the AI.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-fullstack/";
+            },},{id: "projects-serverless-apis-integrations-and-data-pipelines",
+          title: 'Serverless APIs, Integrations and Data Pipelines',
+          description: "Production APIs, third-party integrations, ETL & CI/CD.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-infra/";
+            },},{id: "projects-matching-and-recommendation-systems",
+          title: 'Matching and Recommendation Systems',
+          description: "Ranking & pairing — recommendations and entity-to-entity matching.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-matching/";
+            },},{id: "projects-semantic-search-at-scale",
+          title: 'Semantic Search at Scale',
+          description: "Hybrid retrieval engine — vector + BM25, RRF fusion, cited evidence.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-search/";
+            },},{id: "projects-greek-burned-area-mapper",
+          title: 'Greek Burned-Area Mapper',
+          description: "Coming soon — Sentinel-2 + U-Net wildfire burn-scar mapping.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/burned-area/";
+            },},{id: "projects-chatbot-assistants",
+          title: 'Chatbot Assistants',
+          description: "Conversational RAG assistants with tool-calling — embeddable widgets.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chatbot-assistants/";
+            },},{id: "projects-mapping-the-milky-way-39-s-spiral-arms",
+          title: 'Mapping the Milky Way&#39;s Spiral Arms',
+          description: "Galactic structure from 21cm hydrogen radio emission.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/milky-way/";
+            },},{id: "projects-neural-networks-lab",
+          title: 'Neural Networks Lab',
+          description: "From-scratch autograd engine + character-level LMs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/nn-lab/";
+            },},{id: "projects-a-neural-network-for-the-three-body-problem",
+          title: 'A Neural Network for the Three-Body Problem',
+          description: "Deep learning as a fast emulator of chaotic gravitational dynamics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/three-body/";
+            },},{id: "projects-msc-thesis-object-detection",
+          title: 'MSc Thesis — Object Detection',
+          description: "Benchmarking YOLO, critiquing mAP, and training a deep-sky-object detector.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/yolo-thesis/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%64%69%6D%69%74%72%69%73%6B%6F%67%69%61%73@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/CaptainJimbo", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/dimitris-kogias-273559287", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
