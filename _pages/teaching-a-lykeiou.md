@@ -19,6 +19,9 @@ nav: false
   .al-sub a { display:flex; align-items:center; padding:0.6rem 0.8rem; border:1px solid var(--global-divider-color,#e3e3e3); border-radius:9px; text-decoration:none; color:inherit; font-size:0.95em; transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease; }
   .al-sub a:hover { border-color:var(--global-theme-color); transform:translateY(-2px); box-shadow:0 5px 16px rgba(0,0,0,0.08); text-decoration:none; }
   @media (max-width: 700px) { .al-grid { grid-template-columns:1fr; } }
+  .al-pdf { display:flex; gap:0.55rem; margin-top:0.7rem; flex-wrap:wrap; }
+  .al-pdf a { display:inline-flex; align-items:center; gap:0.35rem; font-size:0.82em; color:var(--global-theme-color); border:1px dashed var(--global-theme-color); border-radius:999px; padding:0.3rem 0.85rem; text-decoration:none; opacity:0.85; }
+  .al-pdf a:hover { opacity:1; background:rgba(127,127,127,0.05); text-decoration:none; }
 </style>
 
 Τυπολόγια από το [Σχολικό βιβλίο μαθητή: Φυσική Α′ Λυκείου (Γενικής Παιδείας)](https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index.html){:target="_blank" rel="noopener"}, [προσομοιώσεις (PhET)](https://phet.colorado.edu/el/){:target="_blank" rel="noopener"} και επιλεγμένες ασκήσεις από την [Τράπεζα Θεμάτων του Ι.Ε.Π.](https://trapeza.iep.edu.gr/grades/1/classes/1/subjects/7){:target="_blank" rel="noopener"}.
@@ -43,6 +46,7 @@ nav: false
   <a href="{{ '/teaching/a-lykeiou/1-3/' | relative_url }}">1.3 Δυναμική στο επίπεδο</a>
   <a href="{{ '/teaching/a-lykeiou/syn-1/' | relative_url }}">Συνδυαστικές Ασκήσεις Κεφαλαίου</a>
 </div>
+<div class="al-pdf"><a href="{{ '/assets/pdf/fysiki-alyk-kef1-askiseis.pdf' | relative_url }}" download>&#128196; Ασκήσεις PDF</a><a href="{{ '/assets/pdf/fysiki-alyk-kef1-me-lyseis.pdf' | relative_url }}" download>&#128196; + Λύσεις PDF</a></div>
 </div>
 </div>
 <div class="al-card">
@@ -53,6 +57,7 @@ nav: false
   <a href="{{ '/teaching/a-lykeiou/2-1/' | relative_url }}">2.1 Διατήρηση μηχανικής ενέργειας</a>
   <a href="{{ '/teaching/a-lykeiou/2-2/' | relative_url }}">2.2 Ολική ενέργεια &amp; υποβάθμιση</a>
 </div>
+<div class="al-pdf"><a href="{{ '/assets/pdf/fysiki-alyk-kef2-askiseis.pdf' | relative_url }}" download>&#128196; Ασκήσεις PDF</a><a href="{{ '/assets/pdf/fysiki-alyk-kef2-me-lyseis.pdf' | relative_url }}" download>&#128196; + Λύσεις PDF</a></div>
 </div>
 </div>
 <div class="al-card">
@@ -62,6 +67,7 @@ nav: false
 <div class="al-sub">
   <a href="{{ '/teaching/a-lykeiou/mikta/' | relative_url }}">Συνδυαστικές Ασκήσεις</a>
 </div>
+<div class="al-pdf"><a href="{{ '/assets/pdf/fysiki-alyk-mikta-askiseis.pdf' | relative_url }}" download>&#128196; Ασκήσεις PDF</a><a href="{{ '/assets/pdf/fysiki-alyk-mikta-me-lyseis.pdf' | relative_url }}" download>&#128196; + Λύσεις PDF</a></div>
 </div>
 </div>
 </div>

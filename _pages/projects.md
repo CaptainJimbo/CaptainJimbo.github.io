@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Production AI systems I build end-to-end — the models, the APIs, and the data pipelines that serve them — plus physics & research projects. Most client work is under NDA, so it's described, not linked.
+description: Production AI systems I build end-to-end — the models, the APIs, and the data pipelines that serve them — plus live demos you can click — and a few things from my physics days. Most client work is under NDA, so it's described, not linked.
 nav: true
 nav_order: 3
-display_categories: ["AI / ML Systems", "Physics & Research"]
+display_categories: ["What I Build", "Live Demos", "Misc"]
 horizontal: false
 ---
 
@@ -13,6 +13,17 @@ horizontal: false
 
 <style>
   .projects .card h2.card-title { font-size: 1.2rem; }
+  .projects h2.category { color: var(--global-theme-color); font-weight: 700; font-size: 1.7rem; text-align: left; opacity: 1; }
+  /* Phones: compact horizontal rows — thumbnail left, text right — so several
+     cards fit per screen. Desktop keeps the normal vertical cards. */
+  @media (max-width: 640px) {
+    .projects .card { flex-direction: row; align-items: center; }
+    .projects .card img.card-img-top { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; margin: 0.6rem 0 0.6rem 0.6rem; flex-shrink: 0; }
+    .projects .card .card-body { padding: 0.6rem 0.85rem; }
+    .projects .card h2.card-title { font-size: 0.98rem; margin-bottom: 0.2rem; }
+    .projects .card p.card-text { font-size: 0.78rem; line-height: 1.35; margin: 0; }
+    .projects .row > * { margin-bottom: 0.35rem !important; }
+  }
 </style>
 
 <div class="projects">

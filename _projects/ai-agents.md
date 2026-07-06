@@ -4,12 +4,12 @@ title: Agentic Workflows
 description: Autonomous, multi-step agents that plan and run a task on their own.
 img: assets/img/ai-agents.jpg
 importance: 4
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/ai-agents-hero.jpg' | relative_url }}" alt="{{ page.title }}">
 
 Workflows that **run themselves** — an LLM **plans and executes a multi-step task** across several turns and tools, **without a human in every step** (the autonomous counterpart to a reactive chatbot). Useful for content generation, research and automation pipelines.
 

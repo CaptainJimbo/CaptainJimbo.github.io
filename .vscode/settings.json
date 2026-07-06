@@ -3,10 +3,9 @@
   "terminal.integrated.scrollback": 10000000,
   "workbench.colorTheme": "Light+",
   "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#efbbe8",
+    "titleBar.activeBackground": "#bbe9ef",
     "titleBar.activeForeground": "#05010f",
-    "statusBar.background": "#efbbe8",
+    "statusBar.background": "#bbe9ef",
     "statusBar.foreground": "#05010f",
   }
 }
-  

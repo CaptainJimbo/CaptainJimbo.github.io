@@ -4,12 +4,12 @@ title: Chatbot Assistants
 description: Conversational assistants — grounded in your data, with tool-calling, embeddable anywhere.
 img: assets/img/chatbot-assistants.jpg
 importance: 6
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/chatbot-assistants-hero.jpg' | relative_url }}" alt="{{ page.title }}">
 
 Assistants people **talk to** — conversational and **reactive**: a person drives, the assistant responds. The goal is one that's **accurate on a specific domain**, can **act** when asked, and stays reliable in a live chat.
 

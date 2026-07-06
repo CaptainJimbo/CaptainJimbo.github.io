@@ -3,8 +3,8 @@ layout: page
 title: MSc Thesis — Object Detection
 description: Benchmarking YOLO, critiquing mAP, and training a deep-sky-object detector.
 img: assets/img/yolo-dsos.jpg
-importance: 4
-category: "Physics & Research"
+importance: 3
+category: "Misc"
 related_publications: false
 ---
 

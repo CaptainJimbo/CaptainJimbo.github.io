@@ -26,16 +26,28 @@ Personal portfolio website (al-folio Jekyll), **live at https://captainjimbo.git
 6. Verify after giving the CDN ~1 min.
 - Pages serves from `gh-pages`. `gh` has the `workflow` scope. Git auth = HTTPS via gh credential helper.
 
-## ✅ Done so far
-_config.yml (name/desc, url=captainjimbo.github.io) · _data/socials.yml (email/GitHub/LinkedIn) ·
-about page (bio, round profile photo, present-tense tutoring, "good for the world" interests:
-EO/climate ML + AI safety) · navbar trimmed to **about · projects · CV** · Projects page with 10 real
-cards in 2 categories (AI/ML Systems; Physics & Research) · CV from `_data/cv.yml` (cv_format: rendercv).
+## ✅ Site structure (as of 2026-07)
+- **Navbar:** about · projects · CV · teaching.
+- **/projects** (`_pages/projects.md`): 3 categories — **What I Build** (6 NDA-safe capability cards),
+  **Live Demos** (7 apps, each project page has a hero image + theme-colored launch button to its
+  GitHub-Pages app + repo link), **Misc** (physics-days projects). Phone view: cards render as
+  horizontal rows (media query ≤640px). Card art: square `assets/img/<slug>.jpg` via front-matter
+  `img:`; page hero: `<slug>-hero.jpg` referenced in the body.
+- **/teaching** (`_pages/teaching.md`): square-cover cards → Studying Hacks (methodology + AI prompts
+  with copy buttons), Φυσική & Χημεία Β′/Γ′ Γυμνασίου (grouped by class), Φυσική Α′ Λυκείου (cards
+  landing → 8 sub-pages with τυπολόγια + Τράπεζα-Θεμάτων exercises, reveal-style solutions),
+  Χημεία Α′ Λυκείου (banner-card landing → 22 per-section pages + syn-2/3/4 «Συνδυαστικές» +
+  prep «Προετοιμασία», Τράπεζα boxes on rich sections), IB Physics SL&HL (24 sub-topics).
+- **Images:** originals dropped in `_storage/` (gitignored) → optimized with `sips` → `assets/img/`.
+- **LICENSE is dual:** MIT (theme code, © Al-Shedivat — keep) + **CC BY-NC-SA 4.0 © Dimitris Kogias**
+  for site content, with third-party exceptions (Ι.Ε.Π./ΙΤΥΕ, PhET, Wikimedia/NASA) listed.
+- **Exercise solutions follow a locked pedagogical style** (name the law → symbolic → solve →
+  substitute last; solutions hidden in `<details class="qa">`) — see the agent memory
+  `alykeiou-solution-style` before writing any new solutions.
+- Deploy tip: if a Pages build hangs in `building` 15′+, re-run `deploy.yml` (fresh gh-pages commit
+  unsticks it); plain `POST /pages/builds` does not.
 
-## ⬜ To do next
-- Add the **Milky Way map image** → placeholder comment in `_projects/milky-way.md`; put image in `assets/img/`.
-- Optional: real CV PDF (then re-add `cv_pdf:` in `_pages/cv.md`); re-enable Repositories if wanted;
-  project card images; accent-color/theme tweak; a blog post or two.
+Private plans/intentions live in `CLAUDE.local.md` (gitignored — this repo is public).
 
 ## 📁 Content sources (in the OTHER repo)
 `~/Documents/GitHub/polish-my-profile/`: `profile-README-draft.md` (full README — main content source),
