@@ -4,12 +4,12 @@ title: Full-Stack Apps
 description: Backend-led full-stack — self-serve SaaS tools, shipped end to end.
 img: assets/img/ai-fullstack.jpg
 importance: 3
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/ai-fullstack-hero.jpg' | relative_url }}" alt="{{ page.title }}">
 
 The **backend does the heavy lifting** — APIs, business logic and data — with just enough **frontend** on top to turn it into a working, self-serve **SaaS tool**. Full-stack here means owning the *whole* product end to end, not shipping an API and hoping someone else builds the UI.
 

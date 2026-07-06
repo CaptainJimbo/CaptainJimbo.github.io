@@ -7,6 +7,7 @@
 br=$(git branch --show-current 2>/dev/null || echo no-git)
 esc=$(printf '\033')
 
+tee /private/tmp/claude-501/-Users-jimbothemagnificent-Documents-GitHub-CaptainJimbo-github-io/a82639a7-b5d6-4c53-bf45-e1d1d4ee920e/scratchpad/statusline-payload.json |
 jq -r --arg br "$br" --arg e "$esc" '
   # 25-cell bar, 8 eighths each → 200 units. Colored fill on a lighter track.
   def bar(p):

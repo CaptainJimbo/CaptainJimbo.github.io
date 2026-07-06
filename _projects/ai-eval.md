@@ -4,7 +4,7 @@ layout: page
 title: Evaluation-Driven LLM Scoring
 description: Golden datasets, sensitivity/specificity, grid search.
 importance: 5
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 

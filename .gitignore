@@ -17,3 +17,4 @@ node_modules/
 output/playwright/
 test-results/
 vendor
+CLAUDE.local.md

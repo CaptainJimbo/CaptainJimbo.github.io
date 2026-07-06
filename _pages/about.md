@@ -41,5 +41,10 @@ Astrophysics, Astronomy & Mechanics) and an **MSc in Artificial Intelligence**. 
 **tutor Physics & Math** to Gymnasio and Lykeio students (Greek curriculum & IB) — 13+ years and
 counting, and where the patience comes from.
 
+**Selected work** — things you can click right now:
+- **[movieBro](/projects/moviebro/)** — hybrid search + recommendations (BM25 · embeddings · reranker · collaborative filtering) running **in your browser**; the public counterpart of client systems built under NDA.
+- **[Ο Ήλιος](/projects/o-ilios/)** — live solar-image segmentation: NASA SDO imagery ingested on schedule, PyTorch → ONNX, evaluated against a physics baseline.
+- **[All projects →](/projects/)**
+
 I'm drawn to **work that does good for the world** — **Earth Observation / climate ML** and
 **AI safety & guardrails research** — and I'm **open to freelance / contract work**. Feel free to reach out.

@@ -1,10 +1,11 @@
 ---
+published: false
 layout: page
 title: Greek Burned-Area Mapper
 description: Coming soon — Sentinel-2 + U-Net wildfire burn-scar mapping.
 img: assets/img/burned-area.jpg
 importance: 6
-category: "Physics & Research"
+category: "Misc"
 related_publications: false
 ---
 

@@ -22,11 +22,37 @@ nav: false
   .trap-box h4 { color: var(--global-theme-color); margin: 0.8rem 0 0.5rem; font-size: 1.05rem; letter-spacing: 0.02em; }
   .trap-box figure { margin: 0.6rem 0 0.2rem; }
   .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+  .subnav .sn-prev, .subnav .sn-next { display: grid; column-gap: 0.65rem; row-gap: 0.12rem; align-items: center; min-height: 44px; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; grid-template-columns: auto 1fr; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; grid-template-columns: 1fr auto; text-align: right; }
+  .subnav .sn-prev::before, .subnav .sn-next::after { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--global-theme-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-weight: 700; grid-row: 1 / span 2; transition: transform .15s ease; }
+  .subnav .sn-prev::before { content: '\2190'; grid-column: 1; }
+  .subnav .sn-next::after { content: '\2192'; grid-column: 2; }
+  .subnav .sn-prev:hover::before { transform: translateX(-3px); }
+  .subnav .sn-next:hover::after { transform: translateX(3px); }
+  .subnav a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 8px; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.94em; line-height: 1.3; color: var(--global-theme-color); font-weight: 500; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; font-size: 0.88em; white-space: nowrap; color: var(--global-theme-color); border: 1px solid var(--global-divider-color, #e3e3e3); border-radius: 999px; padding: 0.42rem 1.05rem; transition: border-color .15s ease, background .15s ease; }
+  .subnav .sn-all:hover { border-color: var(--global-theme-color); }
+  @media (max-width: 640px) {
+    .subnav { grid-template-columns: 1fr 1fr; }
+    .subnav .sn-prev { grid-column: 1; justify-self: stretch; }
+    .subnav .sn-next { grid-column: 2; justify-self: stretch; }
+    .subnav .sn-all { grid-column: 1 / -1; grid-row: 2; }
+  }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
 </style>
 
-<p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/syn-1/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">Συνδυαστικές (Κεφ. 1)</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/2-2/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">2.2 Ολική ενέργεια & υποβάθμιση</span></a>
+</div>
 
-<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index2_1.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Βιβλίο μαθητή</a></p>
+<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index2_1.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Δες την ενότητα «2.1 Διατήρηση μηχανικής ενέργειας» στο Βιβλίο μαθητή</a></p>
 
 <div class="typ-box" markdown="1">
 <h5>Τυπολόγιο</h5>
@@ -116,7 +142,65 @@ nav: false
 <p><strong>β)</strong> Στην <strong>κάθοδο</strong> η τριβή αντιστρέφεται, οπότε $a_2=g(\text{ημ}30^\circ-\mu\,\text{συν}30^\circ)$. Από το ίδιο θεώρημα, $\dfrac{1}{2}m\upsilon^2=(mg\,\text{ημ}30^\circ-\mu mg\,\text{συν}30^\circ)s$, δηλαδή $\upsilon=\sqrt{2a_2 s}$. Αντικαθιστούμε: $a_2=10(0{,}5-0{,}125)=3{,}75\ \text{m/s}^2$ και $\upsilon=\sqrt{2\cdot3{,}75\cdot8}=\sqrt{60}\approx7{,}75\ \text{m/s}$ — μικρότερη από την αρχική, λόγω των απωλειών στην τριβή.</p>
 </details>
 
-<p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 12855, 13508, 11929, 13512, 13467, 38891, 38897, 13480, 13660). Οι εκφωνήσεις αποδόθηκαν ελεύθερα και τα σχήματα ξανασχεδιάστηκαν.</p>
+**Άσκηση 10 — Κατάβαση σε κεκλιμένο με τριβή (Θέμα Δ).** Κιβώτιο μάζας $m=1\ \text{kg}$ αφήνεται από την ηρεμία σε κεκλιμένο επίπεδο γωνίας $\varphi=30^\circ$ και ολισθαίνει προς τα κάτω με σταθερή επιτάχυνση $a=2\ \text{m/s}^2$. Δίνονται $\text{ημ}30^\circ=0{,}5$, $\text{συν}30^\circ=\dfrac{\sqrt3}{2}$, $g=10\ \text{m/s}^2$.<br>**α)** Να δικαιολογήσετε ότι το κεκλιμένο επίπεδο **δεν** είναι λείο.<br>**β)** Να υπολογίσετε την τριβή ολίσθησης και τον συντελεστή τριβής $\mu$.<br>**γ)** Όταν το κιβώτιο έχει διανύσει $x=4\ \text{m}$ στο κεκλιμένο, να υπολογίσετε το έργο του βάρους και τη μεταβολή της δυναμικής ενέργειας. Τι παρατηρείτε;<br>**δ)** Να βρείτε την ταχύτητά του στην ίδια θέση.
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>α)</strong> Αν το επίπεδο ήταν λείο, η μόνη δύναμη στον άξονα της κίνησης θα ήταν η συνιστώσα του βάρους, οπότε από τον <strong>2ο νόμο του Νεύτωνα</strong>: $a_0=g\,\text{ημφ}$. Αντικαθιστούμε: $a_0=10\cdot0{,}5=5\ \text{m/s}^2$. Επειδή το κιβώτιο κινείται με $a=2\ \text{m/s}^2&lt;a_0$, κάποια δύναμη αντιστέκεται στην κίνηση — υπάρχει <strong>τριβή ολίσθησης</strong>, άρα το επίπεδο δεν είναι λείο.</p>
+<p><strong>β)</strong> <strong>2ος νόμος του Νεύτωνα</strong> στον άξονα της κίνησης: $mg\,\text{ημφ}-T=ma \Rightarrow T=m(g\,\text{ημφ}-a)$. Κάθετα στο επίπεδο έχουμε ισορροπία: $N=mg\,\text{συνφ}$. Από τον <strong>νόμο της τριβής</strong> $T=\mu N$, λύνοντας ως προς $\mu$: $\mu=\dfrac{T}{N}$. Αντικαθιστούμε: $T=1\cdot(5-2)=3\ \text{N}$, $N=1\cdot10\cdot\dfrac{\sqrt3}{2}=5\sqrt3\approx8{,}7\ \text{N}$, οπότε $\mu=\dfrac{3}{5\sqrt3}=\dfrac{\sqrt3}{5}\approx0{,}35$.</p>
+<p><strong>γ)</strong> <strong>Έργο σταθερής δύναμης:</strong> κατά μήκος της κίνησης δρα η συνιστώσα $mg\,\text{ημφ}$ του βάρους, άρα $W_B=mg\,\text{ημφ}\cdot x$. Αντικαθιστούμε: $W_B=1\cdot10\cdot0{,}5\cdot4=20\ \text{J}$. Το κιβώτιο κατεβαίνει κατακόρυφο ύψος $h=x\,\text{ημφ}=2\ \text{m}$, οπότε από τον <strong>ορισμό της δυναμικής ενέργειας</strong> $U=mgh$: $\Delta U=-mgh=-20\ \text{J}$. Παρατηρούμε ότι $W_B=-\Delta U$ — αυτό ισχύει πάντα για <strong>συντηρητικές δυνάμεις</strong> όπως το βάρος.</p>
+<p><strong>δ)</strong> <strong>Θεώρημα έργου–ενέργειας</strong> (από την ηρεμία): $\dfrac{1}{2}m\upsilon^2-0=W_B+W_T=W_B-T\,x$. Αντικαθιστούμε: $\dfrac{1}{2}\cdot1\cdot\upsilon^2=20-3\cdot4=8\ \text{J} \Rightarrow \upsilon=4\ \text{m/s}$.</p>
+</details>
+
+**Άσκηση 11 — Εκκρεμές: ισορροπία & διατήρηση ενέργειας (Θέμα Δ).** Σφαίρα μάζας $m=10\ \text{kg}$ κρέμεται από νήμα μήκους $l=1\ \text{m}$ και αρχικά ισορροπεί με το νήμα κατακόρυφο (θέση 1). Με **σταθερή οριζόντια** δύναμη $F$ τη μετακινούμε ώσπου το νήμα να σχηματίσει γωνία $\varphi=60^\circ$ με την κατακόρυφο, όπου και ισορροπεί (θέση 2). Δίνονται $\text{ημ}60^\circ=\dfrac{\sqrt3}{2}$, $\text{συν}60^\circ=0{,}5$, $g=10\ \text{m/s}^2$.<br>**α)** Να υπολογίσετε την τάση του νήματος στη θέση 1 και στη θέση 2.<br>**β)** Να βρείτε το μέτρο της δύναμης $F$.<br>**γ)** Στη θέση 2 καταργούμε τη δύναμη $F$ και η σφαίρα αφήνεται ελεύθερη. Με ποια ταχύτητα περνά από τη θέση 1;
+
+<div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 240 135" style="max-width:240px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="18" x2="150" y2="18" stroke="#888" stroke-width="2"/><line x1="110" y1="18" x2="110" y2="98" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="110" y1="18" x2="179" y2="58" stroke="#888" stroke-width="2"/><path d="M110,34 A16,16 0 0 1 124,26" fill="none" stroke="var(--global-theme-color,#2a66d9)" stroke-width="1.4"/><text x="116" y="46" font-size="11" fill="currentColor">φ</text><circle cx="110" cy="98" r="6" fill="none" stroke="#2a66d9" stroke-width="1.6"/><text x="92" y="118" font-size="12" fill="currentColor">θέση 1</text><circle cx="179" cy="58" r="6" fill="#2a66d9"/><line x1="187" y1="58" x2="214" y2="58" stroke="#d9822a" stroke-width="2"/><polygon points="214,54 222,58 214,62" fill="#d9822a"/><text x="198" y="50" font-size="12" fill="currentColor">F</text><text x="170" y="80" font-size="12" fill="currentColor">θέση 2</text></svg></figure></div>
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>α)</strong> <strong>Θέση 1 — ισορροπία</strong> στον κατακόρυφο άξονα ($\Sigma F=0$): $T_1=mg$. Αντικαθιστούμε: $T_1=10\cdot10=100\ \text{N}$. <strong>Θέση 2:</strong> αναλύουμε την τάση $T_2$ σε οριζόντιο και κατακόρυφο άξονα ($T_{2x}=T_2\,\text{ημφ}$, $T_{2y}=T_2\,\text{συνφ}$). Από την <strong>ισορροπία</strong> κατακόρυφα: $T_2\,\text{συνφ}=mg \Rightarrow T_2=\dfrac{mg}{\text{συνφ}}$. Αντικαθιστούμε: $T_2=\dfrac{100}{0{,}5}=200\ \text{N}$.</p>
+<p><strong>β)</strong> Από την <strong>ισορροπία</strong> στον οριζόντιο άξονα της θέσης 2: $F=T_2\,\text{ημφ}$. Αντικαθιστούμε: $F=200\cdot\dfrac{\sqrt3}{2}=100\sqrt3\approx173\ \text{N}$.</p>
+<p><strong>γ)</strong> Μετά την κατάργηση της $F$, η τάση του νήματος είναι σε κάθε στιγμή <strong>κάθετη στην ταχύτητα</strong>, άρα δεν παράγει έργο· δρα ενεργειακά μόνο το βάρος (συντηρητική δύναμη), οπότε ισχύει η <strong>διατήρηση της μηχανικής ενέργειας</strong>: $mgh=\dfrac{1}{2}m\upsilon^2$, όπου το ύψος καθόδου από τη γεωμετρία είναι $h=l-l\,\text{συνφ}=l(1-\text{συνφ})$. Λύνοντας ως προς την ταχύτητα: $\upsilon=\sqrt{2gl(1-\text{συνφ})}$. Αντικαθιστούμε: $h=1\cdot(1-0{,}5)=0{,}5\ \text{m}$ και $\upsilon=\sqrt{2\cdot10\cdot0{,}5}=\sqrt{10}\approx3{,}2\ \text{m/s}$.</p>
+</details>
+
+<p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 12855, 13508, 11929, 13512, 13467, 38891, 38897, 13480, 13660, 13714, 14394). Οι εκφωνήσεις αποδόθηκαν ελεύθερα και τα σχήματα ξανασχεδιάστηκαν.</p>
 </div>
 
-<p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav subnav-bottom">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/syn-1/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">Συνδυαστικές (Κεφ. 1)</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/2-2/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">2.2 Ολική ενέργεια & υποβάθμιση</span></a>
+</div>
+
+<script>
+document.addEventListener('keydown', function (e) {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  var t = e.target || {};
+  var tag = (t.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select' || tag === 'ninja-keys' || t.isContentEditable) return;
+  var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
+  if (a) window.location.href = a.href;
+});
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
+</script>
