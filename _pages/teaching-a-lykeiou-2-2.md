@@ -22,11 +22,37 @@ nav: false
   .trap-box h4 { color: var(--global-theme-color); margin: 0.8rem 0 0.5rem; font-size: 1.05rem; letter-spacing: 0.02em; }
   .trap-box figure { margin: 0.6rem 0 0.2rem; }
   .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+  .subnav .sn-prev, .subnav .sn-next { display: grid; column-gap: 0.65rem; row-gap: 0.12rem; align-items: center; min-height: 44px; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; grid-template-columns: auto 1fr; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; grid-template-columns: 1fr auto; text-align: right; }
+  .subnav .sn-prev::before, .subnav .sn-next::after { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--global-theme-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-weight: 700; grid-row: 1 / span 2; transition: transform .15s ease; }
+  .subnav .sn-prev::before { content: '\2190'; grid-column: 1; }
+  .subnav .sn-next::after { content: '\2192'; grid-column: 2; }
+  .subnav .sn-prev:hover::before { transform: translateX(-3px); }
+  .subnav .sn-next:hover::after { transform: translateX(3px); }
+  .subnav a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 8px; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.94em; line-height: 1.3; color: var(--global-theme-color); font-weight: 500; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; font-size: 0.88em; white-space: nowrap; color: var(--global-theme-color); border: 1px solid var(--global-divider-color, #e3e3e3); border-radius: 999px; padding: 0.42rem 1.05rem; transition: border-color .15s ease, background .15s ease; }
+  .subnav .sn-all:hover { border-color: var(--global-theme-color); }
+  @media (max-width: 640px) {
+    .subnav { grid-template-columns: 1fr 1fr; }
+    .subnav .sn-prev { grid-column: 1; justify-self: stretch; }
+    .subnav .sn-next { grid-column: 2; justify-self: stretch; }
+    .subnav .sn-all { grid-column: 1 / -1; grid-row: 2; }
+  }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
 </style>
 
-<p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/2-1/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">2.1 Διατήρηση μηχανικής ενέργειας</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/mikta/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">Προετοιμασία για εξετάσεις</span></a>
+</div>
 
-<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index2_2.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Βιβλίο μαθητή</a></p>
+<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index2_2.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Δες την ενότητα «2.2 Ολική ενέργεια & υποβάθμιση» στο Βιβλίο μαθητή</a></p>
 
 <div class="typ-box" markdown="1">
 <h5>Τυπολόγιο</h5>
@@ -36,6 +62,44 @@ nav: false
 - **Εσωτερική ενέργεια:** $$U = N\, \bar{K}$$
 - **Διατήρηση ολικής ενέργειας (1ος θερμοδυναμικός):** $$Q = \Delta U + W$$
 - **Απόδοση μηχανής:** $$e = \dfrac{W_{\text{ωφ}}}{Q}$$
+</div>
+
+<div class="trap-box" markdown="1">
+<h4>Ασκήσεις από το σχολικό βιβλίο</h4>
+<p style="font-size:0.88em; color:var(--global-text-color-light,#828282); font-style:italic;">Κόλλησες; <a href="{{ '/teaching/study-hacks/' | relative_url }}" style="color:inherit;text-decoration:underline;">10 λεπτά προσπάθεια, μετά η λύση γραμμή-γραμμή</a>. Η αρίθμηση είναι του βιβλίου (Ασκήσεις – Προβλήματα, ενότητα 2.2). Παντού $g=10\ \text{m/s}^2$.</p>
+
+
+**Άσκηση 4 — Θέρμανση αερίου με έμβολο.** Κατά τη θέρμανση αερίου μέσα σε δοχείο με έμβολο, μεταβιβάζεται στο αέριο θερμότητα $400\ \text{J}$. Η εσωτερική ενέργεια του αερίου μεταβάλλεται κατά $250\ \text{J}$. Το αέριο ασκεί στο έμβολο σταθερή δύναμη $1\,500\ \text{N}$. Πόσο θα μετακινηθεί το έμβολο;
+
+<details class="qa"><summary>Λύση</summary>
+<p>Από την <strong>αρχή διατήρησης της ενέργειας</strong> για το αέριο, $Q=\Delta U+W$, όπου $W$ το έργο που <em>παράγει</em> το αέριο: $W=Q-\Delta U=400-250=150\ \text{J}$ — ό,τι θερμότητα δεν έμεινε στο αέριο ως εσωτερική ενέργεια έγινε έργο στο έμβολο.</p>
+<p>Από τον <strong>ορισμό του έργου</strong> σταθερής δύναμης $W=F\,x$: $x=\dfrac{W}{F}=\dfrac{150}{1\,500}=0{,}1\ \text{m}=10\ \text{cm}$.</p>
+</details>
+
+**Άσκηση 5 — Πτώση σε άμμο.** Ένα σώμα μάζας $0{,}8\ \text{kg}$ αφήνεται από ύψος $3\ \text{m}$, πέφτει σε άμμο και ακινητοποιείται. Πόσο αυξάνεται η εσωτερική ενέργεια του συστήματος; Δίνεται ότι στο σώμα κατά την πτώση του επενεργεί μόνο το βάρος του.
+
+<details class="qa"><summary>Λύση</summary>
+<p>Στην αρχή το σώμα έχει μόνο δυναμική ενέργεια $U=mgh=0{,}8\cdot10\cdot3=24\ \text{J}$· στο τέλος είναι ακίνητο στο έδαφος, με μηδενική μηχανική ενέργεια. Από την <strong>αρχή διατήρησης της ολικής ενέργειας</strong>, η μηχανική ενέργεια που «χάθηκε» δεν εξαφανίστηκε: έγινε εσωτερική ενέργεια του συστήματος σώμα + άμμος (θερμαίνονται και παραμορφώνονται). Άρα $\Delta U_{\text{εσ}}=24\ \text{J}$.</p>
+<p>Αυτή είναι η <strong>υποβάθμιση</strong> της ενέργειας: τα $24\ \text{J}$ υπάρχουν ακόμη, αλλά σκορπισμένα σε άτακτη κίνηση μορίων — δεν μπορούν πια να ξανασηκώσουν το σώμα.</p>
+</details>
+
+**Άσκηση 6 — Δίαιτα και θερμίδες.** Έστω ότι θέλετε να μειώσετε το βάρος σας και κάποιος σας προτείνει να μειώσετε κατά $10\%$ το ποσοστό θερμίδων στο καθημερινό σας διαιτολόγιο, διατηρώντας την ίδια καθημερινή σας δραστηριότητα. Λάβετε υπόψη ότι η καύση $1\ \text{g}$ λίπους αποδίδει $9{,}5\ \text{kcal}$. Ας υποθέσουμε ότι με ένα κανονικό διαιτολόγιο $3\,500\ \text{kcal}$ την ημέρα το βάρος σας παραμένει σταθερό. Σε πόσο χρόνο θα χάσετε $2\ \text{kg}$;
+
+<details class="qa"><summary>Λύση</summary>
+<p>Με $3\,500\ \text{kcal}$ την ημέρα το βάρος μένει σταθερό, δηλαδή ο οργανισμός ξοδεύει ακριβώς $3\,500\ \text{kcal}$ την ημέρα. Αν τρώμε $10\%$ λιγότερο, δηλαδή $0{,}10\cdot3\,500=350\ \text{kcal}$ λιγότερο, το ημερήσιο <strong>έλλειμμα</strong> ενέργειας είναι $350\ \text{kcal}$ — από τη <strong>διατήρηση της ενέργειας</strong>, ο οργανισμός το καλύπτει καίγοντας λίπος.</p>
+<p>Λίπος που καίγεται την ημέρα: $\dfrac{350\ \text{kcal}}{9{,}5\ \text{kcal/g}}\approx36{,}8\ \text{g}$. Για $2\ \text{kg}=2\,000\ \text{g}$: $t=\dfrac{2\,000}{36{,}8}\approx54$ ημέρες — σχεδόν δύο μήνες για δύο κιλά, με μόνο $10\%$ λιγότερο φαγητό.</p>
+</details>
+
+**Άσκηση 7 — Αυτοκίνητο, αντίσταση και βενζίνη.** Ένα αυτοκίνητο έχει μάζα $1\,000\ \text{kg}$ και κινείται σε οριζόντιο δρόμο με σταθερή ταχύτητα $108\ \text{km/h}$. Η συνολική δύναμη που αντιστέκεται στην κίνηση του αυτοκινήτου είναι $450\ \text{N}$.<br>**Α.** Πόση είναι η κινητική ενέργεια του αυτοκινήτου;<br>**Β.** Πόση ενέργεια απαιτείται για να διανύσει το αυτοκίνητο $1\ \text{km}$ με την ταχύτητα αυτή;<br>**Γ.** Ένα λίτρο βενζίνης όταν καεί αποδίδει $3\cdot10^7\ \text{J}$ και ο κινητήρας του αυτοκινήτου έχει απόδοση $30\%$. Πόση απόσταση διανύει το αυτοκίνητο κινούμενο με $108\ \text{km/h}$ όταν καταναλώσει $1\ \text{L}$ βενζίνης;
+
+<details class="qa"><summary>Λύση</summary>
+<p>Μονάδες: $\upsilon=108\ \text{km/h}=\dfrac{108\,000}{3\,600}=30\ \text{m/s}$.</p>
+<p><strong>Α.</strong> $K=\tfrac{1}{2}m\upsilon^2=\tfrac{1}{2}\cdot1\,000\cdot30^2=450\,000\ \text{J}=450\ \text{kJ}$.</p>
+<p><strong>Β.</strong> Η ταχύτητα είναι σταθερή, άρα η κινητική ενέργεια δεν αλλάζει· η ενέργεια που δίνει ο κινητήρας πάει εξ ολοκλήρου στο να νικήσει την αντίσταση. Για σταθερή ταχύτητα (ισορροπία δυνάμεων) η κινητήρια δύναμη ισούται με την αντίσταση, $F=450\ \text{N}$, και από τον <strong>ορισμό του έργου</strong>: $W=F\,s=450\cdot1\,000=450\,000\ \text{J}=450\ \text{kJ}$ ανά χιλιόμετρο — τυχαία ίση με την κινητική ενέργεια του (Α).</p>
+<p><strong>Γ.</strong> Από το $1\ \text{L}$ βενζίνης μόνο το $30\%$ γίνεται ωφέλιμο έργο (το υπόλοιπο <strong>υποβαθμίζεται</strong> σε θερμότητα στον κινητήρα και στα καυσαέρια): $W_{\text{ωφ}}=0{,}30\cdot3\cdot10^7=9\cdot10^6\ \text{J}$. Με $450\ \text{kJ}$ ανά km: $s=\dfrac{9\cdot10^6}{450\,000}=20\ \text{km}$ — δηλαδή $5\ \text{L}/100\ \text{km}$.</p>
+</details>
+
+<p class="trap-src">Πηγή: Φυσική Α′ Λυκείου (Γενικής Παιδείας), σχολικό βιβλίο — Ασκήσεις – Προβλήματα ενότητας 2.2. Οι εκφωνήσεις είναι του βιβλίου· οι λύσεις είναι δικές μας.</p>
 </div>
 
 <div class="trap-box" markdown="1">
@@ -77,4 +141,43 @@ nav: false
 <p class="trap-src">Ασκήσεις στο πρότυπο της ύλης του σχολικού βιβλίου (Φυσική Α′ Λυκείου, κεφ. 2.2) — πρωτότυπες εκφωνήσεις.</p>
 </div>
 
-<p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav subnav-bottom">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/2-1/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">2.1 Διατήρηση μηχανικής ενέργειας</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/mikta/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">Προετοιμασία για εξετάσεις</span></a>
+</div>
+
+<script>
+document.addEventListener('keydown', function (e) {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  var t = e.target || {};
+  var tag = (t.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select' || tag === 'ninja-keys' || t.isContentEditable) return;
+  var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
+  if (a) window.location.href = a.href;
+});
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
+</script>

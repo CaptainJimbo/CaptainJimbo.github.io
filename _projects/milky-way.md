@@ -3,8 +3,8 @@ layout: page
 title: Mapping the Milky Way's Spiral Arms
 description: Galactic structure from 21cm hydrogen radio emission.
 img: assets/img/milky-way-map.jpg
-importance: 3
-category: "Physics & Research"
+importance: 2
+category: "Misc"
 related_publications: false
 ---
 

@@ -4,12 +4,12 @@ title: Serverless APIs, Integrations and Data Pipelines
 description: The backend plumbing — serverless APIs, service integrations and data pipelines.
 img: assets/img/ai-infra.jpg
 importance: 2
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/ai-infra-hero.jpg' | relative_url }}" alt="{{ page.title }}">
 
 The **plumbing** behind a product — the backend services and pipes that expose APIs, connect systems and move data, with **no UI of their own**. Built **serverless** where it fits: pay-per-use, scale-to-zero, nothing to babysit.
 

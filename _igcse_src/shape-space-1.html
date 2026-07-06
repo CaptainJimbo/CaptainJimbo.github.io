@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Shape and Space 1 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>figure.d{margin:6px 0 4px;} figure.d svg{display:block;max-width:100%;}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 1</div><h1>Shape and Space 1 — Angles · Triangles · Polygons · Similar triangles</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Give a <em>reason</em> for every angle you find (e.g. "angles on a straight line", "alternate angles"). Diagrams are not drawn to scale. Marks in brackets. ★ = harder question.</p>
+
+<h2>A · Angles and triangles</h2>
+<ol class="q">
+<li><span class="marks">[3]</span>Lines $AB$ and $CD$ are parallel. A straight line crosses them as shown. Work out the angles $p$, $q$ and $r$, giving a reason for each.
+<figure class="d"><svg width="300" height="130" viewBox="0 0 300 130" font-family="Helvetica,Arial" font-size="12"><g stroke="#222" stroke-width="1.4"><line x1="20" y1="35" x2="280" y2="35"/><line x1="20" y1="100" x2="280" y2="100"/><line x1="90" y1="125" x2="200" y2="10"/></g><g fill="#222"><text x="6" y="39">A</text><text x="284" y="39">B</text><text x="6" y="104">C</text><text x="284" y="104">D</text><text x="196" y="26">68°</text><text x="150" y="52" fill="#1c4aa8">p</text><text x="108" y="96" fill="#1c4aa8">q</text><text x="128" y="118" fill="#1c4aa8">r</text></g><path d="M150,35 l8,0 M150,35 l-8,0" stroke="none"/></svg></figure>
+<div class="sol"><p>$p=68^\circ$ — <b>vertically opposite</b> angles are equal.</p><p>$r=68^\circ$ — <b>corresponding angles</b> are equal ($AB\parallel CD$): $r$ sits in the same position at the lower crossing as $p$ does at the upper one.</p><p>$q=180^\circ-68^\circ=112^\circ$ — <b>angles on a straight line</b> ($q$ and $r$) add up to $180^\circ$; equally, $p$ and $q$ are <b>co-interior</b> angles, which add up to $180^\circ$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[3]</span>In triangle $PQR$, $PQ=PR$. Angle $Q=(2x+5)^\circ$ and angle $P=(x+10)^\circ$. Find $x$ and the size of each angle.
+<div class="sol"><p>Isosceles: the base angles are equal, so angle $R$ = angle $Q=(2x+5)^\circ$. Angle sum $180^\circ$: $2(2x+5)+x+10=180 \Rightarrow 5x+20=180 \Rightarrow x=32$. Angles: $Q=R=69^\circ$, $P=42^\circ$ (sum 180 ✓).</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[2]</span>In triangle $ABC$, the side $BC$ is extended to a point $D$. Angle $ACD=125^\circ$ and angle $BAC=70^\circ$. Work out angle $ABC$, with a reason.
+<div class="sol"><p>The <b>exterior angle</b> of a triangle equals the sum of the two opposite interior angles: $125=70+\angle ABC \Rightarrow \angle ABC=55^\circ$. (Or: $\angle ACB=55^\circ$ on a straight line, then $180-70-55=55^\circ$.)</p></div>
+<div class="space" style="--h:3em"></div></li>
+</ol>
+
+<h2>B · Quadrilaterals and polygons</h2>
+<ol class="q" style="counter-reset:q 3">
+<li><span class="marks">[3]</span>The angles of a quadrilateral are $3x^\circ$, $(2x+20)^\circ$, $(x+40)^\circ$ and $90^\circ$. Find $x$ and the four angles.
+<div class="sol"><p>Angles in a quadrilateral add to $360^\circ$: $3x+2x+20+x+40+90=360 \Rightarrow 6x+150=360 \Rightarrow x=35$. Angles: $105^\circ$, $90^\circ$, $75^\circ$, $90^\circ$ (sum 360 ✓).</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+
+<li><span class="marks">[4]</span><ul class="parts"><li><b>a</b> Work out the interior angle of a regular decagon (10 sides).</li><li><b>b</b> A regular polygon has exterior angles of $24^\circ$. How many sides does it have, and what is its interior angle?</li></ul>
+<div class="sol"><p><b>a</b> Exterior angle $=\dfrac{360}{10}=36^\circ$, so interior $=180-36=144^\circ$. (Or $\dfrac{(10-2)\times180}{10}=144^\circ$.)</p><p><b>b</b> Exterior angles sum to $360^\circ$: $n=\dfrac{360}{24}=15$ sides. Interior $=180-24=156^\circ$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[3]</span>A regular hexagon and a square share a side. At one end of the shared side, the hexagon and the square each have another side meeting at that vertex. Calculate the angle between those two sides, outside both shapes. Show your working.
+<div class="sol"><p>Interior angle of a regular hexagon: $180-\dfrac{360}{6}=120^\circ$. Interior angle of a square: $90^\circ$. Angles around a point add to $360^\circ$: $360-120-90=150^\circ$.</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+</ol>
+
+<h2>C · Similar triangles and scale</h2>
+<ol class="q" style="counter-reset:q 6">
+<li><span class="marks">[4]</span>In triangle $ABC$, $D$ lies on $AB$ and $E$ lies on $AC$ with $DE$ parallel to $BC$. $AD=6$ cm, $DB=4$ cm, $DE=9$ cm and $AE=7.5$ cm.
+<figure class="d"><svg width="260" height="150" viewBox="0 0 260 150" font-family="Helvetica,Arial" font-size="12"><polygon points="40,135 230,135 120,15" fill="#fff8d6" stroke="#222" stroke-width="1.4"/><line x1="72" y1="87" x2="164" y2="87" stroke="#222" stroke-width="1.4"/><g fill="#222"><text x="114" y="12">A</text><text x="26" y="140">B</text><text x="234" y="140">C</text><text x="56" y="84">D</text><text x="169" y="84">E</text></g></svg></figure>
+<ul class="parts"><li><b>a</b> Explain why triangles $ADE$ and $ABC$ are similar.</li><li><b>b</b> Work out the length $BC$.</li><li><b>c</b> Work out the length $EC$.</li></ul>
+<div class="sol"><p><b>a</b> Angle $A$ is common; $\angle ADE=\angle ABC$ and $\angle AED=\angle ACB$ (corresponding angles, $DE\parallel BC$). Three equal angles → similar.</p><p><b>b</b> Scale factor from $ADE$ to $ABC$: $\dfrac{AB}{AD}=\dfrac{10}{6}=\dfrac{5}{3}$. So $BC=9\times\dfrac{5}{3}=15$ cm.</p><p><b>c</b> $AC=7.5\times\dfrac{5}{3}=12.5$ cm, so $EC=12.5-7.5=5$ cm.</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li><span class="marks">[3]</span>A map has scale $1:50\,000$.
+<ul class="parts"><li><b>a</b> Two villages are 7.4 cm apart on the map. How far apart are they in real life, in km?</li><li><b>b</b> A road is 12 km long. How long is it on the map?</li></ul>
+<div class="sol"><p><b>a</b> $7.4\times50\,000=370\,000$ cm $=3\,700$ m $=3.7$ km.</p><p><b>b</b> $12$ km $=1\,200\,000$ cm; $\div50\,000=24$ cm.</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+
+<li><span class="marks">[2]</span>Describe, step by step, how to construct with compasses and a ruler
+<ul class="parts"><li><b>a</b> the perpendicular bisector of a line segment $AB$ of length 6 cm;</li><li><b>b</b> an angle of $60^\circ$.</li></ul>
+<div class="sol"><p><b>a</b> Open the compasses to more than half of $AB$. With the point on $A$, draw arcs above and below the line; keep the same radius, point on $B$, draw two more arcs crossing the first pair. Join the two crossing points — this line cuts $AB$ at right angles through its midpoint.</p><p><b>b</b> Draw a line and mark a point $O$ on it. With the point on $O$ draw an arc crossing the line at $X$. Keep the radius, put the point on $X$ and draw an arc crossing the first arc at $Y$. Join $OY$: angle $XOY=60^\circ$ (triangle $OXY$ is equilateral).</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li class="star"><span class="marks">[3]</span>At the same moment, a 1.8 m tall person casts a shadow 2.4 m long and a tree casts a shadow 14 m long. Use similar triangles to find the height of the tree.
+<div class="sol"><p>The sun's rays make the same angle with the ground for both, so the two right-angled triangles (height, shadow) are similar. $\dfrac{\text{height}}{\text{shadow}}$ is the same: $\dfrac{h}{14}=\dfrac{1.8}{2.4} \Rightarrow h=14\times0.75=10.5$ m.</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+</ol>
+<p class="total">Total: 30 marks</p>
+<p class="note">Reasons to quote: angles on a line 180° · around a point 360° · vertically opposite · alternate / corresponding / co-interior (parallel lines) · triangle 180° · quadrilateral 360° · exterior angles of a polygon 360°.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Shape and Space 1</span></footer>
+</body></html>

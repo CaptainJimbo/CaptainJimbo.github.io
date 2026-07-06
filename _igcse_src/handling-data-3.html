@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Handling Data 3 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>table.t{border-collapse:collapse;margin:6px 0;font-size:0.95em} table.t th,table.t td{border:1px solid #999;padding:3px 9px;text-align:center} table.t th{background:#e8eef8}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 4</div><h1>Handling Data 3 — Measures of dispersion · Quartiles · Cumulative frequency</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Quartiles for small data sets: $Q_1$ is the $\frac{1}{4}(n+1)$th value, the median the $\frac{1}{2}(n+1)$th, $Q_3$ the $\frac{3}{4}(n+1)$th — if that falls between two values, take their mean. Squared paper for the graph question. Marks in brackets. ★ = harder question.</p>
+
+<ol class="q">
+<li><span class="marks">[6]</span>The average number of rainy days per month in a city is: Jan 2, Feb 1, Mar 3, Apr 4, May 15, Jun 24, Jul 27, Aug 26, Sep 20, Oct 12, Nov 5, Dec 2. Calculate <b>a</b> the range, <b>b</b> the median, <b>c</b> the inter-quartile range.
+<div class="sol"><p>In order ($n=12$): 1, 2, 2, 3, 4, 5, 12, 15, 20, 24, 26, 27.</p><p><b>a</b> $27-1=26$. &nbsp;<b>b</b> $\frac{13}{2}=6.5$th value: mean of 6th and 7th $=\dfrac{5+12}{2}=8.5$ days.</p><p><b>c</b> $Q_1$: $3.25$th → between 3rd and 4th: $\dfrac{2+3}{2}=2.5$. $Q_3$: $9.75$th → between 9th and 10th: $\dfrac{20+24}{2}=22$. IQR $=22-2.5=19.5$ days — the wet and dry seasons make the middle half very spread out.</p></div>
+<div class="space" style="--h:5em"></div></li>
+
+<li><span class="marks">[6]</span>Mira divides her garden into nine equal squares and counts the daisies in each: 10, 5, 15, 5, 10, 0, 10, 5, 15. Calculate <b>a</b> the range, <b>b</b> the median, <b>c</b> the inter-quartile range.
+<div class="sol"><p>In order ($n=9$): 0, 5, 5, 5, 10, 10, 10, 15, 15.</p><p><b>a</b> $15-0=15$. &nbsp;<b>b</b> 5th value: $10$. &nbsp;<b>c</b> $Q_1$ = 2.5th → $\dfrac{5+5}{2}=5$; $Q_3$ = 7.5th → $\dfrac{10+15}{2}=12.5$. IQR $=7.5$.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li><span class="marks">[13]</span>The marks of 30 boys and 30 girls in a test are grouped below.
+<table class="t"><tr><th>Marks $x$ (%)</th><th>Boys</th><th>Girls</th></tr><tr><td>$0<x\le20$</td><td>3</td><td>1</td></tr><tr><td>$20<x\le40$</td><td>7</td><td>3</td></tr><tr><td>$40<x\le60$</td><td>10</td><td>8</td></tr><tr><td>$60<x\le80$</td><td>6</td><td>11</td></tr><tr><td>$80<x\le100$</td><td>4</td><td>7</td></tr></table>
+<ul class="parts"><li><b>a</b> Draw a cumulative frequency graph for each set on the same axes, and use the graphs to estimate <b>(i)</b> the median and <b>(ii)</b> the inter-quartile range of each.</li><li><b>b</b> Compare the performance of the boys and the girls.</li></ul>
+<div class="sol"><p><b>a</b> Cumulative frequencies (plotted at the <em>upper</em> class boundaries 20, 40, 60, 80, 100): boys 3, 10, 20, 26, 30; girls 1, 4, 12, 23, 30. Join each set with a smooth S-shaped curve from $(0,0)$.</p><p>Read across at $\tfrac{1}{2}n=15$ for the median, $7.5$ for $Q_1$ and $22.5$ for $Q_3$. Boys: median $\approx50$, $Q_1\approx33$, $Q_3\approx68$, IQR $\approx35$. Girls: median $\approx65$, $Q_1\approx49$, $Q_3\approx79$, IQR $\approx30$. (Accept readings within a few marks.)</p><p><b>b</b> The girls did better on average — their median is about 15 marks higher. Their IQR is slightly smaller, so their marks are a little more consistent; the boys' marks are more spread out.</p></div>
+<div class="space" style="--h:9em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: order the data first · the IQR measures the spread of the middle 50% and ignores extremes · cumulative frequency is plotted at the <em>end</em> of each class · for large $n$ read the quartiles at $\frac{1}{4}n$, $\frac{1}{2}n$, $\frac{3}{4}n$ · compare with an average <em>and</em> a spread.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Handling Data 3</span></footer>
+</body></html>

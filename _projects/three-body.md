@@ -3,8 +3,8 @@ layout: page
 title: A Neural Network for the Three-Body Problem
 description: Deep learning as a fast emulator of chaotic gravitational dynamics.
 img: assets/img/three-body.jpg
-importance: 5
-category: "Physics & Research"
+importance: 4
+category: "Misc"
 related_publications: false
 ---
 

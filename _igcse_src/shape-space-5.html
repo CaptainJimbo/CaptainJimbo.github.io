@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Shape and Space 5 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 5</div><h1>Shape and Space 5 — Transformations: translation, reflection, rotation, enlargement</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Squared paper (and tracing paper for rotations) needed. Label every image. To <em>describe</em> a transformation, give all the details: vector / mirror line / angle, direction and centre / scale factor and centre. Marks in brackets. ★ = harder question.</p>
+
+<ol class="q">
+<li><span class="marks">[8]</span>Draw axes from $-6$ to $6$. Draw triangle $J$ with vertices $(-2,3)$, $(2,3)$ and $(1,5)$.
+<ul class="parts"><li><b>a</b> Translate $J$ by the vector $\begin{pmatrix}3\\-3\end{pmatrix}$. Label the image $K$.</li><li><b>b</b> Reflect $K$ in the line $y=-x$. Label the image $L$.</li><li><b>c</b> Reflect $L$ in the line $x=-3$. Label the image $M$.</li><li><b>d</b> Describe fully the single transformation that maps $M$ onto $J$.</li></ul>
+<div class="sol"><p><b>a</b> Add 3 to $x$, subtract 3 from $y$: $K$ is $(1,0)$, $(5,0)$, $(4,2)$.</p><p><b>b</b> Reflection in $y=-x$ sends $(x,y)\to(-y,-x)$: $L$ is $(0,-1)$, $(0,-5)$, $(-2,-4)$.</p><p><b>c</b> Reflection in $x=-3$ sends $(x,y)\to(-6-x,\,y)$: $M$ is $(-6,-1)$, $(-6,-5)$, $(-4,-4)$.</p><p><b>d</b> $M\to J$ is a <span class="ans">rotation of $90^\circ$ anticlockwise about $(-6,\,3)$</span>. Check with tracing paper, or: rotating $(-6,-1)$ by $90^\circ$ anticlockwise about $(-6,3)$ gives $(-2,3)$ ✓ and $(-4,-4)$ gives $(1,5)$ ✓.</p></div>
+<div class="space" style="--h:9em"></div></li>
+
+<li><span class="marks">[12]</span>Draw axes from $-6$ to $6$. Draw triangle $A$ with vertices $(-2,-1)$, $(-1,-1)$ and $(-1,1)$.
+<ul class="parts"><li><b>a</b> Rotate $A$ $90^\circ$ clockwise about $(1,2)$. Label the image $B$.</li><li><b>b</b> Enlarge $B$ by scale factor 2, centre $(-4,6)$. Label the image $C$.</li><li><b>c</b> Translate $C$ by $\begin{pmatrix}2\\-6\end{pmatrix}$. Label the image $D$.</li><li><b>d</b> Rotate $D$ $90^\circ$ anticlockwise about $(-3,-5)$. Label the image $E$.</li><li><b>e</b> Describe fully the single transformation that maps $E$ onto $A$.</li></ul>
+<div class="sol"><p><b>a</b> $B$: $(-2,5)$, $(-2,4)$, $(0,4)$.</p><p><b>b</b> Double each point's distance from $(-4,6)$: $C$: $(0,4)$, $(0,2)$, $(4,2)$.</p><p><b>c</b> $D$: $(2,-2)$, $(2,-4)$, $(6,-4)$.</p><p><b>d</b> $E$: $(-6,0)$, $(-4,0)$, $(-4,4)$.</p><p><b>e</b> $E$ has sides twice as long as $A$ and the same orientation, so it's an <span class="ans">enlargement, scale factor $\tfrac{1}{2}$, centre $(2,-2)$</span>. (Lines joining corresponding vertices, e.g. $(-6,0)\to(-2,-1)$ and $(-4,4)\to(-1,1)$, meet at $(2,-2)$.)</p></div>
+<div class="space" style="--h:10em"></div></li>
+
+<li class="star"><span class="marks">[5]</span>The point $P(a,\,b)$ is mapped to $Q(10,\,10)$ by the following transformations <em>in this order</em>: reflection in $y=x$; rotation of $90^\circ$ clockwise about $O$; translation by $\begin{pmatrix}-2\\4\end{pmatrix}$; enlargement of scale factor 2 about $O$. Find $a$ and $b$.
+<div class="sol"><p>Track the point: reflection in $y=x$: $(b,a)$. Rotation $90^\circ$ clockwise about $O$ sends $(x,y)\to(y,-x)$: $(a,-b)$. Translation: $(a-2,\,-b+4)$. Enlargement ×2: $(2a-4,\,-2b+8)=(10,10)$. So $2a-4=10 \Rightarrow a=7$ and $-2b+8=10 \Rightarrow b=-1$. <span class="ans">$P(7,-1)$.</span></p></div>
+<div class="space" style="--h:4.5em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Describe fully: translation → vector · reflection → mirror line equation · rotation → angle, direction, centre · enlargement → scale factor, centre. Useful rules: $y=x$: $(x,y)\to(y,x)$; $y=-x$: $(x,y)\to(-y,-x)$; $90^\circ$ clockwise about $O$: $(x,y)\to(y,-x)$; $90^\circ$ anticlockwise about $O$: $(x,y)\to(-y,x)$.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Shape and Space 5</span></footer>
+</body></html>

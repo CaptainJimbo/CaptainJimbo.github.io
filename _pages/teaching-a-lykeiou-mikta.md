@@ -18,9 +18,34 @@ toc:
   .trap-box { border: 2px dashed var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.9rem; margin: 1.2rem 0 1.8rem; background: rgba(127,127,127,0.035); }
   .trap-box figure { margin: 0.6rem 0 0.2rem; }
   .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+  .subnav .sn-prev, .subnav .sn-next { display: grid; column-gap: 0.65rem; row-gap: 0.12rem; align-items: center; min-height: 44px; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; grid-template-columns: auto 1fr; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; grid-template-columns: 1fr auto; text-align: right; }
+  .subnav .sn-prev::before, .subnav .sn-next::after { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--global-theme-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-weight: 700; grid-row: 1 / span 2; transition: transform .15s ease; }
+  .subnav .sn-prev::before { content: '\2190'; grid-column: 1; }
+  .subnav .sn-next::after { content: '\2192'; grid-column: 2; }
+  .subnav .sn-prev:hover::before { transform: translateX(-3px); }
+  .subnav .sn-next:hover::after { transform: translateX(3px); }
+  .subnav a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 8px; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.94em; line-height: 1.3; color: var(--global-theme-color); font-weight: 500; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; font-size: 0.88em; white-space: nowrap; color: var(--global-theme-color); border: 1px solid var(--global-divider-color, #e3e3e3); border-radius: 999px; padding: 0.42rem 1.05rem; transition: border-color .15s ease, background .15s ease; }
+  .subnav .sn-all:hover { border-color: var(--global-theme-color); }
+  @media (max-width: 640px) {
+    .subnav { grid-template-columns: 1fr 1fr; }
+    .subnav .sn-prev { grid-column: 1; justify-self: stretch; }
+    .subnav .sn-next { grid-column: 2; justify-self: stretch; }
+    .subnav .sn-all { grid-column: 1 / -1; grid-row: 2; }
+  }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
 </style>
 
-<p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/2-2/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">2.2 Ολική ενέργεια & υποβάθμιση</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+</div>
 
 Επαναληπτικά **θέματα εξετάσεων εφ' όλης της ύλης**: **10 θέματα τύπου Β** (έννοιες & αιτιολόγηση) και **10 θέματα τύπου Δ** (πλήρη προβλήματα), επιλεγμένα από την [Τράπεζα Θεμάτων του Ι.Ε.Π.](https://trapeza.iep.edu.gr/grades/1/classes/1/subjects/7){:target="_blank" rel="noopener"} Συνδυάζουν κινηματική, δυναμική και ενέργεια.
 
@@ -206,7 +231,7 @@ toc:
 
 <details class="qa"><summary>Λύση</summary>
 <p>Σε κάθε φάση εφαρμόζουμε τον <strong>2ο νόμο του Νεύτωνα</strong> $a=\dfrac{F}{m}$ και μετά τις <strong>εξισώσεις ταχύτητας/θέσης</strong>.<br><strong>0–2 s</strong> ($a=\tfrac{4}{1}=4\ \text{m/s}^2$): $\upsilon_2=at=8\ \text{m/s}$, $x_2=\tfrac{1}{2}at^2=8\ \text{m}$. <strong>2–8 s</strong> ($F=0$ → σταθερή ταχύτητα): $\upsilon=8\ \text{m/s}$, $x_8=x_2+\upsilon\cdot6=8+48=56\ \text{m}$. <strong>8–14 s</strong> ($a=-4\ \text{m/s}^2$): $\upsilon_{14}=8-4\cdot6=-16\ \text{m/s}$, $x_{14}=56+8\cdot6-\tfrac{1}{2}\cdot4\cdot6^2=32\ \text{m}$.</p>
-<p>Από το <strong>θεώρημα έργου–ενέργειας</strong>: $\Delta K=\tfrac{1}{2}m\upsilon_{14}^2-0=\tfrac{1}{2}\cdot1\cdot16^2=128\ \text{J}$ (ίσο με το συνολικό έργο).</p>
+<p>Από το <strong>θεώρημα μεταβολής της κινητικής ενέργειας</strong>: $\Delta K=\tfrac{1}{2}m\upsilon_{14}^2-0=\tfrac{1}{2}\cdot1\cdot16^2=128\ \text{J}$ (ίσο με το συνολικό έργο).</p>
 </details>
 
 **Θέμα 4.** Κιβώτιο μάζας $10\ \text{kg}$ σπρώχνεται και ανεβαίνει σε **λείο** κεκλιμένο επίπεδο ($\text{ημφ}=0{,}6$, $\text{συνφ}=0{,}8$), διανύοντας ΑΒ $=10\ \text{m}$ σε $10\ \text{s}$ ξεκινώντας από ηρεμία ($g=10$). Βρείτε:
@@ -228,7 +253,7 @@ toc:
 <br>**γ)** τη θερμότητα λόγω τριβής σε όλη τη διαδρομή.
 
 <details class="qa"><summary>Λύση</summary>
-<p><strong>α)</strong> Στην <strong>άνοδο</strong>, βάρος και τριβή έχουν φορά προς τα κάτω, οπότε η επιβράδυνση είναι $a_1=g(\text{ημ}30^\circ+\mu\,\text{συν}30^\circ)$. Αντικαθιστούμε: $a_1=10(0{,}5+0{,}3)=8\ \text{m/s}^2$. Το διάστημα από το <strong>θεώρημα έργου–ενέργειας</strong> ($0-\tfrac{1}{2}m\upsilon_0^2=-m a_1 s$): $s=\dfrac{\upsilon_0^2}{2a_1}=\dfrac{100}{16}=6{,}25\ \text{m}$.</p>
+<p><strong>α)</strong> Στην <strong>άνοδο</strong>, βάρος και τριβή έχουν φορά προς τα κάτω, οπότε η επιβράδυνση είναι $a_1=g(\text{ημ}30^\circ+\mu\,\text{συν}30^\circ)$. Αντικαθιστούμε: $a_1=10(0{,}5+0{,}3)=8\ \text{m/s}^2$. Το διάστημα από το <strong>θεώρημα μεταβολής της κινητικής ενέργειας</strong> ($0-\tfrac{1}{2}m\upsilon_0^2=-m a_1 s$): $s=\dfrac{\upsilon_0^2}{2a_1}=\dfrac{100}{16}=6{,}25\ \text{m}$.</p>
 <p><strong>β)</strong> Στην <strong>κάθοδο</strong> η τριβή αντιστρέφεται: $a_2=g(\text{ημ}30^\circ-\mu\,\text{συν}30^\circ)=10(0{,}5-0{,}3)=2\ \text{m/s}^2$. Από το ίδιο θεώρημα ($\tfrac{1}{2}m\upsilon^2=m a_2 s$): $\upsilon=\sqrt{2a_2 s}=\sqrt{2\cdot2\cdot6{,}25}=5\ \text{m/s}$.</p>
 <p><strong>γ)</strong> Η <strong>θερμότητα</strong> ισούται με το έργο της τριβής σε όλη τη διαδρομή (μήκος $2s$): $Q=\mu mg\,\text{συν}30^\circ\cdot 2s$. Αντικαθιστούμε: $Q=3\cdot12{,}5=37{,}5\ \text{J}$.</p>
 </details>
@@ -240,7 +265,7 @@ toc:
 
 <details class="qa"><summary>Λύση</summary>
 <p><strong>α)</strong> Στο <strong>λείο</strong> ΑΓ η ταχύτητα είναι σταθερή, από τον <strong>ορισμό της ταχύτητας</strong>: $\upsilon=\dfrac{AΓ}{t}=\dfrac{20}{2}=10\ \text{m/s}$. <strong>Κινητική ενέργεια</strong> στο Γ: $K=\tfrac{1}{2}m\upsilon^2=\tfrac{1}{2}\cdot1\cdot10^2=50\ \text{J}$.</p>
-<p><strong>β)</strong> Στο κεκλιμένο η επιβράδυνση είναι $a=g(\text{ημ}30^\circ+\mu\,\text{συν}30^\circ)=10(0{,}5+0{,}5)=10\ \text{m/s}^2$. Από το <strong>θεώρημα έργου–ενέργειας</strong> ($0-K=-m a\, s$): $s=\dfrac{K}{ma}=\dfrac{50}{1\cdot10}=5\ \text{m}$.</p>
+<p><strong>β)</strong> Στο κεκλιμένο η επιβράδυνση είναι $a=g(\text{ημ}30^\circ+\mu\,\text{συν}30^\circ)=10(0{,}5+0{,}5)=10\ \text{m/s}^2$. Από το <strong>θεώρημα μεταβολής της κινητικής ενέργειας</strong> ($0-K=-m a\, s$): $s=\dfrac{K}{ma}=\dfrac{50}{1\cdot10}=5\ \text{m}$.</p>
 <p><strong>γ)</strong> Στην κορυφή συγκρίνουμε τη <strong>μέγιστη στατική τριβή</strong> με τη συνιστώσα του βάρους κατά μήκος: $\mu mg\,\text{συν}30^\circ=5\ \text{N}$ και $mg\,\text{ημ}30^\circ=5\ \text{N}$ — ίσες, άρα το σώμα <strong>ισορροπεί και δεν επιστρέφει</strong>.</p>
 </details>
 
@@ -295,4 +320,42 @@ toc:
 <p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 11932, 11933, 12993, 13579, 12990, 13669, 13696, 13563, 13590, 13481). Οι εκφωνήσεις αποδόθηκαν ελεύθερα και τα σχήματα ξανασχεδιάστηκαν.</p>
 </div>
 
-<p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav subnav-bottom">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/2-2/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">2.2 Ολική ενέργεια & υποβάθμιση</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+</div>
+
+<script>
+document.addEventListener('keydown', function (e) {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  var t = e.target || {};
+  var tag = (t.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select' || tag === 'ninja-keys' || t.isContentEditable) return;
+  var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
+  if (a) window.location.href = a.href;
+});
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
+</script>

@@ -22,11 +22,37 @@ nav: false
   .trap-box h4 { color: var(--global-theme-color); margin: 0.8rem 0 0.5rem; font-size: 1.05rem; letter-spacing: 0.02em; }
   .trap-box figure { margin: 0.6rem 0 0.2rem; }
   .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+  .subnav .sn-prev, .subnav .sn-next { display: grid; column-gap: 0.65rem; row-gap: 0.12rem; align-items: center; min-height: 44px; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; grid-template-columns: auto 1fr; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; grid-template-columns: 1fr auto; text-align: right; }
+  .subnav .sn-prev::before, .subnav .sn-next::after { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--global-theme-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-weight: 700; grid-row: 1 / span 2; transition: transform .15s ease; }
+  .subnav .sn-prev::before { content: '\2190'; grid-column: 1; }
+  .subnav .sn-next::after { content: '\2192'; grid-column: 2; }
+  .subnav .sn-prev:hover::before { transform: translateX(-3px); }
+  .subnav .sn-next:hover::after { transform: translateX(3px); }
+  .subnav a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 8px; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.94em; line-height: 1.3; color: var(--global-theme-color); font-weight: 500; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; font-size: 0.88em; white-space: nowrap; color: var(--global-theme-color); border: 1px solid var(--global-divider-color, #e3e3e3); border-radius: 999px; padding: 0.42rem 1.05rem; transition: border-color .15s ease, background .15s ease; }
+  .subnav .sn-all:hover { border-color: var(--global-theme-color); }
+  @media (max-width: 640px) {
+    .subnav { grid-template-columns: 1fr 1fr; }
+    .subnav .sn-prev { grid-column: 1; justify-self: stretch; }
+    .subnav .sn-next { grid-column: 2; justify-self: stretch; }
+    .subnav .sn-all { grid-column: 1 / -1; grid-row: 2; }
+  }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
 </style>
 
-<p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/1-2/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">1.2 Δυναμική σε μία διάσταση</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/syn-1/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">Συνδυαστικές (Κεφ. 1)</span></a>
+</div>
 
-<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index1_3.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Βιβλίο μαθητή</a></p>
+<p style="margin:0 0 1.1rem;"><a href="https://ebooks.edu.gr/ebooks/v/html/8547/2680/Fysiki_A-Lykeiou_html-empl/index1_3.html" target="_blank" rel="noopener" style="color:var(--global-theme-color);"><i class="fa-solid fa-book"></i>&nbsp;Δες την ενότητα «1.3 Δυναμική στο επίπεδο» στο Βιβλίο μαθητή</a></p>
 
 <div class="typ-box" markdown="1">
 <h5>Τυπολόγιο</h5>
@@ -44,6 +70,110 @@ nav: false
 - **Γραμμική ταχύτητα:** $$\upsilon = \omega\, r = \dfrac{2\pi r}{T}$$
 - **Κεντρομόλος επιτάχυνση:** $$a_{\text{κ}} = \dfrac{\upsilon^2}{r}$$
 - **Κεντρομόλος δύναμη:** $$F_{\text{κ}} = \dfrac{m\, \upsilon^2}{r}$$
+</div>
+
+<div class="trap-box" markdown="1">
+<h4>Ασκήσεις από το σχολικό βιβλίο</h4>
+<p style="font-size:0.88em; color:var(--global-text-color-light,#828282); font-style:italic;">Κόλλησες; <a href="{{ '/teaching/study-hacks/' | relative_url }}" style="color:inherit;text-decoration:underline;">10 λεπτά προσπάθεια, μετά η λύση γραμμή-γραμμή</a>. Η αρίθμηση είναι του βιβλίου (Ασκήσεις – Προβλήματα, ενότητα 1.3)· το ★ σημειώνει τις δυσκολότερες, όπως τις χαρακτηρίζει το βιβλίο. Παντού $g=10\ \text{m/s}^2$.</p>
+
+
+**Άσκηση 4 — Στη Σελήνη: βαρύτητα και οριζόντια βολή.** Ένας αστροναύτης βρίσκεται στη Σελήνη και αφήνει ένα σώμα από ύψος $7{,}2\ \text{m}$, που φτάνει στο έδαφος μετά από $3\ \text{s}$.<br>**Α.** Πόση είναι η επιτάχυνση βαρύτητας στη Σελήνη;<br>**Β.** Αν ο αστροναύτης πετάξει το σώμα οριζόντια με ταχύτητα $12\ \text{m/s}$ από το ίδιο ύψος, **i)** πόσος χρόνος χρειάζεται μέχρι να φτάσει το σώμα στο έδαφος; **ii)** πόση οριζόντια απόσταση θα διανύσει μέχρι να φτάσει στο έδαφος;
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>Α.</strong> Η <strong>ελεύθερη πτώση</strong> είναι ομαλά επιταχυνόμενη κίνηση από ηρεμία με επιτάχυνση $g_\Sigma$, άρα η <strong>εξίσωση κίνησης</strong> είναι $h=\tfrac{1}{2}g_\Sigma t^2$. Λύνουμε ως προς $g_\Sigma$: $g_\Sigma=\dfrac{2h}{t^2}=\dfrac{2\cdot7{,}2}{3^2}=1{,}6\ \text{m/s}^2$.</p>
+<p><strong>Β.</strong> Η <strong>οριζόντια βολή</strong> είναι σύνθετη κίνηση: στον κατακόρυφο άξονα ελεύθερη πτώση, στον οριζόντιο ευθύγραμμη ομαλή με $\upsilon_0$ — οι δύο κινήσεις είναι ανεξάρτητες. <strong>i)</strong> Ο χρόνος πτώσης καθορίζεται μόνο από την κατακόρυφη κίνηση: $h=\tfrac{1}{2}g_\Sigma t^2 \Rightarrow t=\sqrt{\dfrac{2h}{g_\Sigma}}=\sqrt{\dfrac{2\cdot7{,}2}{1{,}6}}=3\ \text{s}$ — ίδιος με πριν, γιατί το ίδιο ύψος πέφτει με την ίδια $g_\Sigma$. <strong>ii)</strong> Στον οριζόντιο άξονα, από την <strong>εξίσωση κίνησης της Ε.Ο.Κ.</strong>: $x=\upsilon_0 t=12\cdot3=36\ \text{m}$.</p>
+</details>
+
+**Άσκηση 6 — Δύο σώματα σε τροχαλία.** Τα σώματα που φαίνονται στην εικόνα έχουν μάζες $m_1=3\ \text{kg}$ και $m_2=1\ \text{kg}$. Το σύστημα αφήνεται ελεύθερο από την ηρεμία.<br>**Α.** Να σχεδιάσετε τις δυνάμεις που δέχεται κάθε σώμα και να εφαρμόσετε για το καθένα το θεμελιώδη νόμο της Μηχανικής.<br>**Β.** Να υπολογιστεί η επιτάχυνση του κάθε σώματος.<br>**Γ.** Να υπολογιστεί η τάση του νήματος. Να θεωρήσετε ότι και τα δύο σώματα δέχονται την ίδια τάση.
+
+<figure markdown="0"><svg width="100%" viewBox="0 0 260 230" style="max-width:250px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="18" x2="200" y2="18" stroke="currentColor" stroke-width="2.5"/><line x1="130" y1="18" x2="130" y2="40" stroke="#888" stroke-width="4"/><circle cx="130" cy="52" r="16" fill="#c9cfd8" stroke="currentColor" stroke-width="1.2"/><circle cx="130" cy="52" r="3" fill="currentColor"/><line x1="114" y1="52" x2="114" y2="150" stroke="currentColor" stroke-width="1.2"/><line x1="146" y1="52" x2="146" y2="120" stroke="currentColor" stroke-width="1.2"/><rect x="94" y="150" width="40" height="40" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><rect x="132" y="120" width="28" height="28" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><g stroke="#2a66d9" stroke-width="2" fill="none"><line x1="114" y1="150" x2="114" y2="112"/><path d="M114,112 l-4,7 M114,112 l4,7"/><line x1="146" y1="120" x2="146" y2="90"/><path d="M146,90 l-4,7 M146,90 l4,7"/></g><g stroke="#d9442a" stroke-width="2" fill="none"><line x1="114" y1="190" x2="114" y2="226"/><path d="M114,226 l-4,-7 M114,226 l4,-7"/><line x1="146" y1="148" x2="146" y2="172"/><path d="M146,172 l-4,-7 M146,172 l4,-7"/></g><g font-size="12" fill="currentColor"><text x="70" y="175">m₁</text><text x="166" y="138">m₂</text><text x="98" y="118" fill="#2a66d9">T</text><text x="152" y="98" fill="#2a66d9">T</text><text x="80" y="214" fill="#d9442a">m₁g</text><text x="152" y="168" fill="#d9442a">m₂g</text></g></svg></figure>
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>Α.</strong> Σε κάθε σώμα δρουν δύο δυνάμεις: το <strong>βάρος</strong> του (προς τα κάτω) και η <strong>τάση του νήματος</strong> $T$ (προς τα πάνω), ίδια και στα δύο (σχήμα). Επειδή $m_1>m_2$, το $m_1$ κατεβαίνει και το $m_2$ ανεβαίνει με την ίδια επιτάχυνση $a$ (το νήμα δεν τεντώνεται ούτε χαλαρώνει). Παίρνουμε θετική φορά για κάθε σώμα τη φορά της κίνησής του και εφαρμόζουμε τον <strong>2ο νόμο του Νεύτωνα</strong> $\Sigma F=m\,a$:</p>
+<p>$$m_1 g-T=m_1 a \quad (1), \qquad T-m_2 g=m_2 a \quad (2).$$</p>
+<p><strong>Β.</strong> Προσθέτουμε κατά μέλη τις (1) και (2) — η $T$ απαλείφεται: $(m_1-m_2)\,g=(m_1+m_2)\,a \Rightarrow a=\dfrac{m_1-m_2}{m_1+m_2}\,g=\dfrac{3-1}{3+1}\cdot10=5\ \text{m/s}^2$, ίδια και για τα δύο σώματα.</p>
+<p><strong>Γ.</strong> Από τη (2), λύνοντας ως προς $T$: $T=m_2\,(g+a)=1\cdot(10+5)=15\ \text{N}$. Έλεγχος από την (1): $T=m_1(g-a)=3\cdot5=15\ \text{N}$ ✓. Παρατήρηση: η τάση είναι <em>μικρότερη</em> από το βάρος του $m_1$ (30 N) και <em>μεγαλύτερη</em> από του $m_2$ (10 N) — έτσι το ένα επιταχύνεται προς τα κάτω και το άλλο προς τα πάνω.</p>
+</details>
+
+**★ Άσκηση 8 — Ελικόπτερο και πιλότος.** Ελικόπτερο έχει μάζα $M=1\,920\ \text{kg}$ και ο πιλότος μάζα $m=80\ \text{kg}$. Το σύστημα ανυψώνεται κατακόρυφα με επιτάχυνση $2\ \text{m/s}^2$.<br>**Α.** Να σχεδιαστούν οι δυνάμεις που δέχονται ο πιλότος και το ελικόπτερο.<br>**Β.** Να υπολογιστεί η ανυψωτική δύναμη που ασκείται στο ελικόπτερο.<br>**Γ.** Να υπολογιστεί η δύναμη που δέχεται ο πιλότος από το κάθισμα.
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>Α.</strong> <strong>Πιλότος:</strong> το βάρος του $mg$ (κάτω) και η δύναμη $N$ από το κάθισμα (πάνω). <strong>Ελικόπτερο:</strong> το βάρος του $Mg$ (κάτω), η ανυψωτική δύναμη $F$ από τον έλικα (πάνω) και η δύναμη $N$ που του ασκεί ο πιλότος μέσω του καθίσματος (κάτω — <strong>δράση–αντίδραση</strong> με τη δύναμη του καθίσματος στον πιλότο).</p>
+<p><strong>Β.</strong> Για το <strong>σύστημα</strong> ελικόπτερο + πιλότος (ολική μάζα $M+m$) οι δυνάμεις $N$ είναι εσωτερικές και απαλείφονται. Με θετική φορά προς τα πάνω, από τον <strong>2ο νόμο του Νεύτωνα</strong>: $F-(M+m)\,g=(M+m)\,a \Rightarrow F=(M+m)(g+a)=2\,000\cdot(10+2)=24\,000\ \text{N}$.</p>
+<p><strong>Γ.</strong> Για τον <strong>πιλότο</strong> μόνο: $N-mg=m\,a \Rightarrow N=m\,(g+a)=80\cdot12=960\ \text{N}$. Είναι μεγαλύτερη από το βάρος του (800 N) — αυτό είναι το «βάρεμα» που νιώθουμε όταν ένα ασανσέρ ξεκινά προς τα πάνω.</p>
+</details>
+
+**★ Άσκηση 9 — Κιβώτιο με τριβή.** Ένα κιβώτιο μάζας $5\ \text{kg}$ ηρεμεί σε οριζόντιο δάπεδο και δέχεται οριζόντια δύναμη $F=30\ \text{N}$. Μετά από $10\ \text{m}$ έχει αποκτήσει ταχύτητα $10\ \text{m/s}$.<br>**Α.** Να υπολογιστεί η τιμή της επιτάχυνσης του σώματος.<br>**Β.** Να δικαιολογήσετε γιατί υπάρχει δύναμη τριβής και να υπολογίσετε την τιμή της.<br>**Γ.** Να υπολογίσετε την τιμή του συντελεστή της τριβής ολίσθησης.
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>Α.</strong> Από ηρεμία: <strong>εξίσωση ταχύτητας</strong> $\upsilon=a\,t \Rightarrow t=\dfrac{\upsilon}{a}$ και <strong>εξίσωση κίνησης</strong> $s=\tfrac{1}{2}a\,t^2=\tfrac{1}{2}a\dfrac{\upsilon^2}{a^2}=\dfrac{\upsilon^2}{2a}$. Λύνουμε ως προς $a$: $a=\dfrac{\upsilon^2}{2s}=\dfrac{10^2}{2\cdot10}=5\ \text{m/s}^2$.</p>
+<p><strong>Β.</strong> Αν δρούσε μόνο η $F$, ο <strong>2ος νόμος του Νεύτωνα</strong> θα έδινε $a=\dfrac{F}{m}=\dfrac{30}{5}=6\ \text{m/s}^2$, μεγαλύτερη από την πραγματική. Άρα υπάρχει και μια δύναμη αντίθετη στην κίνηση: η <strong>τριβή ολίσθησης</strong> $T$. Στην οριζόντια διεύθυνση: $F-T=m\,a \Rightarrow T=F-m\,a=30-5\cdot5=5\ \text{N}$.</p>
+<p><strong>Γ.</strong> Κατακόρυφα το σώμα ισορροπεί: $N=mg=50\ \text{N}$. Από τον <strong>νόμο της τριβής</strong> $T=\mu N$: $\mu=\dfrac{T}{N}=\dfrac{5}{50}=0{,}1$.</p>
+</details>
+
+**★ Άσκηση 12 — Τροχαλία με τριβή.** Τα σώματα της εικόνας έχουν μάζες $m_1=8\ \text{kg}$ και $m_2=12\ \text{kg}$. Ο συντελεστής τριβής του σώματος μάζας $m_2$ με το δάπεδο είναι $0{,}25$. Το σύστημα αφήνεται ελεύθερο να κινηθεί.<br>**Α.** Να σχεδιάσετε τις δυνάμεις που δέχεται κάθε σώμα.<br>**Β.** Να εφαρμόσετε το θεμελιώδη νόμο της Μηχανικής για κάθε σώμα.<br>**Γ.** Να υπολογίσετε την τιμή της επιτάχυνσης με την οποία κινείται κάθε σώμα.
+
+<figure markdown="0"><svg width="100%" viewBox="0 0 320 230" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg"><path d="M110,100 L300,100 L300,106 L116,106 L116,225 L110,225 Z" fill="#c9cfd8" stroke="currentColor" stroke-width="1"/><circle cx="100" cy="88" r="12" fill="#e2e6ec" stroke="currentColor" stroke-width="1.2"/><circle cx="100" cy="88" r="2.5" fill="currentColor"/><line x1="100" y1="76" x2="200" y2="76" stroke="currentColor" stroke-width="1.2"/><line x1="88" y1="88" x2="88" y2="160" stroke="currentColor" stroke-width="1.2"/><rect x="200" y="56" width="48" height="44" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><rect x="68" y="160" width="36" height="40" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><g stroke="#2a66d9" stroke-width="2" fill="none"><line x1="200" y1="76" x2="160" y2="76"/><path d="M160,76 l7,-4 M160,76 l7,4"/><line x1="88" y1="160" x2="88" y2="128"/><path d="M88,128 l-4,7 M88,128 l4,7"/><line x1="224" y1="56" x2="224" y2="24"/><path d="M224,24 l-4,7 M224,24 l4,7"/></g><g stroke="#d9442a" stroke-width="2" fill="none"><line x1="248" y1="92" x2="286" y2="92"/><path d="M286,92 l-7,-4 M286,92 l-7,4"/><line x1="224" y1="100" x2="224" y2="130"/><path d="M224,130 l-4,-7 M224,130 l4,-7"/><line x1="86" y1="200" x2="86" y2="226"/><path d="M86,226 l-4,-7 M86,226 l4,-7"/></g><g font-size="12" fill="currentColor"><text x="252" y="50">m₂</text><text x="36" y="186">m₁</text><text x="172" y="70" fill="#2a66d9">T</text><text x="94" y="140" fill="#2a66d9">T</text><text x="230" y="30" fill="#2a66d9">N</text><text x="266" y="86" fill="#d9442a">T<tspan font-size="9" dy="3">τρ</tspan></text><text x="230" y="126" fill="#d9442a">m₂g</text><text x="52" y="222" fill="#d9442a">m₁g</text></g></svg></figure>
+
+<details class="qa"><summary>Λύση</summary>
+<p><strong>Α.</strong> <strong>Σώμα $m_1$ (κρέμεται):</strong> βάρος $m_1g$ (κάτω), τάση $T$ (πάνω). <strong>Σώμα $m_2$ (στο τραπέζι):</strong> βάρος $m_2g$ (κάτω), κάθετη αντίδραση $N$ (πάνω), τάση $T$ (προς την τροχαλία) και τριβή ολίσθησης $T_{\text{τρ}}$ (αντίθετη στην κίνηση). Το $m_1$ κατεβαίνει και τραβά το $m_2$ — ελέγχουμε ότι όντως κινείται: $m_1g=80\ \text{N}$ είναι μεγαλύτερο από τη μέγιστη τριβή $\mu m_2 g=0{,}25\cdot120=30\ \text{N}$ ✓.</p>
+<p><strong>Β.</strong> Τα δύο σώματα έχουν κοινή επιτάχυνση $a$ (ίδιο νήμα). Με θετική φορά τη φορά κίνησης καθενός, ο <strong>2ος νόμος του Νεύτωνα</strong> δίνει:</p>
+<p>$$m_1:\ m_1g-T=m_1a \quad (1), \qquad m_2:\ T-T_{\text{τρ}}=m_2a \quad (2),$$</p>
+<p>ενώ κατακόρυφα για το $m_2$: $N=m_2g$, και από τον <strong>νόμο της τριβής</strong> $T_{\text{τρ}}=\mu N=\mu m_2 g$.</p>
+<p><strong>Γ.</strong> Προσθέτουμε τις (1) και (2) για να απαλειφθεί η $T$: $m_1g-\mu m_2g=(m_1+m_2)\,a \Rightarrow a=\dfrac{(m_1-\mu m_2)\,g}{m_1+m_2}$. Αντικαθιστούμε: $a=\dfrac{(8-0{,}25\cdot12)\cdot10}{8+12}=\dfrac{50}{20}=2{,}5\ \text{m/s}^2$ και για τα δύο σώματα. (Από την (1): $T=m_1(g-a)=8\cdot7{,}5=60\ \text{N}$.)</p>
+</details>
+
+**★ Άσκηση 18 — Αυτοκίνητο σε κυκλική πλατεία.** Ένα αυτοκίνητο κινείται με σταθερή ταχύτητα γύρω από μια κυκλική πλατεία διαμέτρου $135{,}2\ \text{m}$. Στην κίνηση αυτή η τριβή μεταξύ των τροχών και του οδοστρώματος, η οποία εμποδίζει την πλευρική ολίσθηση του αυτοκινήτου, λειτουργεί ως κεντρομόλος δύναμη. Εάν αυτή η τριβή δεν πρέπει να υπερβαίνει το $25\%$ του βάρους του αυτοκινήτου, υπολογίστε τη μέγιστη ταχύτητα με την οποία μπορεί να κινείται το αυτοκίνητο χωρίς να ολισθαίνει.
+
+<details class="qa"><summary>Λύση</summary>
+<p>Η ακτίνα της τροχιάς είναι $R=\dfrac{d}{2}=67{,}6\ \text{m}$. Στην ομαλή κυκλική κίνηση η συνισταμένη δύναμη είναι η <strong>κεντρομόλος δύναμη</strong> $F_{\text{κ}}=m\dfrac{\upsilon^2}{R}$ — εδώ τον ρόλο της παίζει η τριβή: $T=m\dfrac{\upsilon^2}{R}$.</p>
+<p>Η συνθήκη «η τριβή δεν υπερβαίνει το 25 % του βάρους» γράφεται $T\le0{,}25\,mg$, δηλαδή $m\dfrac{\upsilon^2}{R}\le0{,}25\,mg$. Η μάζα απλοποιείται — το όριο δεν εξαρτάται από το πόσο βαρύ είναι το αυτοκίνητο. Λύνουμε ως προς $\upsilon$:</p>
+<p>$$\upsilon\le\sqrt{0{,}25\,g\,R}=\sqrt{0{,}25\cdot10\cdot67{,}6}=\sqrt{169}=13\ \text{m/s}\ (\approx47\ \text{km/h}).$$</p>
+</details>
+
+**★ Άσκηση 22 — Δύναμη υπό γωνία σε λείο επίπεδο.** Ένα σώμα μάζας $m=10\ \text{kg}$ ηρεμεί σε λείο οριζόντιο επίπεδο. Ασκούμε στο σώμα δύναμη $F=40\ \text{N}$ η οποία σχηματίζει γωνία $60^\circ$ με το οριζόντιο επίπεδο. Να υπολογίσετε:<br>**Α.** Τη δύναμη που δέχεται το σώμα από το οριζόντιο επίπεδο.<br>**Β.** Την ταχύτητα του σώματος μετά από $5\ \text{s}$.<br>**Γ.** Την απόσταση που διανύει το σώμα κατά τη διάρκεια του πέμπτου δευτερολέπτου της κίνησής του.
+
+<figure markdown="0"><svg width="100%" viewBox="0 0 300 170" style="max-width:290px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="130" x2="290" y2="130" stroke="currentColor" stroke-width="2"/><rect x="90" y="86" width="56" height="44" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><g stroke="#d9442a" stroke-width="2.2" fill="none"><line x1="118" y1="108" x2="160" y2="35"/><path d="M160,35 l-8,1 M160,35 l-1,8"/></g><g stroke="#d9442a" stroke-width="1.4" stroke-dasharray="4 3" fill="none" opacity="0.8"><line x1="118" y1="108" x2="160" y2="108"/><line x1="118" y1="108" x2="118" y2="35"/><line x1="160" y1="108" x2="160" y2="35" stroke-dasharray="2 2" opacity="0.5"/><line x1="118" y1="35" x2="160" y2="35" stroke-dasharray="2 2" opacity="0.5"/></g><path d="M160,108 l-7,-3 M160,108 l-7,3 M118,35 l-3,7 M118,35 l3,7" stroke="#d9442a" stroke-width="1.4" fill="none"/><path d="M136,108 A18,18 0 0 0 127,92" fill="none" stroke="currentColor" stroke-width="1"/><g stroke="#2a66d9" stroke-width="2" fill="none"><line x1="104" y1="86" x2="104" y2="52"/><path d="M104,52 l-4,7 M104,52 l4,7"/><line x1="132" y1="130" x2="132" y2="160"/><path d="M132,160 l-4,-7 M132,160 l4,-7"/></g><g font-size="12" fill="currentColor"><text x="166" y="34" fill="#d9442a">F</text><text x="140" y="104" fill="#d9442a">60°</text><text x="166" y="112" fill="#d9442a" font-size="11">F<tspan font-size="8" dy="3">x</tspan></text><text x="98" y="40" fill="#d9442a" font-size="11">F<tspan font-size="8" dy="3">y</tspan></text><text x="90" y="60" fill="#2a66d9">N</text><text x="138" y="158" fill="#2a66d9">mg</text></g></svg></figure>
+
+<details class="qa"><summary>Λύση</summary>
+<p>Αναλύουμε την $F$ σε δύο συνιστώσες: οριζόντια $F_x=F\,\text{συν}60^\circ=40\cdot\tfrac{1}{2}=20\ \text{N}$ και κατακόρυφη $F_y=F\,\text{ημ}60^\circ=40\cdot\tfrac{\sqrt3}{2}=20\sqrt3\approx34{,}6\ \text{N}$ (προς τα πάνω). Στο σώμα δρουν ακόμη το βάρος $mg=100\ \text{N}$ και η κάθετη αντίδραση $N$ (σχήμα).</p>
+<p><strong>Α.</strong> Κατακόρυφα το σώμα δεν κινείται, άρα <strong>ισορροπία</strong>: $N+F_y=mg \Rightarrow N=mg-F_y=100-34{,}6=65{,}4\ \text{N}$. Η $F_y$ «ξαλαφρώνει» το σώμα — αυτή είναι η δύναμη που δέχεται από το επίπεδο.</p>
+<p><strong>Β.</strong> Οριζόντια (λείο επίπεδο, καμία τριβή) η συνισταμένη είναι η $F_x$. <strong>2ος νόμος του Νεύτωνα</strong>: $a=\dfrac{F_x}{m}=\dfrac{20}{10}=2\ \text{m/s}^2$. Από ηρεμία, <strong>εξίσωση ταχύτητας</strong>: $\upsilon=a\,t=2\cdot5=10\ \text{m/s}$.</p>
+<p><strong>Γ.</strong> Το «πέμπτο δευτερόλεπτο» είναι το διάστημα από $t=4\ \text{s}$ έως $t=5\ \text{s}$ — <em>όχι</em> η απόσταση στα 5 s. Από την <strong>εξίσωση κίνησης</strong> $s=\tfrac{1}{2}a\,t^2$: $s_5=\tfrac{1}{2}\cdot2\cdot5^2=25\ \text{m}$ και $s_4=\tfrac{1}{2}\cdot2\cdot4^2=16\ \text{m}$, άρα $\Delta s=s_5-s_4=9\ \text{m}$.</p>
+</details>
+
+**★ Άσκηση 23 — Μετακίνηση κιβωτίου με τριβή.** Υποθέστε ότι πρέπει να μετακινήσουμε ένα κιβώτιο βάρους $1\,000\ \text{N}$, το οποίο ισορροπεί πάνω σε οριζόντιο επίπεδο με το οποίο έχει συντελεστή τριβής ολίσθησης $\mu=0{,}2$.<br>**Α.** Ποια είναι η μικρότερη οριζόντια δύναμη που πρέπει να εφαρμόσουμε, ώστε να μετακινήσουμε το κιβώτιο;<br>**Β.** Αν εφαρμόσουμε οριζόντια δύναμη $500\ \text{N}$, με ποια επιτάχυνση θα κινηθεί το κιβώτιο;<br>**Γ.** Πόσος χρόνος θα χρειαστεί για τη μετακίνηση του κιβωτίου κατά $24\ \text{m}$ με τη δύναμη των $500\ \text{N}$; Ποια θα είναι τότε η ταχύτητα του κιβωτίου; (Να δεχθείτε ότι η οριακή τριβή είναι ίση με την τριβή ολίσθησης.)
+
+<details class="qa"><summary>Λύση</summary>
+<p>Κατακόρυφα το κιβώτιο ισορροπεί, άρα $N=B=1\,000\ \text{N}$. Η μάζα του είναι $m=\dfrac{B}{g}=100\ \text{kg}$.</p>
+<p><strong>Α.</strong> Για να ξεκινήσει, η δύναμη πρέπει να ξεπεράσει την <strong>οριακή τριβή</strong>, που εδώ ισούται με την τριβή ολίσθησης. <strong>Νόμος της τριβής</strong>: $T=\mu N=0{,}2\cdot1\,000=200\ \text{N}$. Άρα $F_{\min}=200\ \text{N}$.</p>
+<p><strong>Β.</strong> Οριζόντια δρουν η $F=500\ \text{N}$ και η τριβή $T=200\ \text{N}$ αντίθετα. <strong>2ος νόμος του Νεύτωνα</strong>: $F-T=m\,a \Rightarrow a=\dfrac{F-T}{m}=\dfrac{500-200}{100}=3\ \text{m/s}^2$.</p>
+<p><strong>Γ.</strong> Από ηρεμία, <strong>εξίσωση κίνησης</strong> $s=\tfrac{1}{2}a\,t^2 \Rightarrow t=\sqrt{\dfrac{2s}{a}}=\sqrt{\dfrac{2\cdot24}{3}}=\sqrt{16}=4\ \text{s}$. <strong>Εξίσωση ταχύτητας</strong>: $\upsilon=a\,t=3\cdot4=12\ \text{m/s}$.</p>
+</details>
+
+**★ Άσκηση 24 — Λείο κεκλιμένο επίπεδο.** Στην κορυφή Α ενός λείου κεκλιμένου επιπέδου ύψους $h=5\ \text{m}$ και γωνίας $\theta=30^\circ$ αφήνουμε ένα σώμα μάζας $m=1\ \text{kg}$. Να υπολογίσετε:<br>**Α.** Την αντίδραση που ασκείται στο σώμα από το κεκλιμένο επίπεδο.<br>**Β.** Την επιτάχυνση με την οποία κινείται το σώμα.<br>**Γ.** Το χρόνο κίνησης του σώματος στο κεκλιμένο επίπεδο και την ταχύτητα με την οποία φτάνει στη βάση του.<br>**Δ.** Την ταχύτητα με την οποία θα φτάσει το σώμα στη βάση του κεκλιμένου επιπέδου, αν η γωνία γίνει $45^\circ$.
+
+<figure markdown="0"><svg width="100%" viewBox="0 0 320 190" style="max-width:300px;height:auto;" xmlns="http://www.w3.org/2000/svg"><polygon points="30,160 290,160 290,10" fill="#e9ecf1" stroke="currentColor" stroke-width="1.5"/><path d="M70,160 A40,40 0 0 0 66,146" fill="none" stroke="currentColor" stroke-width="1"/><text x="76" y="153" font-size="11" fill="currentColor">θ</text><line x1="290" y1="160" x2="290" y2="10" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/><text x="296" y="90" font-size="11" fill="currentColor">h</text><text x="283" y="8" font-size="11" fill="currentColor">Α</text><g transform="translate(190,68) rotate(-30)"><rect x="-18" y="-24" width="36" height="24" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/></g><g stroke="#2a66d9" stroke-width="2" fill="none"><line x1="196" y1="58" x2="174" y2="20"/><path d="M174,20 l0,8 M174,20 l7,4"/></g><text x="160" y="18" font-size="11" fill="#2a66d9">N</text><g stroke="#d9442a" stroke-width="1.6" stroke-dasharray="3 2" fill="none"><line x1="196" y1="58" x2="158" y2="80"/><path d="M158,80 l8,-1 M158,80 l3,-7"/><line x1="196" y1="58" x2="212" y2="86"/><path d="M212,86 l-7,-2 M212,86 l1,-7"/></g><g stroke="#d9442a" stroke-width="2" fill="none"><line x1="196" y1="58" x2="196" y2="112"/><path d="M196,112 l-4,-7 M196,112 l4,-7"/></g><g font-size="10" fill="#d9442a"><text x="152" y="94" text-anchor="end">mg ημθ</text><text x="216" y="98">mg συνθ</text><text x="201" y="118" font-size="11">mg</text></g></svg></figure>
+
+<details class="qa"><summary>Λύση</summary>
+<p>Στο σώμα δρουν το <strong>βάρος</strong> $mg$ και η <strong>κάθετη αντίδραση</strong> $N$ (το επίπεδο είναι λείο — καμία τριβή). Αναλύουμε το βάρος σε συνιστώσα παράλληλη στο επίπεδο $mg\,\text{ημ}\theta$ (προς τα κάτω κατά μήκος της πλαγιάς) και κάθετη σε αυτό $mg\,\text{συν}\theta$ (σχήμα).</p>
+<p><strong>Α.</strong> Κάθετα στο επίπεδο δεν υπάρχει κίνηση, άρα <strong>ισορροπία</strong>: $N=mg\,\text{συν}\theta=1\cdot10\cdot\tfrac{\sqrt3}{2}=5\sqrt3\approx8{,}7\ \text{N}$.</p>
+<p><strong>Β.</strong> Κατά μήκος του επιπέδου η μόνη δύναμη είναι η $mg\,\text{ημ}\theta$. <strong>2ος νόμος του Νεύτωνα</strong>: $mg\,\text{ημ}\theta=m\,a \Rightarrow a=g\,\text{ημ}\theta=10\cdot\tfrac{1}{2}=5\ \text{m/s}^2$ — ανεξάρτητη από τη μάζα.</p>
+<p><strong>Γ.</strong> Το μήκος της πλαγιάς από το ύψος: $\text{ημ}\theta=\dfrac{h}{L} \Rightarrow L=\dfrac{h}{\text{ημ}\theta}=\dfrac{5}{1/2}=10\ \text{m}$. Από ηρεμία, <strong>εξίσωση κίνησης</strong>: $L=\tfrac{1}{2}a\,t^2 \Rightarrow t=\sqrt{\dfrac{2L}{a}}=\sqrt{\dfrac{2\cdot10}{5}}=2\ \text{s}$, και <strong>εξίσωση ταχύτητας</strong>: $\upsilon=a\,t=5\cdot2=10\ \text{m/s}$.</p>
+<p><strong>Δ.</strong> Για $\theta=45^\circ$: $a=g\,\text{ημ}45^\circ=10\cdot\tfrac{\sqrt2}{2}=5\sqrt2\ \text{m/s}^2$ και $L=\dfrac{h}{\text{ημ}45^\circ}=\dfrac{5}{\sqrt2/2}=5\sqrt2\ \text{m}$. Τότε $t=\sqrt{\dfrac{2L}{a}}=\sqrt{\dfrac{2\cdot5\sqrt2}{5\sqrt2}}=\sqrt2\ \text{s}$ και $\upsilon=a\,t=5\sqrt2\cdot\sqrt2=10\ \text{m/s}$ — <strong>ίδια</strong> με πριν! Γενικά $\upsilon=a\,t=a\sqrt{\dfrac{2L}{a}}=\sqrt{2aL}=\sqrt{2\,g\,\text{ημ}\theta\cdot\dfrac{h}{\text{ημ}\theta}}=\sqrt{2gh}$: σε λείο κεκλιμένο η ταχύτητα στη βάση εξαρτάται μόνο από το ύψος, όχι από τη γωνία (πιο απότομη πλαγιά → μεγαλύτερη επιτάχυνση, αλλά μικρότερη διαδρομή). Στο Κεφ. 2 θα το ξαναδούμε με τη διατήρηση της ενέργειας.</p>
+</details>
+
+**★ Άσκηση 25 — Δύο σώματα δεμένα με νήμα.** Τα σώματα Σ₁ και Σ₂ έχουν αντίστοιχα βάρος $B_1=200\ \text{N}$ και $B_2=500\ \text{N}$ και έλκονται από μια σταθερή δύναμη $F$, όπως φαίνεται στην εικόνα. Αν η κοινή επιτάχυνση με την οποία κινούνται τα δύο σώματα είναι $a=g/8$, να υπολογίσετε:<br>**Α.** Τη δύναμη $F$.<br>**Β.** Την τάση του νήματος που συνδέει τα δύο σώματα.
+
+<figure markdown="0"><svg width="100%" viewBox="0 0 400 110" style="max-width:380px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="80" x2="385" y2="80" stroke="currentColor" stroke-width="2"/><rect x="50" y="36" width="80" height="44" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><rect x="200" y="46" width="46" height="34" fill="#9aa4b2" stroke="currentColor" stroke-width="1"/><line x1="130" y1="62" x2="200" y2="62" stroke="currentColor" stroke-width="1.5"/><g stroke="#d9442a" stroke-width="2.2" fill="none"><line x1="246" y1="62" x2="320" y2="62"/><path d="M320,62 l-8,-4 M320,62 l-8,4"/></g><g font-size="12" fill="currentColor"><text x="90" y="28" text-anchor="middle">Σ₂</text><text x="223" y="38" text-anchor="middle">Σ₁</text><text x="300" y="54" fill="#d9442a">F</text><text x="165" y="56" text-anchor="middle" font-size="11">νήμα</text></g></svg></figure>
+
+<details class="qa"><summary>Λύση</summary>
+<p>Οι μάζες από τα βάρη: $m_1=\dfrac{B_1}{g}=20\ \text{kg}$, $m_2=\dfrac{B_2}{g}=50\ \text{kg}$. Η επιτάχυνση: $a=\dfrac{g}{8}=1{,}25\ \text{m/s}^2$. Οριζόντια, στο Σ₁ δρουν η $F$ (εμπρός) και η τάση $T$ (πίσω, προς το Σ₂)· στο Σ₂ μόνο η $T$ (εμπρός). Δεν δίνεται τριβή, οπότε τη θεωρούμε αμελητέα.</p>
+<p><strong>Α.</strong> Για το <strong>σύστημα</strong> των δύο σωμάτων η $T$ είναι εσωτερική και η μόνη εξωτερική οριζόντια δύναμη είναι η $F$. <strong>2ος νόμος του Νεύτωνα</strong>: $F=(m_1+m_2)\,a=70\cdot1{,}25=87{,}5\ \text{N}$.</p>
+<p><strong>Β.</strong> Για το <strong>Σ₂</strong> μόνο του: $T=m_2\,a=50\cdot1{,}25=62{,}5\ \text{N}$. Έλεγχος στο Σ₁: $F-T=87{,}5-62{,}5=25\ \text{N}=m_1a=20\cdot1{,}25$ ✓. Η τάση είναι το μεγαλύτερο μέρος της $F$, γιατί το νήμα «σέρνει» το βαρύτερο σώμα.</p>
+</details>
+
+<p class="trap-src">Πηγή: Φυσική Α′ Λυκείου (Γενικής Παιδείας), σχολικό βιβλίο — Ασκήσεις – Προβλήματα ενότητας 1.3. Οι εκφωνήσεις είναι του βιβλίου· τα σχήματα ξανασχεδιάστηκαν και οι λύσεις είναι δικές μας.</p>
 </div>
 
 <div class="trap-box" markdown="1">
@@ -79,7 +209,7 @@ nav: false
 
 **Άσκηση 4 — Δύναμη υπό γωνία με τριβή (Θέμα Δ).** Σώμα μάζας $m=2\ \text{kg}$ ηρεμεί σε οριζόντιο τραχύ δάπεδο. Τη στιγμή $t=0$ ασκείται δύναμη $F=20\ \text{N}$ που σχηματίζει γωνία $45^\circ$ **κάτω** από το οριζόντιο (σπρώχνει). Δίνονται $\mu=0{,}2$, $g=10\ \text{m/s}^2$, $\text{ημ}45^\circ=\text{συν}45^\circ=0{,}7$. Να βρείτε:<br>**α)** την κάθετη αντίδραση $N$,<br>**β)** την τριβή $T$,<br>**γ)** την επιτάχυνση $a$,<br>**δ)** την ταχύτητα και τη μετατόπιση στα $5\ \text{s}$.
 
-<div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 250 170" style="max-width:250px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="120" x2="230" y2="120" stroke="#888" stroke-width="1.6"/><rect x="95" y="96" width="50" height="24" rx="2" fill="#2a66d9" fill-opacity="0.15" stroke="#2a66d9" stroke-width="1.4"/><line x1="120" y1="108" x2="170" y2="58" stroke="#2a66d9" stroke-width="2.2"/><path d="M120,108 l8,-2 M120,108 l2,-8" stroke="#2a66d9" stroke-width="2.2" fill="none"/><text x="168" y="52" font-size="11" fill="#2a66d9">F</text><line x1="120" y1="108" x2="120" y2="150" stroke="#888" stroke-width="1.4" stroke-dasharray="3 2"/><text x="124" y="146" font-size="9" fill="var(--global-text-color-light)">F ημ45°</text><line x1="120" y1="108" x2="162" y2="108" stroke="#888" stroke-width="1.4" stroke-dasharray="3 2"/><text x="130" y="102" font-size="9" fill="var(--global-text-color-light)">F συν45°</text></svg></figure></div>
+<div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 250 175" style="max-width:250px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="140" x2="230" y2="140" stroke="#888" stroke-width="1.6"/><rect x="100" y="116" width="50" height="24" rx="2" fill="#2a66d9" fill-opacity="0.15" stroke="#2a66d9" stroke-width="1.4"/><line x1="60" y1="66" x2="110" y2="116" stroke="#2a66d9" stroke-width="2.2"/><path d="M110,116 l-9,-2 M110,116 l-2,-9" stroke="#2a66d9" stroke-width="2.2" fill="none"/><text x="46" y="60" font-size="11" fill="#2a66d9">F</text><line x1="60" y1="66" x2="104" y2="66" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/><path d="M76,66 A16,16 0 0 1 71.3,77.3" stroke="#888" stroke-width="1" fill="none"/><text x="80" y="82" font-size="10" font-style="italic" fill="currentColor">45°</text><line x1="110" y1="116" x2="162" y2="116" stroke="#888" stroke-width="1.4" stroke-dasharray="3 2"/><path d="M162,116 l-7,-2.5 M162,116 l-7,2.5" stroke="#888" stroke-width="1.4" fill="none"/><text x="118" y="110" font-size="9" fill="var(--global-text-color-light)">F συν45°</text><line x1="110" y1="116" x2="110" y2="137" stroke="#888" stroke-width="1.4" stroke-dasharray="3 2"/><path d="M110,137 l-2.5,-7 M110,137 l2.5,-7" stroke="#888" stroke-width="1.4" fill="none"/><text x="114" y="134" font-size="9" fill="var(--global-text-color-light)">F ημ45°</text></svg></figure></div>
 
 <details class="qa"><summary>Λύση</summary>
 <p>Αναλύουμε τη δύναμη σε συνιστώσες: οριζόντια $F_x=F\,\text{συν}45^\circ$ και κατακόρυφη (προς τα κάτω, αφού σπρώχνει) $F_y=F\,\text{ημ}45^\circ$. Αριθμητικά: $F_x=F_y=20\cdot0{,}7=14\ \text{N}$.</p>
@@ -103,7 +233,7 @@ nav: false
 <br>**(β)** $\mu=0{,}7$
 <br>**(γ)** $\mu=0{,}9$
 
-<div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 230 150" style="max-width:230px;height:auto;" xmlns="http://www.w3.org/2000/svg"><polygon points="25,125 205,125 25,55" fill="#2a66d9" fill-opacity="0.10" stroke="#888" stroke-width="1.4"/><rect x="55" y="86" width="30" height="18" rx="2" transform="rotate(-21.8 70 95)" fill="#2a66d9" fill-opacity="0.2" stroke="#2a66d9" stroke-width="1.3"/><line x1="70" y1="95" x2="70" y2="135" stroke="#cc3333" stroke-width="1.8"/><path d="M70,135 l-3,-7 M70,135 l3,-7" stroke="#cc3333" stroke-width="1.8" fill="none"/><text x="74" y="130" font-size="10" fill="#cc3333">w</text><path d="M45,125 A20,20 0 0 0 39,113" stroke="#888" stroke-width="1" fill="none"/><text x="33" y="120" font-size="10" font-style="italic" fill="currentColor">30°</text></svg></figure></div>
+<div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 240 150" style="max-width:240px;height:auto;" xmlns="http://www.w3.org/2000/svg"><polygon points="25,130 195,130 195,32" fill="#2a66d9" fill-opacity="0.10" stroke="#888" stroke-width="1.4"/><rect x="77.6" y="69.3" width="32" height="19" rx="2" transform="rotate(-30 93.6 78.8)" fill="#2a66d9" fill-opacity="0.2" stroke="#2a66d9" stroke-width="1.3"/><line x1="93.6" y1="78.8" x2="93.6" y2="120" stroke="#cc3333" stroke-width="1.8"/><path d="M93.6,120 l-3,-7 M93.6,120 l3,-7" stroke="#cc3333" stroke-width="1.8" fill="none"/><text x="99" y="116" font-size="10" fill="#cc3333">w</text><path d="M57,130 A32,32 0 0 0 52.7,114" stroke="#888" stroke-width="1" fill="none"/><text x="60" y="125" font-size="10" font-style="italic" fill="currentColor">30°</text></svg></figure></div>
 
 <details class="qa"><summary>Λύση</summary>
 <p><strong>(α).</strong> Κατά μήκος του επιπέδου, για <strong>ισορροπία</strong> η μέγιστη στατική τριβή πρέπει να εξισορροπεί τη συνιστώσα του βάρους: $\mu N \ge w\,\text{ημφ}$. Με $N=w\,\text{συνφ}$ προκύπτει $\mu \ge \text{εφφ}=\text{εφ}30^\circ\approx0{,}58$. Η τιμή $\mu=0{,}4<0{,}58$ δεν αρκεί — το σώμα θα ολισθήσει.</p>
@@ -139,4 +269,43 @@ nav: false
 <p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 12053, 13346, 12353, 13659, 13464, 13465, 13782, 13468, 13770). Οι εκφωνήσεις αποδόθηκαν ελεύθερα και τα σχήματα ξανασχεδιάστηκαν.</p>
 </div>
 
-<p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav subnav-bottom">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/1-2/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">1.2 Δυναμική σε μία διάσταση</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/syn-1/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">Συνδυαστικές (Κεφ. 1)</span></a>
+</div>
+
+<script>
+document.addEventListener('keydown', function (e) {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  var t = e.target || {};
+  var tag = (t.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select' || tag === 'ninja-keys' || t.isContentEditable) return;
+  var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
+  if (a) window.location.href = a.href;
+});
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
+</script>

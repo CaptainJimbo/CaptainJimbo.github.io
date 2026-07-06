@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Handling Data 2 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>table.t{border-collapse:collapse;margin:6px 0;font-size:0.95em} table.t th,table.t td{border:1px solid #999;padding:3px 10px;text-align:center} table.t th{background:#e8eef8}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 3</div><h1>Handling Data 2 — Frequency tables · Discrete and continuous data</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Calculator allowed. Squared paper for the frequency polygons. Marks in brackets. ★ = harder question.</p>
+
+<ol class="q">
+<li><span class="marks">[5]</span>Dani records the number of goals ($x$) she scores per game over a season of 20 games.
+<table class="t"><tr><th>$x$</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th>Frequency</th><td>1</td><td>4</td><td>6</td><td>5</td><td>2</td><td>1</td><td>1</td></tr></table>
+Last season her mean was 2.1 goals per game. Show that she has improved this season, and write down this season's mode and median.
+<div class="sol"><p>$\sum fx=0+4+12+15+8+5+6=50$; $\sum f=20$. Mean $=\dfrac{50}{20}=2.5>2.1$, so she has improved. Mode $=2$ (frequency 6). Median: 20 values → between the 10th and 11th; running totals 1, 5, 11 — both are 2, so median $=2$.</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li><span class="marks">[10]</span>The times ($t$ minutes) taken by 20 students to finish a puzzle were:<br>3, 16, 5, 19, 6, 7, 10, 8, 13, 12, 9, 7, 10, 11, 12, 16, 15, 13, 8, 5
+<ul class="parts"><li><b>a</b> Make a frequency table with classes $0\le t<5$, $5\le t<10$, $10\le t<15$, $15\le t\le20$.</li><li><b>b</b> Draw a frequency polygon.</li><li><b>c</b> Use the table to estimate the mean time, and state the modal class.</li><li><b>d</b> Calculate the exact mean from the raw data and explain why it differs from your estimate.</li></ul>
+<div class="sol"><p><b>a</b> Frequencies: $0\le t<5$: 1 · $5\le t<10$: 8 · $10\le t<15$: 7 · $15\le t\le20$: 4 (total 20 ✓).</p><p><b>b</b> Plot frequency against the class mid-points $2.5,\,7.5,\,12.5,\,17.5$ and join with straight lines.</p><p><b>c</b> $\sum fx=1(2.5)+8(7.5)+7(12.5)+4(17.5)=2.5+60+87.5+70=220$; estimated mean $=\dfrac{220}{20}=11.0$ min. Modal class $5\le t<10$.</p><p><b>d</b> Raw total $=205$, exact mean $=10.25$ min. The estimate uses the mid-point of each class instead of the real values — here most values sit below their class mid-points, so the estimate is slightly too high.</p></div>
+<div class="space" style="--h:7em"></div></li>
+
+<li><span class="marks">[10]</span>A survey of 100 teenagers asked how many hours ($t$) they slept on New Year's Day.
+<table class="t"><tr><th>Hours $t$</th><td>$0\le t<4$</td><td>$4\le t<6$</td><td>$6\le t<8$</td><td>$8\le t\le12$</td></tr><tr><th>Frequency</th><td>$p$</td><td>24</td><td>$3p$</td><td>16</td></tr></table>
+<ul class="parts"><li><b>a</b> Find $p$ and complete the table.</li><li><b>b</b> Draw a frequency polygon.</li><li><b>c</b> Estimate the mean and state the modal class.</li><li><b>d</b> Estimate the percentage of teenagers who slept at least 7 hours.</li></ul>
+<div class="sol"><p><b>a</b> $p+24+3p+16=100 \Rightarrow 4p=60 \Rightarrow p=15$. Frequencies 15, 24, 45, 16.</p><p><b>b</b> Mid-points 2, 5, 7, 10 against frequency.</p><p><b>c</b> $\sum fx=15(2)+24(5)+45(7)+16(10)=30+120+315+160=625$; mean $\approx\dfrac{625}{100}=6.25$ h. Modal class $6\le t<8$.</p><p><b>d</b> Assume the $6\le t<8$ class is spread evenly: half of 45 $=22.5$ slept 7–8 h, plus all 16 of the last class: $38.5\approx39\%$.</p></div>
+<div class="space" style="--h:7em"></div></li>
+
+<li class="star"><span class="marks">[3]</span>The mean of the numbers 4, 7, $x$, 9 and 11 is 8. Find $x$, and then find the median.
+<div class="sol"><p>Total $=8\times5=40$, so $x=40-31=9$. In order: 4, 7, 9, 9, 11 → median $9$.</p></div>
+<div class="space" style="--h:2.8em"></div></li>
+</ol>
+<p class="total">Total: 28 marks</p>
+<p class="note">Check: mean from a table $=\dfrac{\sum fx}{\sum f}$ (divide by the total frequency, not the number of rows) · grouped data → mid-points, and the mean is an <em>estimate</em> · modal class = highest frequency · frequency polygon: points at mid-points, joined by straight lines.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Handling Data 2</span></footer>
+</body></html>

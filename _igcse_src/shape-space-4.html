@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Shape and Space 4 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>figure.d{margin:6px 0 4px;} figure.d svg{display:block;max-width:100%;}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 4</div><h1>Shape and Space 4 — Sine and cosine ratios · Calculating sides and angles</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Calculator allowed. Give answers correct to 3 significant figures (angles to 1 decimal place where asked). Draw and label a right-angled triangle for each part. Marks in brackets. ★ = harder question.</p>
+
+<ol class="q">
+<li><span class="marks">[4]</span>A window cleaner's ladder is 6 m long and makes an angle of $70^\circ$ with the level ground as it leans against a vertical wall.
+<ul class="parts"><li><b>a</b> Calculate the height of the top of the ladder above the ground.</li><li><b>b</b> The cleaner climbs 2.5 m up the ladder. How far is his lower foot from the wall?</li></ul>
+<div class="sol"><p><b>a</b> Height is opposite the $70^\circ$ angle, hypotenuse 6: $h=6\sin70^\circ=5.64$ m.</p><p><b>b</b> Foot of the ladder from the wall: $6\cos70^\circ=2.052$ m. A point 2.5 m up the ladder is $2.5\cos70^\circ=0.855$ m closer to the wall: $2.052-0.855=1.20$ m.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li><span class="marks">[8]</span>Three phone masts $A$, $B$ and $C$: $C$ is 5 km due east of $B$; $A$ is due north of $B$ and 8 km from $C$.
+<figure class="d"><svg width="220" height="170" viewBox="0 0 220 170" font-family="Helvetica,Arial" font-size="12"><polygon points="60,20 60,140 160,140" fill="#fff8d6" stroke="#222" stroke-width="1.4"/><path d="M60,128 h12 v12" fill="none" stroke="#222" stroke-width="1"/><g stroke="#222" stroke-width="1" stroke-dasharray="3 3"><line x1="60" y1="140" x2="60" y2="8"/><line x1="160" y1="140" x2="160" y2="60"/></g><g fill="#222"><text x="46" y="18">A</text><text x="46" y="156">B</text><text x="166" y="156">C</text><text x="104" y="158">5 km</text><text x="118" y="78">8 km</text><text x="138" y="130" fill="#b8860b">θ</text><text x="164" y="58">N</text><text x="64" y="12">N</text></g></svg></figure>
+<ul class="parts"><li><b>a</b> Calculate, to 1 decimal place: <b>(i)</b> the angle $\theta$ at $C$, <b>(ii)</b> the bearing of $A$ from $C$, <b>(iii)</b> the bearing of $C$ from $A$.</li><li><b>b</b> Calculate the distance $AB$ in km.</li></ul>
+<div class="sol"><p><b>a (i)</b> At $C$ the adjacent side is $BC=5$ and the hypotenuse is $AC=8$: $\cos\theta=\dfrac{5}{8} \Rightarrow \theta=51.3^\circ$.</p><p><b>(ii)</b> From the north line at $C$, $CA$ lies $90-51.3=38.7^\circ$ anticlockwise (towards the north-west), so the bearing is $360-38.7=321.3^\circ$.</p><p><b>(iii)</b> Reverse bearing: $321.3-180=141.3^\circ$.</p><p><b>b</b> $AB$ is opposite $\theta$: $AB=8\sin51.3^\circ=6.24$ km (or Pythagoras: $\sqrt{64-25}=\sqrt{39}=6.24$ ✓).</p></div>
+<div class="space" style="--h:5em"></div></li>
+
+<li><span class="marks">[13]</span>A circle with centre $O$ represents the Earth (radius $OW=6400$ km). A satellite $S$ is at a distance $OS=42\,000$ km from the centre. $W$ (Washington) and $D$ (Delhi) are points on the circle such that the line $OS$ crosses the chord $WD$ at right angles at $N$, and angle $WOD=100^\circ$.
+<ul class="parts"><li><b>a</b> Calculate, to 3 s.f. or to the nearest degree: <b>(i)</b> $WN$, <b>(ii)</b> $ON$, <b>(iii)</b> $NS$, <b>(iv)</b> angle $ODS$.</li><li><b>b</b> Explain briefly why, if angle $ODS$ were less than $90^\circ$, a signal from the satellite could not reach Delhi.</li><li><b>c</b> A radio signal is sent from $W$ to $D$ via $S$. Calculate the distance it travels.</li><li><b>d</b> Radio signals travel at $300\,000$ km/s. How long does the signal take?</li></ul>
+<div class="sol"><p>$ON$ bisects the $100^\circ$ angle (symmetry): angle $WON=50^\circ$, triangle $OWN$ is right-angled at $N$ with hypotenuse 6400.</p><p><b>a (i)</b> $WN=6400\sin50^\circ=4903$ km $\approx4900$ km. <b>(ii)</b> $ON=6400\cos50^\circ=4114$ km $\approx4110$ km. <b>(iii)</b> $NS=42\,000-4114=37\,886\approx37\,900$ km.</p><p><b>(iv)</b> In right-angled triangle $DNS$: $\tan(\angle DSN)=\dfrac{4903}{37\,886} \Rightarrow \angle DSN=7.4^\circ$. In triangle $ODS$: $\angle ODS=180-50-7.4=122.6^\circ\approx123^\circ$.</p><p><b>b</b> At exactly $90^\circ$ the line $DS$ would be a tangent — grazing the Earth. Less than $90^\circ$ means $DS$ would have to pass <em>through</em> the Earth, so $D$ would be over the horizon from $S$.</p><p><b>c</b> $DS=\sqrt{4903^2+37\,886^2}=38\,200$ km (3 s.f.); by symmetry $WS$ is the same: total $2\times38\,200=76\,400$ km.</p><p><b>d</b> $\dfrac{76\,400}{300\,000}=0.255$ s — about a quarter of a second.</p></div>
+<div class="space" style="--h:8em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: SOH CAH TOA — pick the ratio that uses the side you know and the side you want · hypotenuse is always opposite the right angle · angles from two sides: use $\sin^{-1}$, $\cos^{-1}$, $\tan^{-1}$ · calculator in degrees, keep full values between steps.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Shape and Space 4</span></footer>
+</body></html>

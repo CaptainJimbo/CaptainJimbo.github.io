@@ -4,12 +4,14 @@ title: Matching and Recommendation Systems
 description: Recommendations and entity-to-entity matching — collaborative filtering, embeddings, retrieval & reranking.
 img: assets/img/ai-matching.jpg
 importance: 1
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/ai-matching-hero.jpg' | relative_url }}" alt="{{ page.title }}">
+
+*Prefer to click than read? **[movieBro]({{ '/projects/moviebro/' | relative_url }})** is a live, in-browser demo of this exact stack — collaborative filtering, hybrid retrieval and reranking on a movie catalog. Everything below is what's under its hood.*
 
 Recommendation and matching systems **rank and pair** — suggesting items to users, and matching entities to each other. The common thread isn't a single algorithm: it's turning *"how well do these two match?"* into a **score**, and then a **ranking**. In practice that happens **two ways** — **similarity between vectors** (dot-product, cosine or Pearson, depending on the method), or a model that reads a **pair jointly** and scores it directly. The field is a **toolkit**, chosen and combined per problem:
 

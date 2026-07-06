@@ -22,9 +22,35 @@ nav: false
   .trap-box h4 { color: var(--global-theme-color); margin: 0.8rem 0 0.5rem; font-size: 1.05rem; letter-spacing: 0.02em; }
   .trap-box figure { margin: 0.6rem 0 0.2rem; }
   .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin-top: 0.9rem; font-style: italic; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: inherit; -webkit-tap-highlight-color: transparent; }
+  .subnav .sn-prev, .subnav .sn-next { display: grid; column-gap: 0.65rem; row-gap: 0.12rem; align-items: center; min-height: 44px; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; grid-template-columns: auto 1fr; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; grid-template-columns: 1fr auto; text-align: right; }
+  .subnav .sn-prev::before, .subnav .sn-next::after { flex: 0 0 auto; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--global-theme-color); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2em; font-weight: 700; grid-row: 1 / span 2; transition: transform .15s ease; }
+  .subnav .sn-prev::before { content: '\2190'; grid-column: 1; }
+  .subnav .sn-next::after { content: '\2192'; grid-column: 2; }
+  .subnav .sn-prev:hover::before { transform: translateX(-3px); }
+  .subnav .sn-next:hover::after { transform: translateX(3px); }
+  .subnav a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 8px; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.94em; line-height: 1.3; color: var(--global-theme-color); font-weight: 500; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; font-size: 0.88em; white-space: nowrap; color: var(--global-theme-color); border: 1px solid var(--global-divider-color, #e3e3e3); border-radius: 999px; padding: 0.42rem 1.05rem; transition: border-color .15s ease, background .15s ease; }
+  .subnav .sn-all:hover { border-color: var(--global-theme-color); }
+  @media (max-width: 640px) {
+    .subnav { grid-template-columns: 1fr 1fr; }
+    .subnav .sn-prev { grid-column: 1; justify-self: stretch; }
+    .subnav .sn-next { grid-column: 2; justify-self: stretch; }
+    .subnav .sn-all { grid-column: 1 / -1; grid-row: 2; }
+  }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
 </style>
 
-<p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/1-3/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">1.3 Δυναμική στο επίπεδο</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/2-1/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">2.1 Διατήρηση μηχανικής ενέργειας</span></a>
+</div>
 
 <div class="trap-box" markdown="1">
 <h4>Συνδυαστικές ασκήσεις — Τράπεζα Θεμάτων</h4>
@@ -41,9 +67,9 @@ nav: false
 <p>Στη 2η περιοχή (ίδια $F$, ίδιο $N$) πάλι από τον 2ο νόμο: $F-\mu_2 N=ma_2$, και λύνοντας ως προς $\mu_2$:</p>
 <p>$$\mu_2=\dfrac{F-ma_2}{N}=\dfrac{14-2\cdot2}{20}=0{,}5.$$</p>
 <p><strong>β)</strong> Η κίνηση είναι ευθύγραμμη ομαλά επιταχυνόμενη. Από τον <strong>ορισμό της επιτάχυνσης</strong> $a=\dfrac{\Delta\upsilon}{\Delta t}$ προκύπτει $\upsilon=\upsilon_0+at$. Ξεκινώντας από ηρεμία: $\upsilon_5=a_1 t_1=5\cdot5=25\ \text{m/s}$. Στα επόμενα $5\ \text{s}$ με αρχική ταχύτητα $\upsilon_5$: $\upsilon_{10}=\upsilon_5+a_2 t_2=25+2\cdot5=35\ \text{m/s}$.</p>
-<p><strong>γ)</strong> Χωρίζουμε τη διαδρομή σε δύο σκέλη, $s=s_1+s_2$, και χρησιμοποιούμε την <strong>εξίσωση θέσης</strong> $s=\upsilon_0 t+\tfrac{1}{2}a t^2$:</p>
+<p><strong>γ)</strong> Χωρίζουμε τη διαδρομή σε δύο σκέλη, $s=s_1+s_2$, και χρησιμοποιούμε την <strong>εξίσωση κίνησης</strong> $s=\upsilon_0 t+\tfrac{1}{2}a t^2$:</p>
 <p>1ο σκέλος (0–5 s, από ηρεμία): $s_1=\tfrac{1}{2}a_1 t_1^2=\tfrac{1}{2}\cdot5\cdot5^2=62{,}5\ \text{m}$.<br>2ο σκέλος (5–10 s, αρχική $\upsilon_5=25\ \text{m/s}$): $s_2=\upsilon_5 t_2+\tfrac{1}{2}a_2 t_2^2=25\cdot5+\tfrac{1}{2}\cdot2\cdot5^2=150\ \text{m}$.<br>Άρα $s=s_1+s_2=62{,}5+150=212{,}5\ \text{m}$.</p>
-<p><strong>δ)</strong> Μετά την κατάργηση της $F$ δρα οριζόντια μόνο η τριβή $T=\mu_2 N$, που προκαλεί <strong>επιβράδυνση</strong> μέτρου $a$. Από τον <strong>2ο νόμο του Νεύτωνα</strong>: $T=ma \Rightarrow \mu_2 N=ma$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_{10}-a\,t=0$ βρίσκουμε τον χρόνο μέχρι τη στάση, $t_3=\dfrac{\upsilon_{10}}{a}$, και τον αντικαθιστούμε στην <strong>εξίσωση θέσης</strong> $s_3=\upsilon_{10}\,t_3-\tfrac{1}{2}a\,t_3^{\,2}$:</p>
+<p><strong>δ)</strong> Μετά την κατάργηση της $F$ δρα οριζόντια μόνο η τριβή $T=\mu_2 N$, που προκαλεί <strong>επιβράδυνση</strong> μέτρου $a$. Από τον <strong>2ο νόμο του Νεύτωνα</strong>: $T=ma \Rightarrow \mu_2 N=ma$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_{10}-a\,t=0$ βρίσκουμε τον χρόνο μέχρι τη στάση, $t_3=\dfrac{\upsilon_{10}}{a}$, και τον αντικαθιστούμε στην <strong>εξίσωση κίνησης</strong> $s_3=\upsilon_{10}\,t_3-\tfrac{1}{2}a\,t_3^{\,2}$:</p>
 <p>$$s_3=\upsilon_{10}\cdot\dfrac{\upsilon_{10}}{a}-\tfrac{1}{2}a\cdot\dfrac{\upsilon_{10}^2}{a^2}=\dfrac{\upsilon_{10}^2}{2a}.$$</p>
 <p>Αντικαθιστούμε την επιβράδυνση $a=\mu_2 g=0{,}5\cdot10=5\ \text{m/s}^2$ (αφού $N=mg$): $t_3=\dfrac{35}{5}=7\ \text{s}$ (σταματά στα $t=17\ \text{s}$) και $s_3=\dfrac{35^2}{2\cdot5}=122{,}5\ \text{m}$. Ολική μετατόπιση $s_{\text{ολ}}=s_1+s_2+s_3=62{,}5+150+122{,}5=335\ \text{m}$.</p>
 </details>
@@ -59,9 +85,9 @@ nav: false
 <p><strong>β)</strong> Στον <strong>κατακόρυφο άξονα</strong> το σώμα ισορροπεί: $\Sigma F_y=0 \Rightarrow N+F_y-mg=0 \Rightarrow N=mg-F_y=200-87=113\ \text{N}$. Στον <strong>οριζόντιο άξονα</strong> εφαρμόζουμε τον <strong>2ο νόμο του Νεύτωνα</strong>, με τριβή $T=\mu N$:</p>
 <p>$$F_x-T=ma \;\Rightarrow\; T=F_x-ma=50-20\cdot0{,}5=40\ \text{N}.$$</p>
 <p>Από τον <strong>νόμο της τριβής</strong> $T=\mu N$, λύνοντας ως προς $\mu$: $\mu=\dfrac{T}{N}=\dfrac{40}{113}\approx0{,}35$.</p>
-<p><strong>γ)</strong> Η μετατόπιση κατά την έλξη (0–4 s) προκύπτει από την <strong>εξίσωση θέσης</strong> $s=\upsilon_0 t+\tfrac{1}{2}at^2$: $s_1=\tfrac{1}{2}\cdot0{,}5\cdot4^2=4\ \text{m}$. Το <strong>έργο</strong> της δύναμης είναι $W=F\,s_1\,\text{συν}60^\circ=F_x s_1=50\cdot4=200\ \text{J}$.</p>
+<p><strong>γ)</strong> Η μετατόπιση κατά την έλξη (0–4 s) προκύπτει από την <strong>εξίσωση κίνησης</strong> $s=\upsilon_0 t+\tfrac{1}{2}at^2$: $s_1=\tfrac{1}{2}\cdot0{,}5\cdot4^2=4\ \text{m}$. Το <strong>έργο</strong> της δύναμης είναι $W=F\,s_1\,\text{συν}60^\circ=F_x s_1=50\cdot4=200\ \text{J}$.</p>
 <p><strong>δ)</strong> Μόλις αφεθεί, χάνεται η κατακόρυφη συνιστώσα $F_y$, οπότε στον <strong>κατακόρυφο άξονα</strong> η αντίδραση γίνεται $N_2=mg=200\ \text{N}$. Οριζόντια δρα πλέον μόνο η τριβή $T_2=\mu N_2$, που προκαλεί <strong>επιβράδυνση</strong> μέτρου $a_2$. Από τον <strong>2ο νόμο του Νεύτωνα</strong>: $T_2=ma_2 \Rightarrow \mu N_2=ma_2$.</p>
-<p>Η αρχική ταχύτητα αυτής της φάσης είναι $\upsilon_{\text{αρχ}}=2\ \text{m/s}$ (η ταχύτητα τη στιγμή που αφέθηκε) και η τελική $\upsilon_{\text{τελ}}=0$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_{\text{αρχ}}-a_2\,t=0$ βρίσκουμε τον χρόνο $t=\dfrac{\upsilon_{\text{αρχ}}}{a_2}$, και τον αντικαθιστούμε στην <strong>εξίσωση θέσης</strong> $s_2=\upsilon_{\text{αρχ}}\,t-\tfrac{1}{2}a_2\,t^2$:</p>
+<p>Η αρχική ταχύτητα αυτής της φάσης είναι $\upsilon_{\text{αρχ}}=2\ \text{m/s}$ (η ταχύτητα τη στιγμή που αφέθηκε) και η τελική $\upsilon_{\text{τελ}}=0$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_{\text{αρχ}}-a_2\,t=0$ βρίσκουμε τον χρόνο $t=\dfrac{\upsilon_{\text{αρχ}}}{a_2}$, και τον αντικαθιστούμε στην <strong>εξίσωση κίνησης</strong> $s_2=\upsilon_{\text{αρχ}}\,t-\tfrac{1}{2}a_2\,t^2$:</p>
 <p>$$s_2=\upsilon_{\text{αρχ}}\cdot\dfrac{\upsilon_{\text{αρχ}}}{a_2}-\tfrac{1}{2}a_2\cdot\dfrac{\upsilon_{\text{αρχ}}^2}{a_2^2}=\dfrac{\upsilon_{\text{αρχ}}^2}{2a_2}.$$</p>
 <p>Αντικαθιστούμε την επιβράδυνση $a_2=\mu g\approx3{,}5\ \text{m/s}^2$ (αφού $N_2=mg$): $s_2=\dfrac{2^2}{2\cdot3{,}5}\approx0{,}57\ \text{m}$. Συνολική απόσταση $s=s_1+s_2\approx4+0{,}57=4{,}57\ \text{m}$.</p>
 </details>
@@ -74,8 +100,8 @@ nav: false
 
 <details class="qa"><summary>Λύση</summary>
 <p><strong>α)</strong> <strong>Φάση 1 (Ο→Α):</strong> σταθερή ταχύτητα → το σώμα <strong>ισορροπεί</strong> ($\Sigma F=0$): $F_2-F_1-T=0 \Rightarrow T=F_2-F_1=8-6=2\ \text{N}$. Κατακόρυφα ισορροπεί επίσης, άρα $N=mg=20\ \text{N}$. Από τον <strong>νόμο της τριβής</strong> $T=\mu N$, λύνοντας ως προς $\mu$: $\mu=\dfrac{T}{N}=\dfrac{2}{20}=0{,}1$.</p>
-<p><strong>β)</strong> Στη φάση 1, από τον <strong>ορισμό της ταχύτητας</strong> $\upsilon=\dfrac{s}{\Delta t}$: $t_1=\dfrac{x_A}{\upsilon_0}=\dfrac{16}{5}=3{,}2\ \text{s}$. <strong>Φάση 2 (Α→Β):</strong> χωρίς την $F_1$, από τον <strong>2ο νόμο του Νεύτωνα</strong>: $F_2-T=ma_1 \Rightarrow a_1=\dfrac{8-2}{2}=3\ \text{m/s}^2$. Από την <strong>εξίσωση θέσης</strong> $\Delta x=\upsilon_0 t+\tfrac{1}{2}a_1 t^2$ για $\Delta x=16\ \text{m}$: $16=5t+1{,}5t^2 \Rightarrow 3t^2+10t-32=0 \Rightarrow t_2=2\ \text{s}$ (η θετική ρίζα). Άρα περνά από τη Β τη στιγμή $t_B=t_1+t_2=3{,}2+2=5{,}2\ \text{s}$.</p>
-<p><strong>γ)</strong> Η ταχύτητα στη Β από την <strong>εξίσωση της ταχύτητας</strong>: $\upsilon_B=\upsilon_0+a_1 t_2=5+3\cdot2=11\ \text{m/s}$. <strong>Φάση 3 (Β→Γ):</strong> δρα οριζόντια μόνο η τριβή, που προκαλεί <strong>επιβράδυνση</strong> $a_2$· από τον <strong>2ο νόμο</strong>: $T=ma_2 \Rightarrow a_2=\dfrac{T}{m}=1\ \text{m/s}^2$. Από την εξίσωση της ταχύτητας $\upsilon_{\text{τελ}}=\upsilon_B-a_2 t=0$: $t_3=\dfrac{\upsilon_B}{a_2}=11\ \text{s}$. Αντικαθιστούμε στην <strong>εξίσωση θέσης</strong>: $s_3=\upsilon_B t_3-\tfrac{1}{2}a_2 t_3^{\,2}=11\cdot11-\tfrac{1}{2}\cdot1\cdot121=60{,}5\ \text{m}$. Άρα $x_Γ=x_B+s_3=32+60{,}5=92{,}5\ \text{m}$ (και σταματά τη στιγμή $t=5{,}2+11=16{,}2\ \text{s}$).</p>
+<p><strong>β)</strong> Στη φάση 1, από τον <strong>ορισμό της ταχύτητας</strong> $\upsilon=\dfrac{s}{\Delta t}$: $t_1=\dfrac{x_A}{\upsilon_0}=\dfrac{16}{5}=3{,}2\ \text{s}$. <strong>Φάση 2 (Α→Β):</strong> χωρίς την $F_1$, από τον <strong>2ο νόμο του Νεύτωνα</strong>: $F_2-T=ma_1 \Rightarrow a_1=\dfrac{8-2}{2}=3\ \text{m/s}^2$. Από την <strong>εξίσωση κίνησης</strong> $\Delta x=\upsilon_0 t+\tfrac{1}{2}a_1 t^2$ για $\Delta x=16\ \text{m}$: $16=5t+1{,}5t^2 \Rightarrow 3t^2+10t-32=0 \Rightarrow t_2=2\ \text{s}$ (η θετική ρίζα). Άρα περνά από τη Β τη στιγμή $t_B=t_1+t_2=3{,}2+2=5{,}2\ \text{s}$.</p>
+<p><strong>γ)</strong> Η ταχύτητα στη Β από την <strong>εξίσωση της ταχύτητας</strong>: $\upsilon_B=\upsilon_0+a_1 t_2=5+3\cdot2=11\ \text{m/s}$. <strong>Φάση 3 (Β→Γ):</strong> δρα οριζόντια μόνο η τριβή, που προκαλεί <strong>επιβράδυνση</strong> $a_2$· από τον <strong>2ο νόμο</strong>: $T=ma_2 \Rightarrow a_2=\dfrac{T}{m}=1\ \text{m/s}^2$. Από την εξίσωση της ταχύτητας $\upsilon_{\text{τελ}}=\upsilon_B-a_2 t=0$: $t_3=\dfrac{\upsilon_B}{a_2}=11\ \text{s}$. Αντικαθιστούμε στην <strong>εξίσωση κίνησης</strong>: $s_3=\upsilon_B t_3-\tfrac{1}{2}a_2 t_3^{\,2}=11\cdot11-\tfrac{1}{2}\cdot1\cdot121=60{,}5\ \text{m}$. Άρα $x_Γ=x_B+s_3=32+60{,}5=92{,}5\ \text{m}$ (και σταματά τη στιγμή $t=5{,}2+11=16{,}2\ \text{s}$).</p>
 <p><strong>δ)</strong> Οριζόντιο τμήμα στα $5\ \text{m/s}$ ως τα $3{,}2\ \text{s}$, ευθεία ανόδου ως τα $11\ \text{m/s}$ στα $5{,}2\ \text{s}$, ευθεία καθόδου ως το μηδέν στα $16{,}2\ \text{s}$:</p>
 <div style="display:flex;justify-content:center;margin:0.5rem 0 0.2rem;"><figure markdown="0" style="margin:0;text-align:center;"><svg width="100%" viewBox="0 0 320 150" style="max-width:310px;height:auto;" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="115" x2="305" y2="115" stroke="#888" stroke-width="1.4"/><line x1="40" y1="140" x2="40" y2="15" stroke="#888" stroke-width="1.4"/><path d="M305,115 l-6,-3 M305,115 l-6,3" stroke="#888" stroke-width="1.4" fill="none"/><path d="M40,15 l-3,6 M40,15 l3,6" stroke="#888" stroke-width="1.4" fill="none"/><polyline points="40,80 90,80 121,38 291,115" fill="none" stroke="#2a66d9" stroke-width="2.4"/><g stroke="#2a66d9" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"><line x1="90" y1="80" x2="90" y2="115"/><line x1="121" y1="38" x2="121" y2="115"/><line x1="40" y1="38" x2="121" y2="38"/></g><g font-size="9" fill="currentColor" text-anchor="end"><text x="36" y="84">5</text><text x="36" y="42">11</text></g><g font-size="9" fill="currentColor" text-anchor="middle"><text x="90" y="128">3,2</text><text x="121" y="128">5,2</text><text x="291" y="128">16,2</text></g><text x="28" y="16" font-size="11" font-style="italic" fill="currentColor">υ</text><text x="298" y="109" font-size="11" font-style="italic" fill="currentColor">t</text></svg></figure></div>
 </details>
@@ -90,9 +116,9 @@ nav: false
 
 <details class="qa"><summary>Λύση</summary>
 <p><strong>α)</strong> Κατακόρυφα το όχημα <strong>ισορροπεί</strong>: $N=mg=1000\ \text{N}$. Από τον <strong>νόμο της τριβής</strong>: $T_1=\mu_1 N=0{,}2\cdot1000=200\ \text{N}$. Από τον <strong>2ο νόμο του Νεύτωνα</strong> στη διεύθυνση της κίνησης: $F-T_1=ma_1$, οπότε $a_1=\dfrac{F-T_1}{m}=\dfrac{300-200}{100}=1\ \text{m/s}^2$.</p>
-<p><strong>β)</strong> Από την <strong>εξίσωση θέσης</strong> (από ηρεμία) $s=\tfrac{1}{2}a_1 t^2$, λύνοντας ως προς τον χρόνο: $t=\sqrt{\dfrac{2s}{a_1}}=\sqrt{\dfrac{2\cdot50}{1}}=10\ \text{s}$. Από την <strong>εξίσωση της ταχύτητας</strong>: $\upsilon_Γ=a_1 t=1\cdot10=10\ \text{m/s}$.</p>
+<p><strong>β)</strong> Από την <strong>εξίσωση κίνησης</strong> (από ηρεμία) $s=\tfrac{1}{2}a_1 t^2$, λύνοντας ως προς τον χρόνο: $t=\sqrt{\dfrac{2s}{a_1}}=\sqrt{\dfrac{2\cdot50}{1}}=10\ \text{s}$. Από την <strong>εξίσωση της ταχύτητας</strong>: $\upsilon_Γ=a_1 t=1\cdot10=10\ \text{m/s}$.</p>
 <p><strong>γ)</strong> Στην <strong>άνοδο</strong> της πλαγιάς (χωρίς την $F$), αντίθετα στην κίνηση δρουν η συνιστώσα του βάρους $mg\,\text{ημ}\varphi$ και η τριβή $T_2=\mu_2 N_2$, με $N_2=mg\,\text{συν}\varphi$ (ισορροπία κάθετα στην πλαγιά). Από τον <strong>2ο νόμο του Νεύτωνα</strong>: $a_2=g(\text{ημ}\varphi+\mu_2\,\text{συν}\varphi)=10\,(0{,}6+0{,}5\cdot0{,}8)=10\ \text{m/s}^2$.</p>
-<p><strong>δ)</strong> Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_Γ-a_2 t=0$: $t=\dfrac{\upsilon_Γ}{a_2}=1\ \text{s}$. Αντικαθιστούμε στην <strong>εξίσωση θέσης</strong>: $s_{\text{αν}}=\upsilon_Γ t-\tfrac{1}{2}a_2 t^2=10\cdot1-\tfrac{1}{2}\cdot10\cdot1=5\ \text{m}$. Αφού $s_{\text{αν}}=5\ \text{m}<d=10\ \text{m}$, το όχημα σταματά $5\ \text{m}$ <strong>πριν</strong> από τον σκιέρ — <strong>δεν</strong> τον χτυπά.</p>
+<p><strong>δ)</strong> Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon_Γ-a_2 t=0$: $t=\dfrac{\upsilon_Γ}{a_2}=1\ \text{s}$. Αντικαθιστούμε στην <strong>εξίσωση κίνησης</strong>: $s_{\text{αν}}=\upsilon_Γ t-\tfrac{1}{2}a_2 t^2=10\cdot1-\tfrac{1}{2}\cdot10\cdot1=5\ \text{m}$. Αφού $s_{\text{αν}}=5\ \text{m}<d=10\ \text{m}$, το όχημα σταματά $5\ \text{m}$ <strong>πριν</strong> από τον σκιέρ — <strong>δεν</strong> τον χτυπά.</p>
 </details>
 
 **Συνδυαστική 5 — Σκι: ώθηση υπό γωνία & ανάβαση (Θέμα Δ).** Αθλήτρια του σκι μαζί με τον εξοπλισμό της έχει μάζα $m=50\ \text{kg}$. Τη στιγμή $t=0$ περνά από το σημείο Α οριζόντιου χιονισμένου δρόμου με ταχύτητα $\upsilon=11\ \text{m/s}$. Σε όλο το τμήμα ΑΒ $=22\ \text{m}$ σπρώχνει με τα μπατόν, δεχόμενη σταθερή δύναμη $F=250\ \text{N}$ που σχηματίζει γωνία $\varphi$ με τον ορίζοντα (με φορά προς τα πάνω και εμπρός). Στο Β σταματά να σπρώχνει και μπαίνει σε ανηφορική πλαγιά γωνίας $\varphi$, όπου επιβραδύνεται και σταματά στο σημείο Γ. Ο συντελεστής τριβής είναι παντού $\mu=0{,}5$. Δίνονται $\text{ημ}\varphi=0{,}8$, $\text{συν}\varphi=0{,}6$, $g=10\ \text{m/s}^2$. Να βρείτε:
@@ -106,7 +132,7 @@ nav: false
 <details class="qa"><summary>Λύση</summary>
 <p><strong>α)</strong> <strong>Αναλύουμε</strong> την $F$ σε συνιστώσες: οριζόντια $F_x=F\,\text{συν}\varphi=250\cdot0{,}6=150\ \text{N}$ και κατακόρυφη (προς τα πάνω) $F_y=F\,\text{ημ}\varphi=250\cdot0{,}8=200\ \text{N}$. Κατακόρυφα η αθλήτρια <strong>ισορροπεί</strong>: $N+F_y-mg=0$, οπότε $N=mg-F\,\text{ημ}\varphi=500-200=300\ \text{N}$.</p>
 <p><strong>β)</strong> Από τον <strong>νόμο της τριβής</strong>: $T=\mu N=0{,}5\cdot300=150\ \text{N}$. Οριζόντια: $\Sigma F_x=F\,\text{συν}\varphi-T=150-150=0$. Αφού η συνισταμένη είναι μηδέν, από τον <strong>1ο νόμο του Νεύτωνα</strong> η ταχύτητα μένει σταθερή — η κίνηση στο ΑΒ είναι <strong>ευθύγραμμη ομαλή</strong> με $\upsilon=11\ \text{m/s}$.</p>
-<p><strong>γ)</strong> Στο ΑΒ, από τον <strong>ορισμό της ταχύτητας</strong>: $t_1=\dfrac{AB}{\upsilon}=\dfrac{22}{11}=2\ \text{s}$. Στην <strong>άνοδο</strong> της πλαγιάς η επιβράδυνση είναι $a=g(\text{ημ}\varphi+\mu\,\text{συν}\varphi)=10\,(0{,}8+0{,}5\cdot0{,}6)=11\ \text{m/s}^2$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon-a\,t=0$: $t_2=\dfrac{\upsilon}{a}=1\ \text{s}$ — σταματά τη στιγμή $t=t_1+t_2=3\ \text{s}$. Από την <strong>εξίσωση θέσης</strong>: $s_2=\upsilon t_2-\tfrac{1}{2}a t_2^{\,2}=11-5{,}5=5{,}5\ \text{m}$. Συνολικά $AΓ=AB+s_2=22+5{,}5=27{,}5\ \text{m}$.</p>
+<p><strong>γ)</strong> Στο ΑΒ, από τον <strong>ορισμό της ταχύτητας</strong>: $t_1=\dfrac{AB}{\upsilon}=\dfrac{22}{11}=2\ \text{s}$. Στην <strong>άνοδο</strong> της πλαγιάς η επιβράδυνση είναι $a=g(\text{ημ}\varphi+\mu\,\text{συν}\varphi)=10\,(0{,}8+0{,}5\cdot0{,}6)=11\ \text{m/s}^2$. Από την <strong>εξίσωση της ταχύτητας</strong> $\upsilon_{\text{τελ}}=\upsilon-a\,t=0$: $t_2=\dfrac{\upsilon}{a}=1\ \text{s}$ — σταματά τη στιγμή $t=t_1+t_2=3\ \text{s}$. Από την <strong>εξίσωση κίνησης</strong>: $s_2=\upsilon t_2-\tfrac{1}{2}a t_2^{\,2}=11-5{,}5=5{,}5\ \text{m}$. Συνολικά $AΓ=AB+s_2=22+5{,}5=27{,}5\ \text{m}$.</p>
 <p><strong>δ)</strong> Στην πλαγιά, κάθετα στην επιφάνεια ισορροπεί: $N_2=mg\,\text{συν}\varphi=500\cdot0{,}6=300\ \text{N}$, και από τον νόμο της τριβής $T_2=\mu N_2=150\ \text{N}$. Η πλαγιά ασκεί συνολικά την $N_2$ (κάθετη) και την $T_2$ (παράλληλη), που είναι κάθετες μεταξύ τους, άρα το <strong>μέτρο της συνισταμένης</strong> είναι $\sqrt{N_2^2+T_2^2}=\sqrt{300^2+150^2}=150\sqrt{5}\approx335\ \text{N}$.</p>
 </details>
 
@@ -129,4 +155,43 @@ nav: false
 <p class="trap-src">Πηγή: Ι.Ε.Π. — Τράπεζα Θεμάτων Διαβαθμισμένης Δυσκολίας (θέματα 13591, 13658, 13710, 13706, 13701, 14388). Οι εκφωνήσεις αποδόθηκαν ελεύθερα και τα σχήματα ξανασχεδιάστηκαν.</p>
 </div>
 
-<p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/a-lykeiou/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι ενότητες</a></p>
+<div class="subnav subnav-bottom">
+<a class="sn-prev" href="{{ '/teaching/a-lykeiou/1-3/' | relative_url }}"><span class="sn-lbl">Προηγούμενη ενότητα</span><span class="sn-name">1.3 Δυναμική στο επίπεδο</span></a>
+<a class="sn-all" href="{{ '/teaching/a-lykeiou/' | relative_url }}">Όλες οι ενότητες</a>
+<a class="sn-next" href="{{ '/teaching/a-lykeiou/2-1/' | relative_url }}"><span class="sn-lbl">Επόμενη ενότητα</span><span class="sn-name">2.1 Διατήρηση μηχανικής ενέργειας</span></a>
+</div>
+
+<script>
+document.addEventListener('keydown', function (e) {
+  if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
+  if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  var t = e.target || {};
+  var tag = (t.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || tag === 'select' || tag === 'ninja-keys' || t.isContentEditable) return;
+  var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
+  if (a) window.location.href = a.href;
+});
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
+</script>

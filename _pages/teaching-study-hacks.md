@@ -14,6 +14,8 @@ nav: false
   .hack-box p { margin: 0.55rem 0; }
   .hack-box ol { margin: 0.55rem 0 0.7rem; padding-left: 1.4rem; }
   .hack-box li { margin: 0.3rem 0; }
+  .prompt-copy { display:inline-block; font-size:0.78em; font-weight:600; color:var(--global-theme-color); background:none; border:1px solid var(--global-theme-color); border-radius:999px; padding:0.12rem 0.65rem; margin-left:0.35rem; cursor:pointer; vertical-align:middle; transition:background .15s ease, color .15s ease; }
+  .prompt-copy:hover { background:var(--global-theme-color); color:#fff; }
 </style>
 
 <p style="margin:0 0 1.2rem;"><a href="{{ '/teaching/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι τάξεις</a></p>
@@ -47,5 +49,43 @@ nav: false
 
 Δώσε στον εαυτό σου 10–15 λεπτά πραγματικής προσπάθειας πριν ανοίξεις οτιδήποτε — ακόμα κι αν κάνεις λάθος, αυτή η προσπάθεια είναι που «χτίζει» τη γνώση. Μετά, δες τη λύση **σιγά σιγά, αποκαλύπτοντας μία γραμμή τη φορά**, και επανέλαβε τα πρώτα βήματα του Pólya· αν και πάλι δεν τα καταφέρεις, συνέχισε στην επόμενη γραμμή. Μην απελπίζεσαι αν χρειαστεί να δεις πολλές γραμμές — με τον καιρό θα «προγραμματίσεις» τον εγκέφαλό σου να σκέφτεται *φυσικά*, και οι γραμμές που αποκαλύπτεις θα λιγοστεύουν. **Γι' αυτό και όλες οι λύσεις εδώ είναι κρυμμένες.**
 </div>
+
+<div class="hack-box" markdown="1">
+<h4><strong>AI</strong> — γιατί (και πώς) να το χρησιμοποιείς</h4>
+
+Η τεχνητή νοημοσύνη και τα γλωσσικά μοντέλα είναι από τα πιο χρήσιμα εργαλεία που έχεις — αρκεί να τα χρησιμοποιείς σωστά: όχι για να σκέφτονται στη θέση σου, αλλά για να σε κάνουν να σκέφτεσαι καλύτερα.
+
+- **Δώσε του τις σημειώσεις σου και ζήτα να σε εξετάσει.** Ερωτήσεις πάνω σε αυτά που διάβασες — για να δεις αν πραγματικά τα αφομοίωσες ή απλώς σου φαίνονται γνώριμα. <button class="prompt-copy" data-target="prompt-quiz">Ενδεικτικό prompt <i class="fa-regular fa-copy"></i></button>
+- **Εξήγησέ του εσύ ένα φαινόμενο** και ζήτα να σε διορθώσει όπου κάνεις λάθος — η «μέθοδος Feynman» με ζωντανό ακροατή. <button class="prompt-copy" data-target="prompt-feynman">Ενδεικτικό prompt <i class="fa-regular fa-copy"></i></button>
+- **Κόλλησες σε άσκηση; Μην του ζητήσεις να τη λύσει.** Ζήτα να σε καθοδηγήσει **σωκρατικά** (ξέρει τι σημαίνει αυτό): να σου κάνει ερωτήσεις μέχρι να φτάσεις μόνος σου στο επόμενο βήμα. <button class="prompt-copy" data-target="prompt-socratic">Ενδεικτικό prompt <i class="fa-regular fa-copy"></i></button>
+- **Ζήτα ένα φαινόμενο σε 3 επίπεδα αφαίρεσης** — «εξήγησέ μου την πίεση σαν να είμαι 10 χρονών, μετά για μαθητή Λυκείου, μετά για φοιτητή» — και πρόσεξε σε ποιο επίπεδο σταματάς να καταλαβαίνεις. <button class="prompt-copy" data-target="prompt-levels">Ενδεικτικό prompt <i class="fa-regular fa-copy"></i></button>
+
+Το AI δεν είναι για να αντιγράφεις — είναι για να μαθαίνεις.
+</div>
+
+<div id="prompt-quiz" hidden>Σε όλη αυτή τη συζήτηση είσαι εξεταστής Φυσικής. Μιλάς πάντα ελληνικά, σύντομα και απλά. Θα σου στέλνω σημειώσεις ή ύλη και θα με εξετάζεις ΜΟΝΟ πάνω σε αυτά: 5 ερωτήσεις, ΜΙΑ-ΜΙΑ — περίμενε την απάντησή μου πριν την επόμενη. Αν απαντώ σωστά και εύκολα, δυσκόλεψε τις επόμενες· αν απαντώ «παπαγαλία», ρώτα με «γιατί;». Διόρθωνε κάθε λάθος με εξήγηση δύο γραμμών. Στο τέλος του γύρου: τι πρέπει να ξαναδιαβάσω. Ξεκίνα ρωτώντας σε ποια τάξη πηγαίνω και ζητώντας τις σημειώσεις μου.</div>
+<div id="prompt-feynman" hidden>Σε όλη αυτή τη συζήτηση είσαι καθηγητής Φυσικής που με ακούει να εξηγώ φαινόμενα με δικά μου λόγια. Μιλάς πάντα ελληνικά, σύντομα. Κανόνες: μη δίνεις εσύ την εξήγηση· ΜΗ με κολακεύεις — αν η εξήγησή μου είναι μέτρια ή λάθος, πες το ευθέως· μετά από κάθε εξήγησή μου: (α) τι είπα σωστά, (β) τι λάθος ή ασαφές, (γ) τι σημαντικό μου ξέφυγε, (δ) μία ερώτηση που με πάει πιο βαθιά. Ξεκίνα ρωτώντας σε ποια τάξη πηγαίνω και ποιο φαινόμενο θα σου εξηγήσω.</div>
+<div id="prompt-socratic" hidden>Σε όλη αυτή τη συζήτηση είσαι σωκρατικός καθηγητής Φυσικής. Μιλάς πάντα ελληνικά, σύντομα. Θα σου στέλνω ασκήσεις που με δυσκολεύουν και το πού έχω φτάσει. Κανόνες: ΠΟΤΕ μη δίνεις τη λύση ή έτοιμο βήμα — ακόμα κι αν σου το ζητήσω ευθέως· τότε θύμισέ μου ότι θέλω να τη βρω μόνος μου. Μην κάνεις πράξεις για μένα. Κάνε ΜΙΑ ερώτηση τη φορά. Αν κολλήσω σε δύο διαδοχικές απαντήσεις, δώσε ένα μικρό hint και ξαναρώτα. Ξεκίνα ρωτώντας σε ποια τάξη πηγαίνω και ζητώντας την άσκηση.</div>
+<div id="prompt-levels" hidden>Σε όλη αυτή τη συζήτηση, όταν σου γράφω ένα φαινόμενο ή μια έννοια της Φυσικής, την εξηγείς σε 3 επίπεδα: (1) σαν σε 10χρονο, (2) για μαθητή Λυκείου, (3) για φοιτητή Φυσικής. Πάντα ελληνικά. Κάθε επίπεδο έως 150 λέξεις. Ένα επίπεδο τη φορά — περίμενε να γράψω «επόμενο». Στο τέλος ρώτα με σε ποιο επίπεδο έχασα τον ειρμό, και εξήγησε ξανά ακριβώς εκείνο το σκαλοπάτι πιο αναλυτικά, με ένα παράδειγμα από την καθημερινότητα. Ξεκίνα ρωτώντας ποιο φαινόμενο θέλω.</div>
+
+<script>
+document.querySelectorAll('.prompt-copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.getElementById(btn.dataset.target).textContent.trim();
+    var done = function () {
+      var old = btn.innerHTML;
+      btn.innerHTML = 'Αντιγράφηκε ✓';
+      setTimeout(function () { btn.innerHTML = old; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done);
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta); done();
+    }
+  });
+});
+</script>
 
 <p style="margin:2.2rem 0 0;border-top:1px solid var(--global-divider-color,#e3e3e3);padding-top:1rem;"><a href="{{ '/teaching/' | relative_url }}" style="color:var(--global-theme-color);font-size:0.92em;">← Όλες οι τάξεις</a></p>

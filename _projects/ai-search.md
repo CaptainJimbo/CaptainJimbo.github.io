@@ -4,12 +4,12 @@ title: Semantic Search at Scale
 description: Hybrid retrieval engine — dense + lexical, RRF fusion, context-preserving chunking.
 img: assets/img/ai-search.jpg
 importance: 5
-category: "AI / ML Systems"
+category: "What I Build"
 related_publications: false
 ---
 
 <style>.proj-banner{width:100%;height:auto;border-radius:12px;margin:0 0 1.5rem;display:block;}</style>
-<img class="proj-banner" src="{{ page.img | relative_url }}" alt="{{ page.title }}">
+<img class="proj-banner" src="{{ '/assets/img/ai-search-hero.jpg' | relative_url }}" alt="{{ page.title }}">
 
 The **retrieval engine** itself — finding the *right* content for a query, accurately and fast, over a large corpus. It's what powers RAG and search features done **properly**: not just "embed and cosine," but hybrid retrieval, fusion and smart chunking so results are relevant *and* grounded.
 
