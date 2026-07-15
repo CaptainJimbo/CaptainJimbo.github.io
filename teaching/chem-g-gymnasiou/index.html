@@ -1,0 +1,603 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Χημεία Γ′ Γυμνασίου | Dimitris Kogias </title> <meta name="author" content="Dimitris Kogias"> <meta name="description" content="Σημειώσεις ανά κεφάλαιο με διαδραστικές προσομοιώσεις PhET και ασκήσεις με λύσεις."> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://captainjimbo.github.io/teaching/chem-g-gymnasiou/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Dimitris</span> Kogias </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/teaching/">teaching <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">Χημεία Γ′ Γυμνασίου</h1> <p class="post-description">Σημειώσεις ανά κεφάλαιο με διαδραστικές προσομοιώσεις PhET και ασκήσεις με λύσεις.</p> </header> <article> <style>
+  /* Wider content area for the embedded PhET simulations (teaching page only) */
+  .container.mt-5 { max-width: 1400px; }
+  .qa { margin: 0.7rem 0; }
+  .qa summary { list-style: none; cursor: pointer; color: var(--global-text-color-light, #828282); font-size: 0.95em; }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::after { content: ' \25B8'; color: var(--global-theme-color); font-weight: 600; }
+  .qa[open] summary::after { content: ' \25BE'; color: var(--global-theme-color); }
+  .qa p { margin-top: 0.4rem; }
+  .book-link { font-size: 0.62em; margin-left: 0.5em; color: var(--global-theme-color); text-decoration: none; vertical-align: middle; opacity: 0.7; }
+  .book-link:hover { opacity: 1; }
+  .notes-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.6rem; margin: 1.2rem 0 1.6rem; background: rgba(127,127,127,0.04); }
+  .notes-box h5 { color: var(--global-theme-color); margin: 0.7rem 0 0.3rem; letter-spacing: 0.04em; }
+  .ask-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.3rem 1.4rem 1rem; margin: 2rem 0; background: rgba(127,127,127,0.045); }
+  .ask-box h4 { color: var(--global-theme-color); margin-top: 0.9rem; }
+</style> <p>Σχολικό βιβλίο μαθητή: <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/" rel="external nofollow noopener" target="_blank">Χημεία Γ′ Γυμνασίου (εμπλουτισμένο)</a></p> <h3 id="ενότητα-1--οξέα-βάσεις-άλατα">Ενότητα 1 — Οξέα, Βάσεις, Άλατα</h3> <h4 id="κεφάλαιο-1--τα-οξέα-και-η-κλίμακα-ph-">Κεφάλαιο 1 · Τα οξέα και η κλίμακα pH <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index1_1.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Όξινος χαρακτήρας</strong> ονομάζεται το σύνολο των κοινών ιδιοτήτων των υδατικών διαλυμάτων των οξέων: έχουν <strong>όξινη (ξινή) γεύση</strong>, <strong>μεταβάλλουν το χρώμα των δεικτών</strong>, αντιδρούν με πολλά <strong>μέταλλα</strong> (ελευθερώνοντας <strong>υδρογόνο</strong>) και με τα <strong>ανθρακικά άλατα</strong> (π.χ. μάρμαρο → <strong>διοξείδιο του άνθρακα</strong>).</li> <li> <strong>Δείκτες</strong> είναι χημικές ουσίες που αλλάζουν <strong>χρώμα</strong> ανάλογα με το αν το διάλυμα είναι όξινο ή βασικό (π.χ. ηλιοτρόπιο, μπλε της βρωμοθυμόλης, «κόκκινο» λάχανο).</li> <li> <strong>Οξέα κατά Arrhenius:</strong> οι ενώσεις που, όταν διαλύονται στο νερό, δίνουν <strong>κατιόντα υδρογόνου (H⁺)</strong>. Σε αυτά τα H⁺ οφείλονται οι κοινές ιδιότητες των οξέων.</li> <li>Χαρακτηριστικά οξέα και ο <strong>ιοντισμός</strong> τους στο νερό:</li> </ul> \[\text{HCl}\,(aq) \rightarrow \text{H}^+(aq) + \text{Cl}^-(aq)\] \[\text{H}_2\text{SO}_4\,(aq) \rightarrow 2\text{H}^+(aq) + \text{SO}_4^{\,2-}(aq)\] \[\text{HNO}_3\,(aq) \rightarrow \text{H}^+(aq) + \text{NO}_3^{\,-}(aq)\] <ul> <li> <strong>Οξύτητα</strong> είναι η μετρήσιμη ιδιότητα που εκφράζει το πόσο όξινο είναι ένα διάλυμα: όσο περισσότερα <strong>H⁺</strong> ανά ορισμένο όγκο, τόσο μεγαλύτερη η οξύτητα.</li> <li>Η <strong>κλίμακα pH</strong> (στους 25 °C) μετρά την οξύτητα: <strong>pH &lt; 7 → όξινο</strong>, <strong>pH = 7 → ουδέτερο</strong> (καθαρό νερό), <strong>pH &gt; 7 → βασικό</strong>. Όσο <strong>μικρότερο</strong> το pH, τόσο <strong>πιο όξινο</strong> το διάλυμα (pH = 1 πιο όξινο από pH = 2,5).</li> </ul> </div> <div class="phet-card" style="border:1px solid var(--global-divider-color, #e3e3e3); border-radius:10px; padding:0.7rem 1rem 0.3rem; margin:1.3rem 0;"> <p><em>Ρίξε το πεχάμετρο μέσα σε καθημερινά υγρά — καφέ, χυμό λεμονιού, σαπουνόνερο, νερό — και δες το <strong>pH</strong> τους. Πρόσεξε: όσο πιο <strong>όξινο</strong> το υγρό, τόσο πιο μικρός ο αριθμός. Αραίωσε με νερό και δες το pH να τείνει προς το 7.</em></p> <iframe src="https://phet.colorado.edu/sims/html/ph-scale-basics/latest/ph-scale-basics_el.html" width="100%" height="500" frameborder="0" allowfullscreen="" loading="lazy" style="border-radius: 8px; margin: 0.5rem 0;"></iframe> </div> <div class="ask-box"> <h4>Ασκήσεις — Τα οξέα</h4> <p><strong>Άσκηση 1.</strong> Να γράψεις τους μοριακούς τύπους των παρακάτω οξέων:<br><strong>α)</strong> υδροχλώριο (υδροχλωρικό οξύ)<br><strong>β)</strong> θειικό οξύ<br><strong>γ)</strong> νιτρικό οξύ</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> HCl  ·  <strong>β)</strong> H₂SO₄  ·  <strong>γ)</strong> HNO₃.</p> </details> <p><strong>Άσκηση 2.</strong> Να γράψεις τις χημικές εξισώσεις που δείχνουν τον σχηματισμό ιόντων κατά τη διάλυση του <strong>υδροχλωρίου</strong> και του <strong>θειικού οξέος</strong> στο νερό.</p> <details class="qa"><summary>Λύση</summary> <p>Κανόνας (Arrhenius): κάθε οξύ δίνει στο νερό <strong>κατιόντα H⁺</strong> και το αντίστοιχο ανιόν. Προσοχή να ισοσταθμίζονται τα φορτία και τα άτομα:</p> <p>$$\text{HCl}\,(aq) \rightarrow \text{H}^+(aq) + \text{Cl}^-(aq)$$</p> <p>$$\text{H}_2\text{SO}_4\,(aq) \rightarrow 2\text{H}^+(aq) + \text{SO}_4^{\,2-}(aq)$$</p> <p>Το θειικό οξύ δίνει <strong>δύο</strong> H⁺, γι' αυτό ο συντελεστής 2.</p> </details> <p><strong>Άσκηση 3.</strong> Τρία διαλύματα έχουν pH ίσο με 2, 7 και 11 (στους 25 °C).<br><strong>α)</strong> Ποιο είναι όξινο, ποιο ουδέτερο και ποιο βασικό;<br><strong>β)</strong> Ποιο είναι το πιο όξινο;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> pH = 2 → <strong>όξινο</strong>, pH = 7 → <strong>ουδέτερο</strong>, pH = 11 → <strong>βασικό</strong>.</p> <p><strong>β)</strong> Όσο <strong>μικρότερο</strong> το pH, τόσο πιο όξινο — άρα το πιο όξινο είναι αυτό με <strong>pH = 2</strong>.</p> </details> <p><strong>Άσκηση 4.</strong> Ρίχνουμε ξίδι πάνω σε μαρμαρόσκονη και παρατηρούμε φυσαλίδες.<br><strong>α)</strong> Ποιο αέριο παράγεται;<br><strong>β)</strong> Γιατί δεν φυλάμε τα οξέα σε δοχεία από σίδηρο ή αλουμίνιο;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Το μάρμαρο είναι ανθρακικό άλας· με το οξύ ελευθερώνει <strong>διοξείδιο του άνθρακα (CO₂)</strong> — γι' αυτό οι φυσαλίδες.</p> <p><strong>β)</strong> Γιατί τα οξέα <strong>αντιδρούν με τα μέταλλα</strong> (τα «τρώνε»), ελευθερώνοντας υδρογόνο — έτσι θα κατέστρεφαν το μεταλλικό δοχείο.</p> </details> </div> <h4 id="κεφάλαιο-2--οι-βάσεις-">Κεφάλαιο 2 · Οι βάσεις <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index1_2.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Βασικός χαρακτήρας</strong> είναι το σύνολο των κοινών ιδιοτήτων των διαλυμάτων των βάσεων: έχουν <strong>καυστική</strong> («πικρή») γεύση, <strong>σαπωνοειδή</strong> (γλιστερή) αφή και <strong>μεταβάλλουν το χρώμα των δεικτών</strong> (διαφορετικά από τα οξέα).</li> <li> <strong>Βάσεις κατά Arrhenius:</strong> οι ενώσεις που, όταν διαλύονται στο νερό, δίνουν <strong>ανιόντα υδροξειδίου (OH⁻)</strong>. Σε αυτά τα OH⁻ οφείλονται οι κοινές ιδιότητες των βάσεων.</li> <li>Χαρακτηριστικές βάσεις και η <strong>διάλυσή</strong> τους στο νερό:</li> </ul> \[\text{NaOH} \rightarrow \text{Na}^+(aq) + \text{OH}^-(aq)\] \[\text{KOH} \rightarrow \text{K}^+(aq) + \text{OH}^-(aq)\] \[\text{Ca(OH)}_2 \rightarrow \text{Ca}^{2+}(aq) + 2\text{OH}^-(aq)\] <ul> <li>Τα διαλύματα των βάσεων λέγονται και <strong>αλκαλικά</strong>. Στην κλίμακα pH (25 °C) έχουν <strong>pH &gt; 7</strong>· όσο <strong>μεγαλύτερο</strong> το pH, τόσο <strong>πιο βασικό</strong> το διάλυμα (pH = 13 πιο βασικό από pH = 11).</li> <li> <strong>Πεχαμετρικό (πεχάμετρο) χαρτί</strong> ή δείκτες μας δείχνουν αν ένα διάλυμα είναι όξινο, ουδέτερο ή βασικό.</li> </ul> </div> <div class="phet-card" style="border:1px solid var(--global-divider-color, #e3e3e3); border-radius:10px; padding:0.7rem 1rem 0.3rem; margin:1.3rem 0;"> <p><em>Διάλεξε ένα <strong>οξύ</strong> ή μια <strong>βάση</strong> και δες τι σχηματίζεται μέσα στο νερό: τα οξέα γεμίζουν το διάλυμα με <strong>H⁺</strong>, οι βάσεις με <strong>OH⁻</strong>. Βάλε τους δείκτες και το πεχάμετρο και σύγκρινε — έτσι «βλέπεις» γιατί αλλάζει το pH.</em></p> <iframe src="https://phet.colorado.edu/sims/html/acid-base-solutions/latest/acid-base-solutions_el.html" width="100%" height="500" frameborder="0" allowfullscreen="" loading="lazy" style="border-radius: 8px; margin: 0.5rem 0;"></iframe> </div> <div class="ask-box"> <h4>Ασκήσεις — Οι βάσεις</h4> <p><strong>Άσκηση 1.</strong> Να γράψεις τους χημικούς τύπους:<br><strong>α)</strong> υδροξείδιο του νατρίου<br><strong>β)</strong> υδροξείδιο του καλίου<br><strong>γ)</strong> υδροξείδιο του ασβεστίου</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> NaOH  ·  <strong>β)</strong> KOH  ·  <strong>γ)</strong> Ca(OH)₂ (το ασβέστιο είναι δισθενές, γι' αυτό δύο OH).</p> </details> <p><strong>Άσκηση 2.</strong> Να γράψεις τις χημικές εξισώσεις διάλυσης στο νερό του <strong>υδροξειδίου του νατρίου</strong> και του <strong>υδροξειδίου του ασβεστίου</strong>.</p> <details class="qa"><summary>Λύση</summary> <p>Κανόνας (Arrhenius): κάθε βάση δίνει στο νερό <strong>ανιόντα OH⁻</strong> και το αντίστοιχο κατιόν, με ισοσταθμισμένα άτομα και φορτία:</p> <p>$$\text{NaOH} \rightarrow \text{Na}^+(aq) + \text{OH}^-(aq)$$</p> <p>$$\text{Ca(OH)}_2 \rightarrow \text{Ca}^{2+}(aq) + 2\text{OH}^-(aq)$$</p> </details> <p><strong>Άσκηση 3.</strong> Σε τρία ποτήρια Α, Β, Γ περιέχονται: απιονισμένο νερό (Α), διάλυμα θειικού οξέος (Β) και διάλυμα υδροξειδίου του νατρίου (Γ). Να τα διατάξεις κατά <strong>αυξανόμενο pH</strong>.</p> <details class="qa"><summary>Λύση</summary> <p>Το οξύ έχει pH &lt; 7, το νερό pH = 7, η βάση pH &gt; 7. Άρα με αυξανόμενο pH: <strong>Β (οξύ) → Α (νερό) → Γ (βάση)</strong>.</p> </details> <p><strong>Άσκηση 4.</strong> Συμπλήρωσε (στους 25 °C):<br><strong>α)</strong> Διάλυμα με pH = 7 είναι …<br><strong>β)</strong> Διάλυμα με pH &gt; 7 είναι …<br><strong>γ)</strong> Διάλυμα με pH &lt; 7 είναι …<br><strong>δ)</strong> Από δύο διαλύματα NaOH με pH 13 και 12, πιο βασικό είναι αυτό με pH …</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> ουδέτερο  ·  <strong>β)</strong> βασικό (αλκαλικό)  ·  <strong>γ)</strong> όξινο  ·  <strong>δ)</strong> <strong>13</strong> (μεγαλύτερο pH = πιο βασικό).</p> </details> </div> <h4 id="κεφάλαιο-3--εξουδετέρωση-και-άλατα-">Κεφάλαιο 3 · Εξουδετέρωση και άλατα <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index1_3.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Εξουδετέρωση</strong> είναι η αντίδραση ενός <strong>οξέος</strong> με μια <strong>βάση</strong>. Τα κατιόντα <strong>H⁺</strong> του οξέος ενώνονται με τα ανιόντα <strong>OH⁻</strong> της βάσης και σχηματίζουν <strong>νερό</strong>:</li> </ul> \[\text{H}^+(aq) + \text{OH}^-(aq) \rightarrow \text{H}_2\text{O}\,(l)\] <ul> <li>Ο δείκτης <strong>μπλε της βρωμοθυμόλης</strong> δείχνει την πορεία: <strong>κίτρινο</strong> σε όξινο, <strong>πράσινο</strong> σε ουδέτερο, <strong>μπλε</strong> σε βασικό διάλυμα. Στο τέλος μιας πλήρους εξουδετέρωσης το διάλυμα γίνεται <strong>ουδέτερο</strong> (pH = 7).</li> <li>Μετά την εξουδετέρωση, στο διάλυμα μένουν τα υπόλοιπα ιόντα (π.χ. Na⁺ και Cl⁻). Αν <strong>εξατμιστεί</strong> το νερό, αυτά σχηματίζουν κρυστάλλους ενός <strong>άλατος</strong>:</li> </ul> \[\text{Na}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{NaCl}\,(s)\] <ul> <li> <strong>Άλας</strong> ονομάζεται κάθε χημική ένωση που <strong>αποτελείται από ιόντα</strong> και μπορεί να προκύψει από την <strong>αντίδραση ενός οξέος με μια βάση</strong> (π.χ. το μαγειρικό αλάτι, NaCl).</li> <li>Τα άλατα είναι <strong>ευδιάλυτα</strong> ή <strong>δυσδιάλυτα</strong> στο νερό. Π.χ. το <strong>θειικό βάριο (BaSO₄)</strong> πρακτικά δεν διαλύεται — καταβυθίζεται ως στερεό (<strong>ίζημα</strong>).</li> </ul> </div> <div class="ask-box"> <h4>Ασκήσεις — Εξουδετέρωση και άλατα</h4> <p><strong>Άσκηση 1.</strong> Να γράψεις τη χημική εξίσωση της εξουδετέρωσης (τι σχηματίζεται από τα H⁺ και τα OH⁻).</p> <details class="qa"><summary>Λύση</summary> <p>Τα κατιόντα υδρογόνου ενώνονται με τα ανιόντα υδροξειδίου και δίνουν νερό:</p> <p>$$\text{H}^+(aq) + \text{OH}^-(aq) \rightarrow \text{H}_2\text{O}\,(l)$$</p> </details> <p><strong>Άσκηση 2.</strong> Σε ποτήρι με διάλυμα υδροξειδίου του νατρίου και μπλε της βρωμοθυμόλης (μπλε χρώμα) προσθέτουμε σιγά-σιγά διάλυμα υδροχλωρίου.<br><strong>α)</strong> Τι χρώμα θα έχει το διάλυμα ακριβώς όταν εξουδετερωθεί;<br><strong>β)</strong> Τι χρώμα αν συνεχίσουμε να ρίχνουμε οξύ;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> <strong>Πράσινο</strong> — το ουδέτερο διάλυμα (pH = 7).</p> <p><strong>β)</strong> <strong>Κίτρινο</strong> — με περίσσεια οξέος το διάλυμα γίνεται όξινο.</p> </details> <p><strong>Άσκηση 3.</strong> Θέλουμε να παρασκευάσουμε <strong>χλωριούχο νάτριο (NaCl)</strong>.<br><strong>α)</strong> Ποιου οξέος το διάλυμα πρέπει να αναμείξουμε με διάλυμα NaOH;<br><strong>β)</strong> Πώς παίρνουμε τελικά τους κρυστάλλους του άλατος;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Διάλυμα <strong>υδροχλωρίου (HCl)</strong> — δίνει τα ιόντα Cl⁻ που, μαζί με τα Na⁺ της βάσης, σχηματίζουν το NaCl.</p> <p><strong>β)</strong> Με <strong>εξάτμιση</strong> του νερού από το ουδέτερο διάλυμα — μένουν οι κρύσταλλοι του άλατος.</p> </details> </div> <h4 id="κεφάλαιο-4--εφαρμογές--οξέα-βάσεις-και-άλατα-στη-ζωή-μας-">Κεφάλαιο 4 · Εφαρμογές — οξέα, βάσεις και άλατα στη ζωή μας <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index1_5.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li>Τα οξέα, οι βάσεις και τα άλατα βρίσκονται <strong>παντού</strong> στην καθημερινή ζωή: στο <strong>στομάχι</strong> μας (υδροχλωρικό οξύ για την πέψη), στα <strong>τρόφιμα</strong> (κιτρικό, οξικό, γαλακτικό οξύ), στα <strong>καθαριστικά</strong> (αμμωνία, καυστική σόδα), στα <strong>λιπάσματα</strong> και στα φάρμακα.</li> <li> <strong>Όξινη βροχή:</strong> ρύποι όπως το διοξείδιο του θείου και τα οξείδια του αζώτου ενώνονται με το νερό της ατμόσφαιρας και δίνουν όξινα διαλύματα, που <strong>διαβρώνουν</strong> μάρμαρα, μέταλλα και βλάπτουν φυτά και νερά.</li> <li> <strong>Εξουδετέρωση στην πράξη:</strong> στο <strong>τσίμπημα μέλισσας</strong> (όξινο) βάζουμε κάτι βασικό (μαγειρική σόδα, αμμωνία)· στο <strong>τσίμπημα σφήκας</strong> (βασικό) βάζουμε κάτι όξινο (ξίδι). Το <strong>αντιόξινο</strong> χάπι εξουδετερώνει την περίσσεια οξέος στο στομάχι.</li> <li>Γνωστά <strong>άλατα</strong>: το μαγειρικό αλάτι (NaCl), η μαγειρική σόδα, ο ασβεστόλιθος/μάρμαρο (ανθρακικό ασβέστιο), η γύψος.</li> </ul> </div> <details class="qa"><summary>Γιατί βάζουμε <strong>μαγειρική σόδα</strong> στο τσίμπημα της μέλισσας, αλλά <strong>ξίδι</strong> στο τσίμπημα της σφήκας;</summary> <p>Το δηλητήριο της <strong>μέλισσας είναι όξινο</strong> — το εξουδετερώνουμε με κάτι <strong>βασικό</strong> (σόδα). Το δηλητήριο της <strong>σφήκας είναι βασικό</strong> — το εξουδετερώνουμε με κάτι <strong>όξινο</strong> (ξίδι). Και στις δύο περιπτώσεις κάνουμε μια μικρή <strong>εξουδετέρωση</strong> για να ανακουφιστεί το τσίμπημα.</p> </details> <h3 id="ενότητα-2--ταξινόμηση-των-στοιχείων">Ενότητα 2 — Ταξινόμηση των στοιχείων</h3> <h4 id="κεφάλαιο-5--ο-περιοδικός-πίνακας-">Κεφάλαιο 5 · Ο περιοδικός πίνακας <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index2_1.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Ταξινόμηση</strong> είναι η ομαδοποίηση με βάση κοινές ιδιότητες. Τα χημικά στοιχεία ταξινομούνται στον <strong>περιοδικό πίνακα</strong> με βάση την <strong>περιοδικότητα</strong> — την επανάληψη των ιδιοτήτων τους με καθορισμένο τρόπο.</li> <li>Τα στοιχεία μπαίνουν στον πίνακα κατά <strong>αυξανόμενο ατομικό αριθμό (Ζ)</strong> — δηλαδή κατά αυξανόμενο αριθμό πρωτονίων.</li> <li>Οι <strong>οριζόντιες γραμμές</strong> λέγονται <strong>περίοδοι</strong>, οι <strong>κατακόρυφες στήλες</strong> λέγονται <strong>ομάδες</strong>. Στοιχεία της <strong>ίδιας ομάδας</strong> έχουν <strong>παρόμοιες ιδιότητες</strong>.</li> <li>Ο <strong>Mendeleev</strong> έφτιαξε τον πρώτο περιοδικό πίνακα και είχε την οξυδέρκεια να αφήσει <strong>κενές θέσεις</strong> για στοιχεία που δεν είχαν ακόμη ανακαλυφθεί — και σωστά προέβλεψε τις ιδιότητές τους.</li> <li>Τα στοιχεία χωρίζονται σε <strong>μέταλλα</strong> και <strong>αμέταλλα</strong>. Γνωστές ομάδες: τα <strong>αλκάλια</strong> (1η ομάδα, πλην του υδρογόνου), οι <strong>αλκαλικές γαίες</strong> (2η ομάδα), τα <strong>αλογόνα</strong> (17η ομάδα) και τα <strong>ευγενή αέρια</strong> (τελευταία ομάδα — πολύ σταθερά, αδρανή).</li> </ul> </div> <div class="phet-card" style="border:1px solid var(--global-divider-color, #e3e3e3); border-radius:10px; padding:0.7rem 1rem 0.3rem; margin:1.3rem 0;"> <p><em>Χτίσε ένα άτομο προσθέτοντας <strong>πρωτόνια</strong> — και πρόσεξε πώς κάθε φορά αλλάζει το <strong>στοιχείο</strong> και ο <strong>ατομικός αριθμός Ζ</strong>. Αυτός ακριβώς ο αριθμός καθορίζει τη θέση κάθε στοιχείου στον περιοδικό πίνακα.</em></p> <iframe src="https://phet.colorado.edu/sims/html/build-an-atom/latest/build-an-atom_el.html" width="100%" height="500" frameborder="0" allowfullscreen="" loading="lazy" style="border-radius: 8px; margin: 0.5rem 0;"></iframe> </div> <div class="ask-box"> <h4>Ασκήσεις — Ο περιοδικός πίνακας</h4> <p><strong>Άσκηση 1.</strong> Συμπλήρωσε:<br><strong>α)</strong> Οι οριζόντιες γραμμές του περιοδικού πίνακα λέγονται …<br><strong>β)</strong> Οι κατακόρυφες στήλες λέγονται …<br><strong>γ)</strong> Τα στοιχεία τοποθετούνται κατά αυξανόμενο …</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> περίοδοι  ·  <strong>β)</strong> ομάδες  ·  <strong>γ)</strong> ατομικό αριθμό (Ζ).</p> </details> <p><strong>Άσκηση 2.</strong> Δύο στοιχεία βρίσκονται στην <strong>ίδια ομάδα</strong>.<br><strong>α)</strong> Τι κοινό περιμένεις να έχουν;<br><strong>β)</strong> Το νάτριο (Na) και το κάλιο (K) ανήκουν στα αλκάλια. Σε ποια ομάδα βρίσκονται;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> <strong>Παρόμοιες ιδιότητες</strong> — γι' αυτό μπαίνουν στην ίδια στήλη.</p> <p><strong>β)</strong> Στην <strong>1η ομάδα</strong> (τα αλκάλια).</p> </details> </div> <h4 id="κεφάλαιο-6--αλκάλια-μέταλλα-και-αλογόνα-">Κεφάλαιο 6 · Αλκάλια, μέταλλα και αλογόνα <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index2_2.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Αλκάλια</strong> ονομάζονται τα στοιχεία της <strong>1ης ομάδας</strong> του περιοδικού πίνακα (πλην του υδρογόνου): <strong>λίθιο (Li), νάτριο (Na), κάλιο (K)</strong>, ρουβίδιο (Rb), καίσιο (Cs), φράγκιο (Fr). Είναι <strong>μέταλλα</strong>, μαλακά, πολύ <strong>δραστικά</strong> — αντιδρούν έντονα με το νερό δίνοντας <strong>βάση</strong> και <strong>υδρογόνο</strong>, γι’ αυτό φυλάσσονται μέσα σε πετρέλαιο.</li> <li> <strong>Μέταλλα:</strong> έχουν χαρακτηριστική <strong>μεταλλική λάμψη</strong>, είναι καλοί <strong>αγωγοί</strong> θερμότητας και ηλεκτρισμού, <strong>ελατά</strong> και <strong>όλκιμα</strong> (γίνονται φύλλα και σύρματα). Τα περισσότερα στοιχεία είναι μέταλλα.</li> <li>Ένα <strong>δραστικό</strong> μέταλλο, ριγμένο σε αραιό διάλυμα <strong>οξέος</strong>, το «διαλύει» ελευθερώνοντας <strong>υδρογόνο</strong>. Η <strong>δραστικότητα</strong> διαφέρει από μέταλλο σε μέταλλο: ένα πιο δραστικό μέταλλο μπορεί να «διώξει» (αντικαταστήσει) ένα λιγότερο δραστικό από το διάλυμα άλατός του (<strong>απλή αντικατάσταση</strong>).</li> <li> <strong>Κράματα</strong> είναι μείγματα μετάλλων (ή μετάλλου με άλλο στοιχείο) με βελτιωμένες ιδιότητες — π.χ. ο <strong>χάλυβας (ατσάλι)</strong>, ο <strong>ορείχαλκος (μπρούντζος)</strong>.</li> <li> <strong>Αλογόνα</strong> ονομάζονται τα στοιχεία της <strong>17ης ομάδας</strong>: <strong>φθόριο (F), χλώριο (Cl), βρώμιο (Br), ιώδιο (I)</strong>, άστατο (At). Είναι <strong>αμέταλλα</strong>, δραστικά, και σχηματίζουν άλατα με τα μέταλλα (π.χ. NaCl).</li> </ul> </div> <div class="ask-box"> <h4>Ασκήσεις — Αλκάλια, μέταλλα, αλογόνα</h4> <p><strong>Άσκηση 1.</strong> Χαρακτήρισε ως <strong>μέταλλο</strong> ή <strong>αμέταλλο</strong>:<br><strong>α)</strong> νάτριο (Na)<br><strong>β)</strong> χλώριο (Cl)<br><strong>γ)</strong> κάλιο (K)</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> μέταλλο (αλκάλιο)  ·  <strong>β)</strong> αμέταλλο (αλογόνο)  ·  <strong>γ)</strong> μέταλλο (αλκάλιο).</p> </details> <p><strong>Άσκηση 2.</strong><br><strong>α)</strong> Σε ποια ομάδα του περιοδικού πίνακα ανήκουν τα αλογόνα;<br><strong>β)</strong> Ανάφερε δύο αλογόνα.<br><strong>γ)</strong> Τι σχηματίζει ένα αλογόνο (π.χ. το χλώριο) με ένα μέταλλο (π.χ. το νάτριο);</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Στη <strong>17η ομάδα</strong>.  <strong>β)</strong> π.χ. <strong>φθόριο και χλώριο</strong> (ή βρώμιο, ιώδιο).  <strong>γ)</strong> Ένα <strong>άλας</strong> — εδώ το χλωριούχο νάτριο, <strong>NaCl</strong> (το μαγειρικό αλάτι).</p> </details> <p><strong>Άσκηση 3.</strong> Γιατί τα αλκάλια (π.χ. το νάτριο) φυλάσσονται μέσα σε πετρέλαιο και όχι στον αέρα ή κοντά σε νερό;</p> <details class="qa"><summary>Λύση</summary> <p>Γιατί είναι πάρα πολύ <strong>δραστικά</strong>: αντιδρούν έντονα με το νερό (ακόμα και με την υγρασία του αέρα), ελευθερώνοντας <strong>υδρογόνο</strong> — αντίδραση επικίνδυνη. Το πετρέλαιο τα «μονώνει» από το νερό και το οξυγόνο.</p> </details> </div> <h4 id="κεφάλαιο-7--ο-άνθρακας-και-το-πυρίτιο-">Κεφάλαιο 7 · Ο άνθρακας και το πυρίτιο <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index2_4.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li>Ο <strong>άνθρακας (C)</strong> είναι ένα ξεχωριστό αμέταλλο: εμφανίζεται σε διαφορετικές μορφές (<strong>αλλοτροπία</strong>) — το <strong>διαμάντι</strong> (πολύ σκληρό, διάφανο) και ο <strong>γραφίτης</strong> (μαλακός, αγώγιμος — το «μολύβι» του μολυβιού) είναι <strong>και τα δύο καθαρός άνθρακας</strong>, με διαφορετική όμως διάταξη ατόμων.</li> <li>Ο άνθρακας σχηματίζει <strong>αναρίθμητες ενώσεις</strong> — γι’ αυτό έχει δικό του κλάδο, την <strong>Οργανική Χημεία</strong>. Δίνει και ανόργανες ενώσεις: τα <strong>οξείδια</strong> (CO, CO₂) και τα <strong>ανθρακικά άλατα</strong> (π.χ. ανθρακικό ασβέστιο — μάρμαρο, ασβεστόλιθος).</li> <li>Το <strong>πυρίτιο (Si)</strong> είναι επίσης αμέταλλο (ακριβέστερα <strong>ημιμέταλλο</strong>) και το δεύτερο πιο άφθονο στοιχείο του φλοιού της Γης, κυρίως ως <strong>διοξείδιο του πυριτίου</strong> (άμμος, χαλαζίας, γυαλί).</li> <li>Το πυρίτιο είναι <strong>ημιαγωγός</strong>: βρίσκεται στην καρδιά κάθε <strong>τσιπ</strong> και ηλεκτρονικού υπολογιστή, καθώς και στα <strong>φωτοβολταϊκά</strong>.</li> </ul> </div> <details class="qa"><summary>Πώς γίνεται το <strong>διαμάντι</strong> και ο μαλακός <strong>γραφίτης</strong> του μολυβιού να είναι το <strong>ίδιο</strong> στοιχείο;</summary> <p>Και τα δύο είναι <strong>καθαρός άνθρακας</strong> — αλλάζει μόνο ο <strong>τρόπος που συνδέονται τα άτομα</strong>. Στο διαμάντι κάθε άτομο δένεται γερά με τέσσερα άλλα σε τρισδιάστατο πλέγμα (γι' αυτό είναι το σκληρότερο υλικό)· στον γραφίτη τα άτομα είναι σε φύλλα που γλιστρούν το ένα πάνω στο άλλο (γι' αυτό «γράφει» και λερώνει). Αυτό το φαινόμενο λέγεται <strong>αλλοτροπία</strong>.</p> </details> <h3 id="ενότητα-3--η-χημεία-του-άνθρακα">Ενότητα 3 — Η Χημεία του άνθρακα</h3> <h4 id="κεφάλαιο-8--οι-υδρογονάνθρακες-">Κεφάλαιο 8 · Οι υδρογονάνθρακες <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index3_1.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li> <strong>Υδρογονάνθρακες</strong> ονομάζονται οι οργανικές ενώσεις που αποτελούνται <strong>μόνο</strong> από <strong>άνθρακα (C)</strong> και <strong>υδρογόνο (H)</strong>. Το πετρέλαιο και το φυσικό αέριο είναι κυρίως <strong>μείγματα υδρογονανθράκων</strong>.</li> <li>Ο <strong>μοριακός τύπος</strong> δείχνει το είδος και τον αριθμό των ατόμων (π.χ. CH₄)· ο <strong>συντακτικός τύπος</strong> δείχνει επιπλέον <strong>πώς συνδέονται</strong> τα άτομα μεταξύ τους.</li> <li>Ταξινόμηση κατά τον δεσμό άνθρακα-άνθρακα: <ul> <li> <strong>Αλκάνια</strong> — μόνο <strong>απλοί</strong> δεσμοί (<strong>κορεσμένοι</strong>), γενικός τύπος <strong>CνH₂ν₊₂</strong> (ν = αριθμός ατόμων C).</li> <li> <strong>Αλκένια</strong> — έχουν έναν <strong>διπλό</strong> δεσμό (<strong>ακόρεστοι</strong>).</li> <li> <strong>Αλκίνια</strong> — έχουν έναν <strong>τριπλό</strong> δεσμό (ακόρεστοι).</li> </ul> </li> <li>Τα πρώτα αλκάνια: <strong>μεθάνιο (CH₄)</strong>, <strong>αιθάνιο (C₂H₆)</strong>, <strong>προπάνιο (C₃H₈)</strong>, <strong>βουτάνιο (C₄H₁₀)</strong>. Όσο πιο <strong>μεγάλη</strong> η ανθρακική αλυσίδα, τόσο <strong>υψηλότερο</strong> το σημείο βρασμού.</li> <li> <strong>Καύση:</strong> οι υδρογονάνθρακες καίγονται με το οξυγόνο. Στην <strong>τέλεια καύση</strong> (επαρκές οξυγόνο) δίνουν <strong>διοξείδιο του άνθρακα</strong> και <strong>νερό</strong>:</li> </ul> \[\text{CH}_4 + 2\text{O}_2 \rightarrow \text{CO}_2 + 2\text{H}_2\text{O}\] <ul> <li>Στην <strong>ατελή καύση</strong> (λίγο οξυγόνο) παράγεται και <strong>μονοξείδιο του άνθρακα (CO)</strong> — τοξικό — και <strong>αιθάλη</strong> (καπνιά).</li> </ul> </div> <div class="phet-card" style="border:1px solid var(--global-divider-color, #e3e3e3); border-radius:10px; padding:0.7rem 1rem 0.3rem; margin:1.3rem 0;"> <p><em>Ένωσε <strong>άνθρακα</strong> και <strong>υδρογόνο</strong> και φτιάξε τον πιο απλό υδρογονάνθρακα, το <strong>μεθάνιο (CH₄)</strong>: ένα άτομο C με τέσσερα H. Δες πώς τα άτομα «κουμπώνουν» και σχηματίζουν το μόριο.</em></p> <iframe src="https://phet.colorado.edu/sims/html/build-a-molecule/latest/build-a-molecule_el.html" width="100%" height="500" frameborder="0" allowfullscreen="" loading="lazy" style="border-radius: 8px; margin: 0.5rem 0;"></iframe> </div> <div class="ask-box"> <h4>Ασκήσεις — Οι υδρογονάνθρακες</h4> <p><strong>Άσκηση 1.</strong><br><strong>α)</strong> Ποιες ενώσεις ονομάζονται υδρογονάνθρακες;<br><strong>β)</strong> Ποιος είναι ο γενικός τύπος των αλκανίων;<br><strong>γ)</strong> Επαλήθευσέ τον για το προπάνιο (3 άτομα C).</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Οι οργανικές ενώσεις που αποτελούνται <strong>μόνο από άνθρακα και υδρογόνο</strong>.</p> <p><strong>β)</strong> CνH₂ν₊₂.</p> <p><strong>γ)</strong> Για ν = 3: H = 2·3 + 2 = 8, άρα <strong>C₃H₈</strong> — σωστά, το προπάνιο.</p> </details> <p><strong>Άσκηση 2.</strong> Χαρακτήρισε <strong>κορεσμένο</strong> ή <strong>ακόρεστο</strong>:<br><strong>α)</strong> αλκάνιο (μόνο απλοί δεσμοί)<br><strong>β)</strong> αλκένιο (ένας διπλός δεσμός)<br><strong>γ)</strong> αλκίνιο (ένας τριπλός δεσμός)</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> κορεσμένο  ·  <strong>β)</strong> ακόρεστο  ·  <strong>γ)</strong> ακόρεστο. (Ακόρεστος = έχει διπλό ή τριπλό δεσμό.)</p> </details> <p><strong>Άσκηση 3.</strong> Δίνεται η ημιτελής εξίσωση της τέλειας καύσης του μεθανίου: CH₄ + O₂ → CO₂ + H₂O.<br><strong>α)</strong> Ισοστάθμισέ την.<br><strong>β)</strong> Ποια αρχή τηρείται όταν την ισοσταθμίζουμε;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Δεξιά χρειάζονται 2 άτομα O για το CO₂ και 1 για κάθε H₂O· με 2 μόρια νερού έχουμε 2+2 = 4 άτομα O, άρα 2 μόρια O₂:</p> <p>$$\text{CH}_4 + 2\text{O}_2 \rightarrow \text{CO}_2 + 2\text{H}_2\text{O}$$</p> <p><strong>β)</strong> Η <strong>διατήρηση των ατόμων</strong>: τόσα άτομα κάθε στοιχείου αριστερά, τόσα και δεξιά (C: 1=1, H: 4=4, O: 4=4).</p> </details> </div> <h4 id="κεφάλαιο-9--πετρέλαιο-φυσικό-αέριο-και-αιθανόλη-">Κεφάλαιο 9 · Πετρέλαιο, φυσικό αέριο και αιθανόλη <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index3_2.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li>Το <strong>πετρέλαιο</strong> και το <strong>φυσικό αέριο</strong> είναι <strong>ορυκτά καύσιμα</strong>, μείγματα υδρογονανθράκων που σχηματίστηκαν από υπολείμματα οργανισμών εκατομμύρια χρόνια πριν. Είναι <strong>μη ανανεώσιμες</strong> πηγές ενέργειας.</li> <li>Το αργό πετρέλαιο διαχωρίζεται στα συστατικά του με <strong>κλασματική απόσταξη</strong> (με βάση τα διαφορετικά σημεία βρασμού): υγραέριο, βενζίνη, κηροζίνη, πετρέλαιο κίνησης, μαζούτ, άσφαλτος. Από αυτά η <strong>πετροχημική βιομηχανία</strong> φτιάχνει πλαστικά, χρώματα, φάρμακα κ.ά.</li> <li> <strong>Ζύμωση</strong> ονομάζεται η μετατροπή οργανικών ουσιών σε άλλες απλούστερες με τη βοήθεια <strong>ενζύμων</strong> (βιολογικών καταλυτών). Η <strong>αλκοολική ζύμωση</strong> μετατρέπει τα σάκχαρα (π.χ. τη γλυκόζη του μούστου) σε <strong>αιθανόλη</strong> και διοξείδιο του άνθρακα — έτσι γίνεται το κρασί.</li> <li>Η <strong>αιθανόλη</strong> (αιθυλική αλκοόλη, οινόπνευμα) έχει μοριακό τύπο <strong>C₂H₅OH</strong>· είναι άχρωμο υγρό με χαρακτηριστική οσμή, που <strong>αναμειγνύεται με το νερό σε κάθε αναλογία</strong>. Καίγεται δίνοντας CO₂ και νερό, και χρησιμοποιείται ως διαλύτης, αντισηπτικό και καύσιμο.</li> <li>Ο <strong>αλκοολικός βαθμός</strong> ενός ποτού είναι η περιεκτικότητά του σε αιθανόλη <strong>% v/v</strong>. Η <strong>κατάχρηση</strong> του αλκοόλ βλάπτει σοβαρά τον οργανισμό.</li> </ul> </div> <div class="ask-box"> <h4>Ασκήσεις — Πετρέλαιο, φυσικό αέριο, αιθανόλη</h4> <p><strong>Άσκηση 1.</strong><br><strong>α)</strong> Τι είδους ουσίες (χημικά) είναι το πετρέλαιο και το φυσικό αέριο;<br><strong>β)</strong> Με ποια μέθοδο διαχωρίζουμε τα συστατικά του πετρελαίου;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> <strong>Μείγματα υδρογονανθράκων</strong> (ορυκτά καύσιμα).</p> <p><strong>β)</strong> Με <strong>κλασματική απόσταξη</strong>, που εκμεταλλεύεται τα διαφορετικά σημεία βρασμού των συστατικών.</p> </details> <p><strong>Άσκηση 2.</strong><br><strong>α)</strong> Τι ονομάζεται ζύμωση;<br><strong>β)</strong> Ποια ουσία (και ποιο αέριο) παράγεται από την αλκοολική ζύμωση της γλυκόζης;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Η μετατροπή οργανικών ουσιών σε <strong>απλούστερες</strong> με τη βοήθεια <strong>ενζύμων</strong>.</p> <p><strong>β)</strong> Παράγεται <strong>αιθανόλη (C₂H₅OH)</strong> και <strong>διοξείδιο του άνθρακα (CO₂)</strong>.</p> </details> <p><strong>Άσκηση 3.</strong> Ένα κρασί αναγράφει «12% vol».<br><strong>α)</strong> Τι μας λέει αυτό;<br><strong>β)</strong> Πόσα mL καθαρή αιθανόλη περιέχει ένα μπουκάλι 750 mL;</p> <details class="qa"><summary>Λύση</summary> <p><strong>α)</strong> Ότι έχει <strong>αλκοολικό βαθμό 12% v/v</strong> — δηλαδή <strong>12 mL αιθανόλης σε κάθε 100 mL</strong> κρασιού.</p> <p><strong>β)</strong> Λύνοντας ως προς τον όγκο της ουσίας: V = (% v/v × V_διαλύματος)/100 = (12 × 750)/100 = <strong>90 mL</strong>.</p> </details> </div> <h4 id="κεφάλαιο-10--υδατάνθρακες-πρωτεΐνες-λίπη-">Κεφάλαιο 10 · Υδατάνθρακες, πρωτεΐνες, λίπη <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2208/Chimeia_G-Gymnasiou_html-empl/index3_4.html" title="Βιβλίο μαθητή" target="_blank" rel="noopener" class="book-link"><i class="fa-solid fa-book"></i></a> </h4> <div class="notes-box"> <h5>Σημειώσεις</h5> <ul> <li>Οι <strong>υδατάνθρακες</strong>, οι <strong>πρωτεΐνες</strong> και τα <strong>λίπη</strong> είναι οι βασικές <strong>οργανικές ενώσεις της ζωής</strong> — τα «καύσιμα» και τα «υλικά» των οργανισμών, που παίρνουμε από τις <strong>τροφές</strong>.</li> <li> <strong>Υδατάνθρακες (σάκχαρα):</strong> η κύρια πηγή <strong>ενέργειας</strong> του οργανισμού. Περιλαμβάνουν τη <strong>γλυκόζη</strong>, τη <strong>ζάχαρη</strong> (σακχαρόζη), το <strong>άμυλο</strong> (ψωμί, πατάτα, ρύζι) και την <strong>κυτταρίνη</strong> (φυτικές ίνες).</li> <li> <strong>Πρωτεΐνες:</strong> τα «δομικά υλικά» των κυττάρων (μύες, μαλλιά, ένζυμα). Αποτελούνται από <strong>αμινοξέα</strong>· τις παίρνουμε από κρέας, ψάρι, αυγά, όσπρια, γάλα.</li> <li> <strong>Λίπη και έλαια:</strong> αποθήκη <strong>ενέργειας</strong> και μόνωση· δίνουν την περισσότερη ενέργεια ανά γραμμάριο. Τα <strong>έλαια</strong> είναι υγρά (φυτικά, π.χ. ελαιόλαδο), τα <strong>λίπη</strong> στερεά (κυρίως ζωικά).</li> <li>Η ενέργεια των τροφών αποδίδεται με τις <strong>καύσεις</strong> τους στα κύτταρα (κυτταρική αναπνοή). Μια ισορροπημένη διατροφή περιλαμβάνει σωστές αναλογίες και από τις τρεις κατηγορίες, μαζί με βιταμίνες και ανόργανα άλατα.</li> </ul> </div> <details class="qa"><summary>Γιατί οι αθλητές τρώνε ζυμαρικά πριν από έναν αγώνα, ενώ μετά χρειάζονται και πρωτεΐνη;</summary> <p>Τα ζυμαρικά είναι πλούσια σε <strong>υδατάνθρακες (άμυλο)</strong> — την πιο <strong>γρήγορη πηγή ενέργειας</strong> για τους μύες. Μετά την προσπάθεια, οι <strong>πρωτεΐνες</strong> δίνουν τα <strong>δομικά υλικά</strong> (αμινοξέα) για να <strong>επιδιορθωθούν</strong> και να δυναμώσουν οι μύες. Διαφορετική δουλειά η καθεμία!</p> </details> </article> </div> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dimitris Kogias. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script>
+  window.op =
+    window.op ||
+    function (...args) {
+      (window.op.q = window.op.q || []).push(args);
+    };
+  window.op("init", {
+    clientId: "894603ab-9aa7-41a5-a676-5f28baab38ec",
+    trackScreenViews: true,
+    trackOutgoingLinks: true,
+    trackAttributes: true,
+  });
+</script> <script async defer src="https://openpanel.dev/op1.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Production AI systems I build end-to-end — the models, the APIs, and the data pipelines that serve them — plus live demos you can click — and a few things from my physics days. Most client work is under NDA, so it's described, not linked.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "AI / ML Systems Engineer · Physicist — experience, education & skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Σημειώσεις και υλικό Φυσικής και Χημείας ανά τάξη.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march & april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-agentic-workflows",
+          title: 'Agentic Workflows',
+          description: "Autonomous, multi-step agents that plan and run a task on their own.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-agents/";
+            },},{id: "projects-full-stack-apps",
+          title: 'Full-Stack Apps',
+          description: "Backend-led full-stack — self-serve SaaS tools, shipped end to end.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-fullstack/";
+            },},{id: "projects-serverless-apis-integrations-and-data-pipelines",
+          title: 'Serverless APIs, Integrations and Data Pipelines',
+          description: "The backend plumbing — serverless APIs, service integrations and data pipelines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-infra/";
+            },},{id: "projects-matching-and-recommendation-systems",
+          title: 'Matching and Recommendation Systems',
+          description: "Recommendations and entity-to-entity matching — collaborative filtering, embeddings, retrieval & reranking.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-matching/";
+            },},{id: "projects-semantic-search-at-scale",
+          title: 'Semantic Search at Scale',
+          description: "Hybrid retrieval engine — dense + lexical, RRF fusion, context-preserving chunking.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-search/";
+            },},{id: "projects-archeologic-the-ai-archaeologist",
+          title: 'ArcheoLogic — the AI archaeologist',
+          description: "An LLM agent that investigates historical claims, chases citations to primary evidence, and returns cited verdicts on a living knowledge graph.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/archeologic/";
+            },},{id: "projects-chatbot-assistants",
+          title: 'Chatbot Assistants',
+          description: "Conversational assistants — grounded in your data, with tool-calling, embeddable anywhere.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chatbot-assistants/";
+            },},{id: "projects-ηλιακός-άνεμος-the-sun-earth-sandbox",
+          title: 'Ηλιακός Άνεμος — the Sun–Earth sandbox',
+          description: "The magnetosphere as a navigable 3D scene — solar wind, bow shock, auroras — with physics dials you can turn.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/iliakos-anemos/";
+            },},{id: "projects-limenarchisai-the-ai-harbormaster",
+          title: 'LimenarchisAI — the AI Harbormaster',
+          description: "Hybrid-search RAG over live maritime traffic in the Saronic Gulf — ask the harbor a question, get a cited answer.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/limenarchis/";
+            },},{id: "projects-μαύρη-τρύπα-an-interactive-black-hole",
+          title: 'Μαύρη Τρύπα — an interactive black hole',
+          description: "Real general-relativistic ray tracing in WebGL — accretion disc, lensing, droppable clocks. Physics with sliders.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mavri-trypa/";
+            },},{id: "projects-mapping-the-milky-way-39-s-spiral-arms",
+          title: 'Mapping the Milky Way&#39;s Spiral Arms',
+          description: "Galactic structure from 21cm hydrogen radio emission.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/milky-way/";
+            },},{id: "projects-moviebro-your-movie-bro",
+          title: 'movieBro — your movie bro',
+          description: "Rate a few movies, get your next watch — collaborative filtering + hybrid search + in-browser reranking, fully client-side.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/moviebro/";
+            },},{id: "projects-neural-networks-lab",
+          title: 'Neural Networks Lab',
+          description: "From-scratch autograd engine + character-level LMs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/nn-lab/";
+            },},{id: "projects-ο-ήλιος-the-living-sun",
+          title: 'Ο Ήλιος — The Living Sun',
+          description: "AI segmentation of solar features on live NASA SDO imagery — with a real-time space-weather dashboard.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/o-ilios/";
+            },},{id: "projects-pyro-pythia-the-fire-oracle",
+          title: 'Pyro-Pythia — the fire oracle',
+          description: "Burn-scar mapping for Greek wildfires — pre/post Sentinel-2, dNBR baseline, U-Net segmentation, interactive web map.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pyro-pythia/";
+            },},{id: "projects-a-neural-network-for-the-three-body-problem",
+          title: 'A Neural Network for the Three-Body Problem',
+          description: "Deep learning as a fast emulator of chaotic gravitational dynamics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/three-body/";
+            },},{id: "projects-msc-thesis-object-detection",
+          title: 'MSc Thesis — Object Detection',
+          description: "Benchmarking YOLO, critiquing mAP, and training a deep-sky-object detector.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/yolo-thesis/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%64%69%6D%69%74%72%69%73%6B%6F%67%69%61%73@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/CaptainJimbo", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/dimitris-kogias-273559287", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
