@@ -34,8 +34,10 @@ Personal portfolio website (al-folio Jekyll), **live at https://captainjimbo.git
   horizontal rows (media query ≤640px). Card art: square `assets/img/<slug>.jpg` via front-matter
   `img:`; page hero: `<slug>-hero.jpg` referenced in the body.
 - **/teaching** (`_pages/teaching.md`): square-cover cards → Studying Hacks (methodology + AI prompts
-  with copy buttons), Β′/Γ′ Γυμνασίου, Α′ Λυκείου (cards landing → 8 sub-pages with τυπολόγια +
-  Τράπεζα-Θεμάτων exercises, reveal-style solutions), IB Physics SL&HL (24 sub-topics).
+  with copy buttons), Φυσική & Χημεία Β′/Γ′ Γυμνασίου (grouped by class), Φυσική Α′ Λυκείου (cards
+  landing → 8 sub-pages with τυπολόγια + Τράπεζα-Θεμάτων exercises, reveal-style solutions),
+  Χημεία Α′ Λυκείου (banner-card landing → 22 per-section pages + syn-2/3/4 «Συνδυαστικές» +
+  prep «Προετοιμασία», Τράπεζα boxes on rich sections), IB Physics SL&HL (24 sub-topics).
 - **Images:** originals dropped in `_storage/` (gitignored) → optimized with `sips` → `assets/img/`.
 - **LICENSE is dual:** MIT (theme code, © Al-Shedivat — keep) + **CC BY-NC-SA 4.0 © Dimitris Kogias**
   for site content, with third-party exceptions (Ι.Ε.Π./ΙΤΥΕ, PhET, Wikimedia/NASA) listed.
