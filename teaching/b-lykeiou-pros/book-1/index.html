@@ -1,0 +1,621 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Ασκήσεις σχολικού βιβλίου — Κεφ. 1 | Dimitris Kogias </title> <meta name="author" content="Dimitris Kogias"> <meta name="description" content="AI / ML Systems Engineer &amp; Physicist. I build and rigorously evaluate production AI systems — matching &amp; recommendation systems, LLM / RAG apps, and the cloud + data infrastructure behind them. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://captainjimbo.github.io/teaching/b-lykeiou-pros/book-1/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Dimitris</span> Kogias </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/teaching/">teaching <span class="sr-only">(current)</span> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Ασκήσεις σχολικού βιβλίου — Κεφ. 1</h1> <p class="post-description"></p> </header> <article> <style>
+  .container.mt-5 { max-width: 1400px; }
+  .qa { margin: 0.7rem 0; }
+  .qa summary { list-style: none; cursor: pointer; color: var(--global-text-color-light, #828282); font-size: 0.95em; }
+  .qa summary::-webkit-details-marker { display: none; }
+  .qa summary::after { content: ' \25B8'; color: var(--global-theme-color); font-weight: 600; }
+  .qa[open] summary::after { content: ' \25BE'; color: var(--global-theme-color); }
+  .qa p { margin-top: 0.4rem; }
+  .notes-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.6rem; margin: 1.2rem 0 1.6rem; background: rgba(127,127,127,0.04); }
+  .notes-box h5 { color: var(--global-theme-color); margin: 0.7rem 0 0.3rem; letter-spacing: 0.04em; }
+  .typ-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.2rem 1.3rem 0.6rem; margin: 1rem 0 1.6rem; background: rgba(127,127,127,0.04); }
+  .typ-box h5 { color: var(--global-theme-color); margin: 0.7rem 0 0.3rem; letter-spacing: 0.04em; }
+  .ask-box { border: 2px solid var(--global-theme-color); border-radius: 12px; padding: 0.3rem 1.4rem 1rem; margin: 2rem 0; background: rgba(127,127,127,0.045); }
+  .ask-box h4 { color: var(--global-theme-color); margin-top: 0.9rem; }
+  .trap-box { border: 2px dashed var(--global-theme-color); border-radius: 12px; padding: 0.3rem 1.4rem 1rem; margin: 2rem 0; background: rgba(127,127,127,0.03); }
+  .trap-box h4 { color: var(--global-theme-color); margin-top: 0.9rem; }
+  .trap-src { font-size: 0.76em; color: var(--global-text-color-light, #828282); margin: 0.1rem 0 0.9rem; }
+  .trap-src a { color: var(--global-theme-color); text-decoration: none; }
+  .trap-src a:hover { text-decoration: underline; }
+  .fig-c { margin: 1.6rem auto; max-width: 560px; text-align: center; }
+  .fig-c img, .fig-c svg { width: 100%; height: auto; border-radius: 10px; display: block; }
+  .fig-cap { font-size: 0.78em; color: var(--global-text-color-light, #828282); margin-top: 0.4rem; line-height: 1.4; }
+  .subnav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.8rem; margin: 0 0 1.3rem; }
+  .subnav a { text-decoration: none; color: var(--global-theme-color); }
+  .subnav .sn-prev, .subnav .sn-next { display: flex; flex-direction: column; gap: 0.1rem; }
+  .subnav .sn-prev { grid-column: 1; justify-self: start; }
+  .subnav .sn-all { grid-column: 2; justify-self: center; }
+  .subnav .sn-next { grid-column: 3; justify-self: end; text-align: right; }
+  .subnav .sn-lbl { font-size: 0.76em; color: var(--global-text-color-light, #828282); }
+  .subnav .sn-name { font-size: 0.92em; line-height: 1.3; }
+  .subnav a:hover .sn-name, .subnav .sn-all:hover { text-decoration: underline; }
+  .subnav .sn-all { font-size: 0.9em; white-space: nowrap; }
+  .subnav-bottom { border-top: 1px solid var(--global-divider-color, #e3e3e3); padding-top: 1.1rem; margin: 2.4rem 0 0; }
+</style> <div class="subnav"> <a class="sn-prev" href="/teaching/b-lykeiou-pros/1-4/"><span class="sn-lbl">← Προηγούμενη ενότητα</span><span class="sn-name">1.4 Περιπτώσεις κεντρομόλου δύναμης</span></a> <a class="sn-all" href="/teaching/b-lykeiou-pros/">Όλα τα κεφάλαια</a> <a class="sn-next" href="/teaching/b-lykeiou-pros/syn-1/"><span class="sn-lbl">Επόμενη ενότητα →</span><span class="sn-name">Συνδυαστικές ασκήσεις — Κεφ. 1</span></a> </div> <p>Οι <strong>ασκήσεις και τα προβλήματα του σχολικού βιβλίου</strong>, με λύσεις γραμμένες βήμα-βήμα: πρώτα ο <strong>νόμος</strong>, μετά ο <strong>συμβολικός</strong> τύπος, μετά η <strong>λύση ως προς το ζητούμενο</strong> — και <strong>στο τέλος</strong> η αντικατάσταση των τιμών. Με <strong>*</strong> σημειώνονται όσες το βιβλίο χαρακτηρίζει πιο απαιτητικές.</p> <p class="trap-src">Εκφωνήσεις: <a href="https://ebooks.edu.gr/ebooks/v/html/8547/2684/Fysiki_B-Lykeiou-ThSp_html-empl/" target="_blank" rel="noopener">Φυσική Ομάδας Προσανατολισμού Θετικών Σπουδών Β΄ Λυκείου</a>, ΙΤΥΕ «Διόφαντος» — Υπουργείο Παιδείας. Οι λύσεις είναι δικής μας γραφής, με βάση το επίσημο <a href="https://ebooks.edu.gr/ebooks/v/pdf/8547/2590/22-0224-02_Fysiki_B-Lykeiou-ThSp_Lyseis-Askiseon/" target="_blank" rel="noopener">βιβλίο «Λύσεις των ασκήσεων»</a>.</p> <div class="ask-box"> <h4>Ερωτήσεις, Κεφάλαιο 1</h4> <p><strong>1.</strong> Μία σφαίρα ηρεμεί στην άκρη ενός τραπεζιού. Στη σφαίρα δίνεται οριζόντια ταχύτητα $\upsilon_0$. Να γράψετε τις εξισώσεις που περιγράφουν την κίνηση της σφαίρας και να εξηγήσετε πώς υπολογίζεται ο χρόνος που κάνει να πέσει στο δάπεδο.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Η σφαίρα εκτελεί <strong>οριζόντια βολή</strong>. Με βάση την <strong>αρχή της ανεξαρτησίας των κινήσεων</strong>:</p> \[\text{οριζόντια:}\;\; \upsilon_x = \upsilon_0,\;\; x = \upsilon_0 t \qquad \text{κατακόρυφα:}\;\; \upsilon_y = gt,\;\; y = \tfrac{1}{2}gt^2\] <p>Ο χρόνος πτώσης προκύπτει <strong>μόνο</strong> από την κατακόρυφη κίνηση: θέτω $y = h$ (το ύψος του τραπεζιού) και λύνω:</p> \[h = \tfrac{1}{2}gt^2 \;\Rightarrow\; t = \sqrt{\dfrac{2h}{g}}\] </details> <p><strong>2.</strong> Η σφαίρα της προηγούμενης ερώτησης αποκτά αρχική ταχύτητα $2\upsilon_0$. Ο χρόνος πτώσης θα αλλάξει σε σχέση με πριν;</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>Όχι.</strong> Ο χρόνος πτώσης $t = \sqrt{2h/g}$ <strong>δεν περιέχει</strong> την $\upsilon_0$. Η οριζόντια κίνηση δεν επηρεάζει την κατακόρυφη — αλλάζει μόνο το <strong>βεληνεκές</strong>, που διπλασιάζεται.</p> </details> <p><strong>3.</strong> Ένα αεροπλάνο ταξιδεύει παράλληλα προς το έδαφος και αφήνεται μία βόμβα. Για ποιο λόγο η βόμβα δεν πέφτει κατακόρυφα;</p> <details class="qa"> <summary>Απάντηση</summary> <p>Γιατί τη στιγμή που αφήνεται η βόμβα <strong>έχει ήδη</strong> την οριζόντια ταχύτητα του αεροπλάνου, και λόγω <strong>αδράνειας</strong> τη διατηρεί. Έτσι εκτελεί <strong>σύνθετη</strong> κίνηση (οριζόντια ομαλή + ελεύθερη πτώση) και η τροχιά της είναι καμπύλη, όχι κατακόρυφη.</p> </details> <p><strong>4.</strong> Πότε η κίνηση ενός σώματος χαρακτηρίζεται ομαλή κυκλική;</p> <details class="qa"> <summary>Απάντηση</summary> <p>Όταν η τροχιά είναι <strong>κύκλος</strong> και η <strong>τιμή</strong> (το μέτρο) της ταχύτητας παραμένει <strong>σταθερή</strong>. Η κατεύθυνση της ταχύτητας αλλάζει διαρκώς — γι’ αυτό η κίνηση παραμένει <strong>επιταχυνόμενη</strong>.</p> </details> <p><strong>5.</strong> Πώς ορίζεται η γωνιακή ταχύτητα στην ομαλή κυκλική κίνηση;</p> <details class="qa"> <summary>Απάντηση</summary> <p>Ως το πηλίκο της <strong>γωνίας</strong> που διαγράφει η επιβατική ακτίνα προς τον <strong>χρόνο</strong>:</p> \[\omega = \dfrac{\Delta\varphi}{\Delta t} \qquad\text{και για μία πλήρη περιφορά}\qquad \omega = \dfrac{2\pi}{T}\] </details> <p><strong>6.</strong> Τα σημεία ενός δίσκου CD κάνουν ομαλή κυκλική κίνηση. Όλα τα σημεία έχουν την ίδια περίοδο; Έχουν και ίδιες ταχύτητες;</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>Ίδια περίοδο: ναι</strong> — ο δίσκος είναι ένα στερεό σώμα, όλα τα σημεία κάνουν μία περιφορά στον ίδιο χρόνο (άρα και ίδια $\omega$).</p> <p><strong>Ίδιες ταχύτητες: όχι</strong> — από $\upsilon = \omega R$, όσο πιο μακριά από το κέντρο, τόσο <strong>μεγαλύτερη</strong> γραμμική ταχύτητα.</p> </details> <p><strong>7.</strong> Να αποδείξετε τη σχέση που συνδέει τη γραμμική με τη γωνιακή ταχύτητα στην ομαλή κυκλική κίνηση.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Σε <strong>μία πλήρη περιφορά</strong> (χρόνος $T$) το σώμα διανύει τόξο ίσο με την περιφέρεια $2\pi R$ και διαγράφει γωνία $2\pi$:</p> \[\upsilon = \dfrac{2\pi R}{T} \qquad \omega = \dfrac{2\pi}{T}\] <p>Διαιρώ κατά μέλη — το $2\pi/T$ απλοποιείται:</p> \[\dfrac{\upsilon}{\omega} = R \;\Rightarrow\; \boxed{\upsilon = \omega R}\] </details> <p><strong>8.</strong> Στην ομαλή κυκλική κίνηση εμφανίζεται επιτάχυνση. Από ποια σχέση υπολογίζουμε την τιμή της; Ποια είναι η κατεύθυνσή της;</p> <details class="qa"> <summary>Απάντηση</summary> \[a_κ = \dfrac{\upsilon^2}{R} = \omega^2 R\] <p>Η κατεύθυνσή της είναι <strong>προς το κέντρο</strong> της κυκλικής τροχιάς — γι’ αυτό ονομάζεται <strong>κεντρομόλος</strong>.</p> </details> <p><strong>9.</strong> Στην ομαλή κυκλική κίνηση να εφαρμόσετε τον θεμελιώδη νόμο της Μηχανικής και να βγάλετε σχέση μεταξύ της δύναμης και της ταχύτητας.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Θεμελιώδης νόμος (2ος νόμος του Νεύτωνα): $\Sigma F = m a$. Εδώ η επιτάχυνση είναι η <strong>κεντρομόλος</strong>:</p> \[F_κ = m a_κ = m\dfrac{\upsilon^2}{R}\] </details> <p><strong>10.</strong> Δύο πανομοιότυπες σφαίρες: η Α αφήνει το τραπέζι (οριζόντια βολή) την ίδια στιγμή που η Β αφήνεται να πέσει κατακόρυφα από το ίδιο ύψος. Ποια φτάνει πρώτη στο πάτωμα; <br><strong>α)</strong> Φτάνει πρώτα η Β. <strong>β)</strong> Φτάνει πρώτα η Α. <strong>γ)</strong> Φτάνουν ταυτόχρονα. <strong>δ)</strong> Δεν μπορούμε να απαντήσουμε γιατί δεν γνωρίζουμε το ύψος.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Σωστό το <strong>(γ)</strong>. Από την <strong>αρχή της ανεξαρτησίας των κινήσεων</strong>, η κατακόρυφη κίνηση και των δύο είναι η <strong>ίδια ελεύθερη πτώση</strong> από το ίδιο ύψος: $t = \sqrt{2h/g}$. Η οριζόντια ταχύτητα της Α <strong>δεν</strong> επηρεάζει τον χρόνο.</p> </details> <p><strong>11.</strong> Δύο άνθρωποι βρίσκονται σε διαφορετικά σημεία Α και Β της γήινης επιφάνειας και, λόγω της περιστροφής της Γης, εκτελούν μία περιστροφή σε $24\ \text{h}$. Ποιος έχει μεγαλύτερη ταχύτητα;</p> <details class="qa"> <summary>Απάντηση</summary> <p>Και οι δύο έχουν την <strong>ίδια περίοδο</strong> ($24\ \text{h}$), άρα και την ίδια <strong>γωνιακή</strong> ταχύτητα $\omega$. Όμως $\upsilon = \omega R$, όπου $R$ η <strong>ακτίνα του κύκλου που διαγράφει ο καθένας</strong> (απόσταση από τον άξονα περιστροφής).</p> <p>Άρα <strong>μεγαλύτερη γραμμική ταχύτητα έχει αυτός που βρίσκεται πιο κοντά στον Ισημερινό</strong> (μεγαλύτερο $R$). Στους πόλους η ταχύτητα είναι πρακτικά μηδέν.</p> </details> <p><strong>12.</strong> Ένα σημείο Μ κινείται πάνω σε μια περιφέρεια. Ποιο από τα σχήματα δείχνει σωστά την ταχύτητα και την επιτάχυνσή του;</p> <div class="dia"> <svg viewbox="0 0 340 150" xmlns="http://www.w3.org/2000/svg" font-family="inherit"> <g> <circle cx="70" cy="80" r="45" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3"></circle> <circle cx="70" cy="35" r="6" fill="var(--global-theme-color)"></circle> <line x1="78" y1="35" x2="120" y2="35" stroke="#d64545" stroke-width="2.5"></line><polygon points="125,35 114,30 114,40" fill="#d64545"></polygon> <line x1="70" y1="44" x2="70" y2="68" stroke="#e8852c" stroke-width="2.5"></line><polygon points="70,74 65,63 75,63" fill="#e8852c"></polygon> <text x="70" y="140" text-anchor="middle" fill="currentColor" font-size="12">(Α)</text> </g> <g> <circle cx="180" cy="80" r="45" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3"></circle> <circle cx="180" cy="35" r="6" fill="var(--global-theme-color)"></circle> <line x1="188" y1="35" x2="230" y2="35" stroke="#d64545" stroke-width="2.5"></line><polygon points="235,35 224,30 224,40" fill="#d64545"></polygon> <line x1="180" y1="26" x2="180" y2="6" stroke="#e8852c" stroke-width="2.5"></line><polygon points="180,0 175,11 185,11" fill="#e8852c"></polygon> <text x="180" y="140" text-anchor="middle" fill="currentColor" font-size="12">(Β)</text> </g> <g> <circle cx="290" cy="80" r="45" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3"></circle> <circle cx="290" cy="35" r="6" fill="var(--global-theme-color)"></circle> <line x1="290" y1="44" x2="290" y2="68" stroke="#d64545" stroke-width="2.5"></line><polygon points="290,74 285,63 295,63" fill="#d64545"></polygon> <line x1="298" y1="35" x2="332" y2="35" stroke="#e8852c" stroke-width="2.5"></line><polygon points="337,35 326,30 326,40" fill="#e8852c"></polygon> <text x="290" y="140" text-anchor="middle" fill="currentColor" font-size="12">(Γ)</text> </g> </svg> <div class="fig-cap">κόκκινο = ταχύτητα υ · πορτοκαλί = επιτάχυνση a</div> </div> <details class="qa"> <summary>Απάντηση</summary> <p>Σωστό το <strong>(Α)</strong>. Η <strong>ταχύτητα</strong> είναι πάντα <strong>εφαπτόμενη</strong> στην τροχιά και η <strong>κεντρομόλος επιτάχυνση</strong> δείχνει πάντα <strong>προς το κέντρο</strong>.</p> <p>Στο (Β) η επιτάχυνση δείχνει προς τα <strong>έξω</strong> (λάθος — δεν υπάρχει «φυγόκεντρος» επιτάχυνση εδώ), ενώ στο (Γ) τα δύο διανύσματα είναι <strong>αντεστραμμένα</strong>.</p> </details> <p><strong>13.</strong> Μια μοτοσυκλέτα κινείται σε κυκλική πίστα με ταχύτητα σταθερής τιμής. Όταν διπλασιαστεί η τιμή της ταχύτητας, η κεντρομόλος επιτάχυνση είναι: <br><strong>α)</strong> Ίδια. <strong>β)</strong> Διπλασιάζεται. <strong>γ)</strong> Υποδιπλασιάζεται. <strong>δ)</strong> Τετραπλασιάζεται.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Σωστό το <strong>(δ)</strong>. Η $a_κ = \upsilon^2/R$ είναι <strong>ανάλογη του τετραγώνου</strong> της ταχύτητας: διπλάσια $\upsilon$ → $2^2 = 4$ φορές μεγαλύτερη επιτάχυνση.</p> </details> <p><strong>14.</strong> Να συμπληρωθούν τα κενά: Ένα μικρό πακέτο αφήνεται από αεροπλάνο που πετά οριζόντια σε ύψος $h$. Τη στιγμή που αφήνεται έχει ταχύτητα ίδιας τιμής με την ταχύτητα …………. Η κίνησή του προέρχεται από τη σύνθεση δύο κινήσεων: μία σε οριζόντια διεύθυνση που είναι …………. και μία σε κατακόρυφη διεύθυνση που είναι ………….</p> <details class="qa"> <summary>Απάντηση</summary> <p>…με την ταχύτητα <strong>του αεροπλάνου</strong>· η οριζόντια είναι <strong>ευθύγραμμη ομαλή</strong>· η κατακόρυφη είναι <strong>ελεύθερη πτώση</strong> (ευθύγραμμη ομαλά επιταχυνόμενη).</p> </details> <p><strong>15.</strong> Να συμπληρωθούν τα κενά: Στην ομαλή κυκλική κίνηση εμφανίζεται …………. επιτάχυνση. Η τιμή της δίνεται από τη σχέση …………. Η γραμμική ταχύτητα συνδέεται με τη γωνιακή με τη σχέση …………. Η τιμή της γραμμικής ταχύτητας παραμένει …………. ενώ αλλάζει συνέχεια η …………. της.</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>κεντρομόλος</strong> · $a_κ = \dfrac{\upsilon^2}{R}$ · $\upsilon = \omega R$ · <strong>σταθερή</strong> · <strong>κατεύθυνση</strong>.</p> </details> <p><strong>16.</strong> Να συμπληρωθούν τα κενά με τις λέξεις: <em>μεγαλύτερη, μικρότερη, σταθερή</em>. <br><strong>α)</strong> Ο ωροδείκτης ενός ρολογιού έχει …………. γωνιακή ταχύτητα από τον λεπτοδείκτη. <br><strong>β)</strong> Η τιμή της ταχύτητας του άκρου του λεπτοδείκτη είναι …………. <br><strong>γ)</strong> Ο λεπτοδείκτης έχει …………. περίοδο από τον ωροδείκτη.</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>α) μικρότερη</strong> — ο ωροδείκτης κάνει μία περιστροφή σε 12 h, ο λεπτοδείκτης σε 1 h, και $\omega = 2\pi/T$.</p> <p><strong>β) σταθερή</strong> — η κίνηση είναι <strong>ομαλή</strong> κυκλική (αλλάζει μόνο η κατεύθυνση).</p> <p><strong>γ) μικρότερη</strong> — $T_Λ = 1\ \text{h}$ έναντι $T_Ω = 12\ \text{h}$.</p> </details> <p><strong>17.</strong> Στις παρακάτω σχέσεις της ομαλής κυκλικής κίνησης να συμπληρώσετε τα κενά με τα σύμβολα $\upsilon,\ \omega,\ f,\ R$: <br><strong>α)</strong> $\upsilon = 2\pi f \cdot \ldots$ <strong>β)</strong> $T = 1/\ldots$ <strong>γ)</strong> $\upsilon = \ldots \cdot R$ <strong>δ)</strong> $s = \ldots \cdot t$</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>α)</strong> $\upsilon = 2\pi f R$ · <strong>β)</strong> $T = \dfrac{1}{f}$ · <strong>γ)</strong> $\upsilon = \omega R$ · <strong>δ)</strong> $s = \upsilon t$</p> </details> <p><strong>18.</strong> Να συμπληρωθούν τα κενά των σχέσεων: <br><strong>Α.</strong> $F_κ = m\cdot\ldots$ <strong>Β.</strong> $a = \upsilon^2 \ldots$ <strong>Γ.</strong> $\omega = \upsilon \ldots$ <strong>Δ.</strong> $T = \mu\cdot\ldots$</p> <details class="qa"> <summary>Απάντηση</summary> <p><strong>Α.</strong> $F_κ = m\dfrac{\upsilon^2}{R}$ · <strong>Β.</strong> $a = \dfrac{\upsilon^2}{R}$ · <strong>Γ.</strong> $\omega = \dfrac{\upsilon}{R}$ · <strong>Δ.</strong> $T = \mu N$ (τριβή = συντελεστής × κάθετη δύναμη).</p> </details> <p><strong>19.</strong> Ποιες από τις παρακάτω προτάσεις είναι σωστές; <br><strong>α)</strong> Για να πραγματοποιήσει ένα σώμα κυκλική κίνηση δεν απαιτείται δύναμη. <br><strong>β)</strong> Ένα σώμα που εκτελεί ομαλή κυκλική κίνηση δεν επιταχύνεται. <br><strong>γ)</strong> Για να πραγματοποιήσει κυκλική κίνηση ένα σώμα πρέπει να ασκείται πάνω του κεντρομόλος δύναμη.</p> <details class="qa"> <summary>Απάντηση</summary> <p>Σωστή <strong>μόνο η (γ)</strong>.</p> <p>Η <strong>(α)</strong> είναι λάθος: χωρίς δύναμη το σώμα θα κινούνταν <strong>ευθύγραμμα</strong> (1ος νόμος). Η <strong>(β)</strong> είναι λάθος: η ταχύτητα <strong>αλλάζει κατεύθυνση</strong>, άρα υπάρχει επιτάχυνση (η κεντρομόλος) — «ομαλή» σημαίνει σταθερό <strong>μέτρο</strong>, όχι μηδενική επιτάχυνση.</p> </details> <p><strong>20.</strong> Ένα σφαιρίδιο περιφέρεται κυκλικά σε οριζόντιο επίπεδο λόγω της δύναμης που του ασκεί το νήμα. Αν <strong>κοπεί</strong> το νήμα, ποια θα είναι η μετέπειτα τροχιά του;</p> <div class="dia"> <svg viewbox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" font-family="inherit"> <circle cx="110" cy="80" r="52" fill="none" stroke="currentColor" stroke-width="1.3" stroke-dasharray="4 3"></circle> <circle cx="110" cy="80" r="3" fill="currentColor"></circle> <circle cx="110" cy="28" r="7" fill="var(--global-theme-color)"></circle> <path d="M110,28 L295,28" stroke="#3ba55d" stroke-width="2.5" fill="none"></path><polygon points="300,28 289,23 289,33" fill="#3ba55d"></polygon> <text x="230" y="20" fill="#3ba55d" font-size="12">(Α) εφαπτομενικά</text> <path d="M110,28 C170,28 190,60 190,80" stroke="#d64545" stroke-width="2" fill="none" stroke-dasharray="4 3"></path> <text x="196" y="86" fill="#d64545" font-size="12">(Β)</text> <line x1="110" y1="28" x2="110" y2="150" stroke="#7a4fb5" stroke-width="2" stroke-dasharray="4 3"></line> <text x="116" y="150" fill="#7a4fb5" font-size="12">(Γ)</text> </svg> </div> <details class="qa"> <summary>Απάντηση</summary> <p>Σωστό το <strong>(Α)</strong>: το σφαιρίδιο συνεχίζει <strong>ευθύγραμμα, εφαπτομενικά</strong> στην τροχιά.</p> <p>Μόλις κοπεί το νήμα <strong>παύει να ασκείται κεντρομόλος δύναμη</strong>. Χωρίς συνισταμένη δύναμη, από τον <strong>1ο νόμο του Νεύτωνα (αδράνεια)</strong>, το σώμα διατηρεί την ταχύτητα που είχε εκείνη τη στιγμή — και αυτή ήταν <strong>εφαπτόμενη</strong> στον κύκλο. Δεν συνεχίζει καμπύλα (Β) ούτε φεύγει ακτινικά προς τα έξω (Γ): η «φυγόκεντρος» δεν είναι πραγματική δύναμη.</p> </details> </div> <div class="ask-box"> <h4>Ασκήσεις – Προβλήματα, Κεφάλαιο 1</h4> <p><strong>1.</strong> Ένας αστροναύτης βρίσκεται στη Σελήνη, και αφήνει ένα σώμα από ύψος $7{,}2\ \text{m}$ που φτάνει στο έδαφος μετά από $3\ \text{s}$. <br><strong>α)</strong> Πόση είναι η επιτάχυνση βαρύτητας στη Σελήνη; <br><strong>β)</strong> Αν ο αστροναύτης πετάξει το σώμα οριζόντια με ταχύτητα $12\ \text{m/s}$ από το ίδιο ύψος, <br><strong>i)</strong> Πόσος χρόνος χρειάζεται μέχρι να φτάσει το σώμα στο έδαφος; <br><strong>ii)</strong> Πόση οριζόντια απόσταση θα διανύσει μέχρι να φτάσει στο έδαφος;</p> <details class="qa"> <summary>Λύση</summary> <p><strong>α)</strong> Το σώμα <strong>αφήνεται</strong>, άρα κάνει <strong>ελεύθερη πτώση</strong>:</p> \[h = \tfrac{1}{2}g_Σ t^2 \;\Rightarrow\; g_Σ = \dfrac{2h}{t^2}\] <p>Αντικαθιστώ:</p> \[g_Σ = \dfrac{2\cdot7{,}2}{3^2} = 1{,}6\ \text{m/s}^2\] <p><strong>β) i)</strong> Σύμφωνα με την <strong>αρχή της ανεξαρτησίας των κινήσεων</strong>, η κατακόρυφη κίνηση δεν επηρεάζεται από την οριζόντια. Το ύψος είναι το ίδιο, άρα ο χρόνος πτώσης είναι <strong>πάλι $3\ \text{s}$</strong>.</p> <p><strong>ii)</strong> Στον οριζόντιο άξονα η κίνηση είναι <strong>ευθύγραμμη ομαλή</strong>:</p> \[x = \upsilon t = 12 \cdot 3 = 36\ \text{m}\] </details> <p><strong>2.</strong> Ένα αεροπλάνο πετά οριζόντια σε ύψος $h = 500\ \text{m}$ με ταχύτητα $150\ \text{m/s}$ και αφήνει μία βόμβα. <br><strong>α)</strong> Να γράψετε τις εξισώσεις για την ταχύτητα και τη μετατόπιση που περιγράφουν την κίνηση της βόμβας. <br><strong>β)</strong> Αν ο χρόνος πτώσης της βόμβας είναι $10\ \text{s}$, να υπολογίσετε την επιτάχυνση της βαρύτητας. <br><strong>γ)</strong> Να βρείτε το σημείο που βρίσκεται το αεροπλάνο όταν η βόμβα φτάνει στο έδαφος.</p> <details class="qa"> <summary>Λύση</summary> <p><strong>α)</strong> Η βόμβα εκτελεί <strong>οριζόντια βολή</strong> — αναλύω στους δύο άξονες:</p> \[\text{οριζόντια:}\;\; \upsilon_x = \upsilon_0,\quad x = \upsilon_0 t \qquad \text{κατακόρυφα:}\;\; \upsilon_y = g t,\quad y = \tfrac{1}{2}g t^2\] <p><strong>β)</strong> Από την κατακόρυφη εξίσωση, λυμένη ως προς $g$:</p> \[y = \tfrac{1}{2}g t^2 \;\Rightarrow\; g = \dfrac{2y}{t^2} = \dfrac{2\cdot500}{10^2} = 10\ \text{m/s}^2\] <p><strong>γ)</strong> Η βόμβα διατηρεί την <strong>οριζόντια</strong> ταχύτητα του αεροπλάνου, άρα βόμβα και αεροπλάνο διανύουν <strong>την ίδια οριζόντια απόσταση</strong>. Επομένως το αεροπλάνο βρίσκεται <strong>ακριβώς πάνω από το σημείο πρόσκρουσης</strong>, έχοντας μετατοπιστεί κατά:</p> \[x = \upsilon_0 t = 150 \cdot 10 = 1.500\ \text{m}\] </details> <p><strong>*3.</strong> Ένα όχημα έχει λάστιχα διαμέτρου $0{,}8\ \text{m}$. Βρείτε την ταχύτητα και την κεντρομόλο επιτάχυνση ενός σημείου στο πέλμα του ελαστικού όταν το αυτοκίνητο κινείται με ταχύτητα $35\ \text{m/s}$.</p> <details class="qa"> <summary>Λύση</summary> <p>Η <strong>γραμμική ταχύτητα</strong> κάθε σημείου του πέλματος ισούται με τη μεταφορική ταχύτητα του αυτοκινήτου, δηλαδή $\upsilon = 35\ \text{m/s}$.</p> <p>Για την κεντρομόλο επιτάχυνση, με ακτίνα $R = \dfrac{\delta}{2} = \dfrac{0{,}8}{2} = 0{,}4\ \text{m}$:</p> \[a_κ = \dfrac{\upsilon^2}{R} = \dfrac{35^2}{0{,}4} = 3.062{,}5\ \text{m/s}^2\] </details> <p><strong>*4.</strong> Υπολογίστε την ταχύτητα και την κεντρομόλο επιτάχυνση που οφείλεται στην περιστροφή της Γης, ενός αντικειμένου που βρίσκεται στον Ισημερινό της Γης. Δίνεται ότι η ακτίνα του Ισημερινού είναι $6.380\ \text{km}$. Η περίοδος περιστροφής της Γης είναι $T = 24\ \text{h}$.</p> <details class="qa"> <summary>Λύση</summary> <p>Γραμμική ταχύτητα στην ομαλή κυκλική κίνηση (από $\upsilon = \omega R$ με $\omega = 2\pi/T$):</p> \[\upsilon = \dfrac{2\pi}{T}R\] <p>Αντικαθιστώ ($R = 6{,}380\cdot10^{6}\ \text{m}$, $T = 24\cdot3.600\ \text{s}$):</p> \[\upsilon = \dfrac{2\cdot3{,}14}{24\cdot3.600}\cdot6.380\cdot10^{3} \approx 463\ \text{m/s}\] <p>Και η κεντρομόλος επιτάχυνση:</p> \[a_κ = \dfrac{\upsilon^2}{R} = \dfrac{463^2}{6.380\cdot10^{3}} \approx 0{,}034\ \text{m/s}^2\] <p>Πολύ μικρή σε σχέση με το $g$ — γι’ αυτό δεν την αντιλαμβανόμαστε.</p> </details> <p><strong>5.</strong> Ένα pulsar (ταχέως περιστρεφόμενο αστέρι νετρονίων) έχει διάμετρο $13{,}8\ \text{km}$ και περιστρέφεται με συχνότητα $8{,}5\ \text{Hz}$. Υπολογίστε την ταχύτητα και την κεντρομόλο επιτάχυνση ενός σημείου που βρίσκεται στον Ισημερινό του αστεριού.</p> <details class="qa"> <summary>Λύση</summary> <p>Χρησιμοποιώ $\upsilon = \omega R$ με $\omega = 2\pi f$ και $R = \delta/2$:</p> \[\upsilon = 2\pi f \dfrac{\delta}{2}\] <p>Αντικαθιστώ:</p> \[\upsilon = 2\cdot3{,}14\cdot8{,}5\cdot\dfrac{13{,}8\cdot10^{3}}{2} \approx 368\cdot10^{3}\ \text{m/s}\] \[a_κ = \dfrac{\upsilon^2}{R} = \dfrac{(368\cdot10^{3})^2}{\frac{13{,}8\cdot10^{3}}{2}} \approx 19{,}6\cdot10^{6}\ \text{m/s}^2\] <p>Τεράστια τιμή — δείχνει πόσο ακραία αντικείμενα είναι τα αστέρια νετρονίων.</p> </details> <p><strong>6.</strong> Ένας περιστρεφόμενος κάδος στεγνωτήρα λειτουργεί εκτελώντας $780$ περιστροφές το λεπτό. Ο κάδος έχει διάμετρο $0{,}66\ \text{m}$. Υπολογίστε: <br><strong>α)</strong> Την ταχύτητα ενός σημείου που βρίσκεται πάνω στο τοίχωμα του κάδου. <br><strong>β)</strong> Την κεντρομόλο επιτάχυνση ενός σημείου του τοιχώματος.</p> <details class="qa"> <summary>Λύση</summary> <p>Πρώτα μετατρέπω τις στροφές ανά λεπτό σε <strong>συχνότητα</strong> (στροφές ανά δευτερόλεπτο):</p> \[f = \dfrac{780}{60} = 13\ \text{Hz}\] <p><strong>α)</strong> Γραμμική ταχύτητα, με $R = \delta/2 = 0{,}33\ \text{m}$:</p> \[\upsilon = 2\pi f R = 2\cdot3{,}14\cdot13\cdot0{,}33 \approx 26{,}9\ \text{m/s}\] <p><strong>β)</strong> Κεντρομόλος επιτάχυνση:</p> \[a_κ = \dfrac{\upsilon^2}{R} = \dfrac{26{,}9^2}{0{,}33} \approx 2.193\ \text{m/s}^2\] </details> <p><strong>*7.</strong> Ένα αυτοκίνητο κινείται με σταθερή ταχύτητα, γύρω από μία κυκλική πλατεία διαμέτρου $135{,}2\ \text{m}$. Στην κίνηση αυτή η τριβή μεταξύ των τροχών και του οδοστρώματος λειτουργεί ως <strong>κεντρομόλος δύναμη</strong>. Εάν αυτή η τριβή δεν πρέπει να υπερβαίνει το $25\%$ του βάρους του αυτοκινήτου, υπολογίστε τη μέγιστη ταχύτητα με την οποία μπορεί να κινείται χωρίς να ολισθαίνει. Δίνεται $g = 10\ \text{m/s}^2$.</p> <details class="qa"> <summary>Λύση</summary> <p>Η τριβή παίζει τον ρόλο της <strong>κεντρομόλου δύναμης</strong> και δεν ξεπερνά το $25\%$ του βάρους:</p> \[F_{κ(max)} = 0{,}25\,B = 0{,}25\,mg\] <p>Εξισώνω με την έκφραση της κεντρομόλου και λύνω ως προς την ταχύτητα (η <strong>μάζα απλοποιείται</strong>):</p> \[0{,}25\,mg = \dfrac{m\upsilon_{max}^2}{R} \;\Rightarrow\; \upsilon_{max} = \sqrt{0{,}25\,g R}\] <p>Αντικαθιστώ ($R = 135{,}2/2 = 67{,}6\ \text{m}$):</p> \[\upsilon_{max} = \sqrt{0{,}25\cdot10\cdot67{,}6} = \sqrt{169} = 13\ \text{m/s}\] </details> <p><strong>8.</strong> Να βρεθούν η περίοδος του ωροδείκτη και η περίοδος του λεπτοδείκτη ενός ρολογιού. Κάποια στιγμή το ρολόι δείχνει $12$ το μεσημέρι. Μετά από πόση ώρα οι δείκτες σχηματίζουν γωνία $\pi/3$ για πρώτη φορά;</p> <details class="qa"> <summary>Λύση</summary> <p><strong>Περίοδοι:</strong> ο ωροδείκτης κάνει μία πλήρη περιστροφή σε $12$ ώρες, ο λεπτοδείκτης σε $1$ ώρα:</p> \[T_Ω = 12\cdot3.600 = 43.200\ \text{s} \qquad T_Λ = 1\cdot3.600 = 3.600\ \text{s}\] <p>Κάθε δείκτης διαγράφει γωνία $\varphi = \omega t = \dfrac{2\pi}{T}t$. Η <strong>διαφορά</strong> των γωνιών πρέπει να γίνει $\pi/3$:</p> \[\varphi_Λ - \varphi_Ω = \dfrac{\pi}{3} \;\Rightarrow\; \dfrac{2\pi}{T_Λ}t - \dfrac{2\pi}{T_Ω}t = \dfrac{\pi}{3}\] <p>Διαιρώ με $\pi$ και λύνω ως προς $t$:</p> \[2t\left(\dfrac{1}{T_Λ} - \dfrac{1}{T_Ω}\right) = \dfrac{1}{3} \;\Rightarrow\; 2t\left(\dfrac{1}{3.600} - \dfrac{1}{43.200}\right) = \dfrac{1}{3}\] \[t \approx 10{,}9\ \text{min}\] </details> <p><strong>9.</strong> Τη στιγμή που ένα βλήμα απέχει απόσταση $d = 2\ \text{m}$ από το σημείο Α ενός δίσκου έχει ταχύτητα $\upsilon = 400\ \text{m/s}$. Ο δίσκος περιστρέφεται με σταθερή γωνιακή ταχύτητα $\omega$. Τη στιγμή που το βλήμα κτυπά στον δίσκο, το σημείο Α έχει περιστραφεί κατά γωνία $\varphi = 45°$. Να βρείτε τη γωνιακή ταχύτητα περιστροφής του δίσκου.</p> <details class="qa"> <summary>Λύση</summary> <p>Το βλήμα κινείται <strong>ευθύγραμμα ομαλά</strong>, άρα ο χρόνος μέχρι την πρόσκρουση είναι:</p> \[t = \dfrac{d}{\upsilon} = \dfrac{2}{400} = 0{,}005\ \text{s}\] <p>Στον <strong>ίδιο</strong> χρόνο ο δίσκος διέγραψε γωνία $\varphi = 45° = \dfrac{\pi}{4}\ \text{rad}$. Από τον ορισμό της γωνιακής ταχύτητας:</p> \[\omega = \dfrac{\varphi}{t} = \dfrac{\pi/4}{0{,}005} = 50\pi\ \text{rad/s}\] </details> <p><strong>10.</strong> Δορυφόρος εκτελεί κυκλική κίνηση σε ύψος $h = 6.400\ \text{km}$ από την επιφάνεια της Γης και έχει περίοδο $4\ \text{h}$. Αν η ακτίνα της Γης είναι $R = 6.400\ \text{km}$, να υπολογιστούν: <br><strong>α)</strong> Η ταχύτητα περιστροφής του δορυφόρου. <br><strong>β)</strong> Η γωνιακή ταχύτητα περιστροφής του δορυφόρου.</p> <details class="qa"> <summary>Λύση</summary> <p><strong>Προσοχή:</strong> η ακτίνα της τροχιάς μετριέται από το <strong>κέντρο</strong> της Γης, άρα είναι $R + h$.</p> <p><strong>α)</strong> Γραμμική ταχύτητα:</p> \[\upsilon = \omega(R+h) = \dfrac{2\pi}{T}(R+h)\] <p>Αντικαθιστώ ($T = 4\cdot3.600\ \text{s}$):</p> \[\upsilon = \dfrac{2\cdot3{,}14}{4\cdot3.600}\left(6.400\cdot10^{3} + 6.400\cdot10^{3}\right) \approx 5.581\ \text{m/s}\] <p><strong>β)</strong> Γωνιακή ταχύτητα:</p> \[\omega = \dfrac{2\pi}{T} = \dfrac{2\cdot3{,}14}{4\cdot3.600} \approx 4{,}36\cdot10^{-4}\ \text{rad/s}\] </details> </div> <div class="subnav subnav-bottom"> <a class="sn-prev" href="/teaching/b-lykeiou-pros/1-4/"><span class="sn-lbl">← Προηγούμενη ενότητα</span><span class="sn-name">1.4 Περιπτώσεις κεντρομόλου δύναμης</span></a> <a class="sn-all" href="/teaching/b-lykeiou-pros/">Όλα τα κεφάλαια</a> <a class="sn-next" href="/teaching/b-lykeiou-pros/syn-1/"><span class="sn-lbl">Επόμενη ενότητα →</span><span class="sn-name">Συνδυαστικές ασκήσεις — Κεφ. 1</span></a> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dimitris Kogias. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script>
+  window.op =
+    window.op ||
+    function (...args) {
+      (window.op.q = window.op.q || []).push(args);
+    };
+  window.op("init", {
+    clientId: "894603ab-9aa7-41a5-a676-5f28baab38ec",
+    trackScreenViews: true,
+    trackOutgoingLinks: true,
+    trackAttributes: true,
+  });
+</script> <script async defer src="https://openpanel.dev/op1.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-projects",
+          title: "projects",
+          description: "Production AI systems I build end-to-end — the models, the APIs, and the data pipelines that serve them — plus live demos you can click — and a few things from my physics days. Most client work is under NDA, so it's described, not linked.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "AI / ML Systems Engineer · Physicist — experience, education & skills.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-teaching",
+          title: "teaching",
+          description: "Σημειώσεις και υλικό Φυσικής και Χημείας ανά τάξη.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
+        },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march & april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
+          description: "",
+          section: "News",},{id: "news-a-long-announcement-with-details",
+          title: 'A long announcement with details',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
+          description: "",
+          section: "News",},{id: "projects-agentic-workflows",
+          title: 'Agentic Workflows',
+          description: "Autonomous, multi-step agents that plan and run a task on their own.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-agents/";
+            },},{id: "projects-full-stack-apps",
+          title: 'Full-Stack Apps',
+          description: "Backend-led full-stack — self-serve SaaS tools, shipped end to end.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-fullstack/";
+            },},{id: "projects-serverless-apis-integrations-and-data-pipelines",
+          title: 'Serverless APIs, Integrations and Data Pipelines',
+          description: "The backend plumbing — serverless APIs, service integrations and data pipelines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-infra/";
+            },},{id: "projects-matching-and-recommendation-systems",
+          title: 'Matching and Recommendation Systems',
+          description: "Recommendations and entity-to-entity matching — collaborative filtering, embeddings, retrieval & reranking.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-matching/";
+            },},{id: "projects-semantic-search-at-scale",
+          title: 'Semantic Search at Scale',
+          description: "Hybrid retrieval engine — dense + lexical, RRF fusion, context-preserving chunking.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-search/";
+            },},{id: "projects-archeologic-the-ai-archaeologist",
+          title: 'ArcheoLogic — the AI archaeologist',
+          description: "An LLM agent that investigates historical claims, chases citations to primary evidence, and returns cited verdicts on a living knowledge graph.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/archeologic/";
+            },},{id: "projects-chatbot-assistants",
+          title: 'Chatbot Assistants',
+          description: "Conversational assistants — grounded in your data, with tool-calling, embeddable anywhere.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chatbot-assistants/";
+            },},{id: "projects-ηλιακός-άνεμος-the-sun-earth-sandbox",
+          title: 'Ηλιακός Άνεμος — the Sun–Earth sandbox',
+          description: "The magnetosphere as a navigable 3D scene — solar wind, bow shock, auroras — with physics dials you can turn.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/iliakos-anemos/";
+            },},{id: "projects-limenarchisai-the-ai-harbormaster",
+          title: 'LimenarchisAI — the AI Harbormaster',
+          description: "Hybrid-search RAG over live maritime traffic in the Saronic Gulf — ask the harbor a question, get a cited answer.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/limenarchis/";
+            },},{id: "projects-μαύρη-τρύπα-an-interactive-black-hole",
+          title: 'Μαύρη Τρύπα — an interactive black hole',
+          description: "Real general-relativistic ray tracing in WebGL — accretion disc, lensing, droppable clocks. Physics with sliders.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mavri-trypa/";
+            },},{id: "projects-mapping-the-milky-way-39-s-spiral-arms",
+          title: 'Mapping the Milky Way&#39;s Spiral Arms',
+          description: "Galactic structure from 21cm hydrogen radio emission.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/milky-way/";
+            },},{id: "projects-moviebro-your-movie-bro",
+          title: 'movieBro — your movie bro',
+          description: "Rate a few movies, get your next watch — collaborative filtering + hybrid search + in-browser reranking, fully client-side.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/moviebro/";
+            },},{id: "projects-neural-networks-lab",
+          title: 'Neural Networks Lab',
+          description: "From-scratch autograd engine + character-level LMs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/nn-lab/";
+            },},{id: "projects-ο-ήλιος-the-living-sun",
+          title: 'Ο Ήλιος — The Living Sun',
+          description: "AI segmentation of solar features on live NASA SDO imagery — with a real-time space-weather dashboard.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/o-ilios/";
+            },},{id: "projects-pyro-pythia-the-fire-oracle",
+          title: 'Pyro-Pythia — the fire oracle',
+          description: "Burn-scar mapping for Greek wildfires — pre/post Sentinel-2, dNBR baseline, U-Net segmentation, interactive web map.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pyro-pythia/";
+            },},{id: "projects-a-neural-network-for-the-three-body-problem",
+          title: 'A Neural Network for the Three-Body Problem',
+          description: "Deep learning as a fast emulator of chaotic gravitational dynamics.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/three-body/";
+            },},{id: "projects-msc-thesis-object-detection",
+          title: 'MSc Thesis — Object Detection',
+          description: "Benchmarking YOLO, critiquing mAP, and training a deep-sky-object detector.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/yolo-thesis/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%64%69%6D%69%74%72%69%73%6B%6F%67%69%61%73@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/CaptainJimbo", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/dimitris-kogias-273559287", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
