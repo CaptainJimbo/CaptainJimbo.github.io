@@ -53,6 +53,29 @@ document.addEventListener('keydown', function (e) {
   var a = document.querySelector(e.key === 'ArrowLeft' ? '.subnav .sn-prev' : '.subnav .sn-next');
   if (a) window.location.href = a.href;
 });
+(function () {
+  var sx, sy, st, ok;
+  document.addEventListener('touchstart', function (e) {
+    ok = false;
+    if (e.touches.length !== 1) return;
+    var t = e.touches[0];
+    if (t.clientX < 30 || t.clientX > window.innerWidth - 30) return;
+    var el = e.target;
+    while (el && el !== document.body) {
+      if (el.scrollWidth > el.clientWidth + 5) return;
+      el = el.parentElement;
+    }
+    sx = t.clientX; sy = t.clientY; st = Date.now(); ok = true;
+  }, {passive: true});
+  document.addEventListener('touchend', function (e) {
+    if (!ok || e.touches.length > 0) return;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy, dt = Date.now() - st;
+    if (dt > 500 || Math.abs(dx) < 80 || Math.abs(dy) > 50) return;
+    var a = document.querySelector(dx < 0 ? '.subnav .sn-next' : '.subnav .sn-prev');
+    if (a) window.location.href = a.href;
+  }, {passive: true});
+})();
 </script> </article> </div> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dimitris Kogias. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
