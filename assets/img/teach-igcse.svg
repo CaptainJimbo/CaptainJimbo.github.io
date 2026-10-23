@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="IGCSE Maths">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c4aa8"/>
+      <stop offset="1" stop-color="#0d2d6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.13" stroke-width="2">
+    <path d="M0 150 H600 M0 300 H600 M0 450 H600 M150 0 V600 M300 0 V600 M450 0 V600"/>
+  </g>
+  <g fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-style="italic">
+    <text x="62" y="232" font-size="150">x</text>
+    <text x="150" y="160" font-size="70">2</text>
+    <text x="222" y="232" font-size="110">+</text>
+    <text x="312" y="232" font-size="150">y</text>
+    <text x="396" y="160" font-size="70">2</text>
+  </g>
+  <g fill="#ffd54a" font-family="Georgia, 'Times New Roman', serif">
+    <text x="60" y="430" font-size="150">√</text>
+    <text x="300" y="400" font-size="96" font-style="italic">π</text>
+    <text x="420" y="430" font-size="120">÷</text>
+  </g>
+  <rect x="162" y="296" width="372" height="4" fill="#ffd54a"/>
+  <text x="300" y="555" fill="#ffffff" font-family="Helvetica, Arial, sans-serif" font-size="46" font-weight="700" text-anchor="middle" letter-spacing="4">IGCSE MATHS</text>
+</svg>
