@@ -97,7 +97,15 @@ Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tie
   <a href="{{ '/teaching/igcse-maths/shape-space-8/' | relative_url }}">Shape & Space 8 — Vectors</a>
   <a href="{{ '/teaching/igcse-maths/handling-data-5/' | relative_url }}">Handling Data 5 — Probability laws, trees</a>
 </div>
-<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Units 9–10 follow.</p>
+<p class="ig-unit">Unit 9</p>
+<div class="ig-sub">
+  <a href="{{ '/teaching/igcse-maths/number-9/' | relative_url }}">Number 9 — Costs, tax, currency</a>
+  <a href="{{ '/teaching/igcse-maths/algebra-9/' | relative_url }}">Algebra 9 — Linear & non-linear simultaneous, proof</a>
+  <a href="{{ '/teaching/igcse-maths/graphs-8/' | relative_url }}">Graphs 8 — Gradient of a curve, transformations</a>
+  <a href="{{ '/teaching/igcse-maths/shape-space-9/' | relative_url }}">Shape & Space 9 — 3D trigonometry</a>
+  <a href="{{ '/teaching/igcse-maths/handling-data-6/' | relative_url }}">Handling Data 6 — Histograms</a>
+</div>
+<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Unit 10 follows.</p>
 </div>
 </div>
 

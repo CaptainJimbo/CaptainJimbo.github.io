@@ -54,7 +54,7 @@ Three ways to solve $ax^2+bx+c=0$, and when to use each: **factorise** if it fac
 <h4>Quadratic inequalities</h4>
 
 - Sketch $y=$ the quadratic: find the roots, note it is U-shaped if $a>0$.
-- "$<0$" → where the graph is **below** the axis: one region **between** the roots, e.g. $-1<x<2$.
+- "$<0$" → where the graph is **below** the axis: one region **between** the roots, e.g. $-1\lt x<2$.
 - "$>0$" → **above** the axis: two regions **outside** the roots, written as two inequalities, e.g. $x<-1$ or $x>2$.
 </div>
 

@@ -53,7 +53,7 @@ Fractions with letters in them obey exactly the fraction rules from Number 1. Th
 - Solve exactly like an equation **except**: when you multiply or divide both sides by a **negative** number, **reverse the sign**. $-2x\ge6 \Rightarrow x\le-3$. (Safer: add $2x$ to both sides instead.)
 - $x>3$: 3 not included; $x\ge3$: 3 included.
 - **Number line:** solid circle ● for $\le$ / $\ge$, open circle ○ for $<$ / $>$, arrow in the direction of the solutions.
-- A double inequality $3\le3x<x+6$ is **two** inequalities: solve each, then combine ($1\le x<3$). "Integer solutions" means list the whole numbers in that range.
+- A double inequality $3\le3x\lt x+6$ is **two** inequalities: solve each, then combine ($1\le x<3$). "Integer solutions" means list the whole numbers in that range.
 </div>
 
 <div class="ex" markdown="1">

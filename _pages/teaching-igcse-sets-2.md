@@ -61,7 +61,7 @@ Both $=x$: $(22-x)+x+(25-x)+3=40\Rightarrow 50-x=40\Rightarrow x=10$.
 </div>
 
 <div class="ex" markdown="1">
-<b class="lbl">Worked example.</b> List $\{x:\ -2<x\le3,\ x\in\mathbb{Z}\}$.
+<b class="lbl">Worked example.</b> List $\{x:\ -2\lt x\le3,\ x\in\mathbb{Z}\}$.
 
 $\{-1,0,1,2,3\}$ — strict on the left, inclusive on the right.
 </div>
