@@ -89,7 +89,15 @@ Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tie
   <a href="{{ '/teaching/igcse-maths/shape-space-7/' | relative_url }}">Shape & Space 7 — Sectors, solids, similar shapes</a>
   <a href="{{ '/teaching/igcse-maths/sets-3/' | relative_url }}">Sets 3 — Probability, conditional probability</a>
 </div>
-<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Units 8–10 follow.</p>
+<p class="ig-unit">Unit 8</p>
+<div class="ig-sub">
+  <a href="{{ '/teaching/igcse-maths/number-8/' | relative_url }}">Number 8 — Units, compound measures</a>
+  <a href="{{ '/teaching/igcse-maths/algebra-8/' | relative_url }}">Algebra 8 — Functions</a>
+  <a href="{{ '/teaching/igcse-maths/graphs-7/' | relative_url }}">Graphs 7 — Solving equations with graphs</a>
+  <a href="{{ '/teaching/igcse-maths/shape-space-8/' | relative_url }}">Shape & Space 8 — Vectors</a>
+  <a href="{{ '/teaching/igcse-maths/handling-data-5/' | relative_url }}">Handling Data 5 — Probability laws, trees</a>
+</div>
+<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Units 9–10 follow.</p>
 </div>
 </div>
 

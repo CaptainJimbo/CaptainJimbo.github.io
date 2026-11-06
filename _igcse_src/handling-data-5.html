@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Handling Data 5 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+<style>table.t{border-collapse:collapse;margin:4px 0 6px;font-size:0.95em} table.t td,table.t th{border:1px solid #999;padding:2px 9px;text-align:center} table.t th{background:#eef3fa;font-weight:600} .figs{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:flex-start}</style>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 8</div><h1>Handling Data 5 — Laws of probability · Independent events · Tree diagrams · Conditional probability</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Marks in brackets. ★ = harder question. Independent events: $P(A\text{ and }B)=P(A)\times P(B)$. Mutually exclusive: $P(A\text{ or }B)=P(A)+P(B)$.</p>
+
+<ol class="q">
+<li><span class="marks">[4]</span>On a school day, the probability that Maya's bus is on time is 0.8 and the probability that her train is on time is 0.9. The two events are independent. Find the probability that
+<div class="row"><span><b>a</b> both are on time</span><span><b>b</b> exactly one of them is on time.</span></div>
+<div class="sol"><p><b>a</b> $0.8\times0.9=0.72$. &nbsp;<b>b</b> Bus on time and train late, <em>or</em> bus late and train on time: $0.8\times0.1+0.2\times0.9=0.08+0.18=0.26$.</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+
+<li><span class="marks">[4]</span>A year group of 120 students was asked whether they are left- or right-handed.
+<table class="t"><tr><th></th><th>left-handed</th><th>right-handed</th><th>total</th></tr><tr><td>boys</td><td>7</td><td>58</td><td>65</td></tr><tr><td>girls</td><td>10</td><td>45</td><td>55</td></tr><tr><td>total</td><td>17</td><td>103</td><td>120</td></tr></table>
+<div class="row"><span><b>a</b> A student is picked at random. Find the probability that the student is right-handed.</span><span><b>b</b> Given that the student is a girl, find the probability that she is left-handed.</span></div>
+<div class="sol"><p><b>a</b> $\dfrac{103}{120}$. &nbsp;<b>b</b> Only the 55 girls count now: $\dfrac{10}{55}=\dfrac{2}{11}$.</p></div>
+<div class="space" style="--h:3em"></div></li>
+
+<li><span class="marks">[10]</span>Each morning Leo tries to remember to take his water bottle to school, and each afternoon to bring it home. The probability that he remembers to take it on either journey is $\tfrac34$. If he sets off with it, the probability that he loses it on that journey is $\tfrac16$. On a particular day, find the probability that
+<div class="row"><span><b>a</b> he takes the bottle to school and loses it on the way</span><span><b>b</b> he arrives at school with the bottle</span><span><b>c</b> he leaves school with the bottle</span></div>
+<div class="row"><span><b>d</b> he arrives home with the bottle</span><span><b>e</b> the bottle is at home in the evening.</span></div>
+<div class="sol"><p>Multiply along each chain of events.</p>
+<p><b>a</b> $\tfrac34\times\tfrac16=\tfrac{3}{24}=\tfrac18$. &nbsp;<b>b</b> Takes it and does not lose it: $\tfrac34\times\tfrac56=\tfrac{15}{24}=\tfrac58$. &nbsp;<b>c</b> It must be at school (b) and he must remember it: $\tfrac58\times\tfrac34=\tfrac{15}{32}$. &nbsp;<b>d</b> Leaves with it (c) and does not lose it: $\tfrac{15}{32}\times\tfrac56=\tfrac{75}{192}=\tfrac{25}{64}$.</p>
+<p><b>e</b> Three ways: he never took it ($\tfrac14$); he took it to school and forgot to bring it back ($\tfrac58\times\tfrac14=\tfrac{5}{32}$) — but then it is at school, not at home, so this does <em>not</em> count; or he brought it home (d). So $P=\tfrac14+\tfrac{25}{64}=\tfrac{16}{64}+\tfrac{25}{64}=\tfrac{41}{64}$.</p></div>
+<div class="space" style="--h:6em"></div></li>
+
+<li class="star"><span class="marks">[7]</span>Ana, Ben, Cara and Dan run a race. Their probabilities of winning are shown. Separately, Eve and Finn play one game of chess; the probability that Eve wins is 0.6 (there are no draws).
+<table class="t"><tr><th>Ana</th><th>Ben</th><th>Cara</th><th>Dan</th></tr><tr><td>0.35</td><td>0.25</td><td>0.22</td><td>0.18</td></tr></table>
+<div class="row"><span><b>a</b> Find the probability that Ana or Cara wins the race.</span><span><b>b</b> Draw a tree diagram showing the winner of the race and the winner of the chess game.</span><span><b>c</b> Find the probability that Ben wins the race and Finn wins the chess game.</span></div>
+<div class="sol"><p><b>a</b> Only one person can win, so the events are mutually exclusive: $0.35+0.22=0.57$.</p>
+<p><b>b</b> Four branches for the race, each followed by two branches (Eve 0.6, Finn 0.4) for the chess:</p><figure class="d" style="display:inline-block;vertical-align:top;margin:4px 14px 4px 0"><svg width="330" height="190" viewBox="0 0 330 190" font-family="Helvetica,Arial" font-size="11"><g stroke="#000" stroke-width="1"><line x1="20" y1="95" x2="110" y2="35"/><line x1="20" y1="95" x2="110" y2="75"/><line x1="20" y1="95" x2="110" y2="115"/><line x1="20" y1="95" x2="110" y2="155"/><line x1="150" y1="35" x2="230" y2="25"/><line x1="150" y1="35" x2="230" y2="45"/><line x1="150" y1="75" x2="230" y2="65"/><line x1="150" y1="75" x2="230" y2="85"/><line x1="150" y1="115" x2="230" y2="105"/><line x1="150" y1="115" x2="230" y2="125"/><line x1="150" y1="155" x2="230" y2="145"/><line x1="150" y1="155" x2="230" y2="165"/></g><text x="118" y="39" font-size="10">Ana</text><text x="56" y="58" font-size="9">0.35</text><text x="118" y="79" font-size="10">Ben</text><text x="56" y="80" font-size="9">0.25</text><text x="118" y="119" font-size="10">Cara</text><text x="56" y="112" font-size="9">0.22</text><text x="118" y="159" font-size="10">Dan</text><text x="56" y="138" font-size="9">0.18</text><text x="236" y="28" font-size="10">Eve</text><text x="236" y="49" font-size="10">Finn</text><text x="182" y="25" font-size="9">0.6</text><text x="182" y="49" font-size="9">0.4</text><text x="236" y="68" font-size="10">Eve</text><text x="236" y="89" font-size="10">Finn</text><text x="182" y="65" font-size="9">0.6</text><text x="182" y="89" font-size="9">0.4</text><text x="236" y="108" font-size="10">Eve</text><text x="236" y="129" font-size="10">Finn</text><text x="182" y="105" font-size="9">0.6</text><text x="182" y="129" font-size="9">0.4</text><text x="236" y="148" font-size="10">Eve</text><text x="236" y="169" font-size="10">Finn</text><text x="182" y="145" font-size="9">0.6</text><text x="182" y="169" font-size="9">0.4</text><text x="100" y="14" font-size="10" font-weight="bold">Race</text><text x="226" y="14" font-size="10" font-weight="bold">Chess</text></svg></figure>
+<p><b>c</b> The race and the chess are independent: $0.25\times0.4=0.1$.</p></div>
+<div class="space" style="--h:7em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: independent → multiply; mutually exclusive → add · "exactly one" = add the two one-and-not-the-other products · on a tree, multiply along a branch, add between branches · "given that" shrinks the total to the given row/column · check the probabilities on each set of branches add to 1.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Handling Data 5</span></footer>
+</body></html>

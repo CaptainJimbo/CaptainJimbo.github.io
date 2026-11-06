@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Shape and Space 8 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+<style>table.t{border-collapse:collapse;margin:4px 0 6px;font-size:0.95em} table.t td,table.t th{border:1px solid #999;padding:2px 9px;text-align:center} table.t th{background:#eef3fa;font-weight:600} .figs{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:flex-start}</style>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 8</div><h1>Shape and Space 8 — Vectors · Column vectors · Vector geometry</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Calculator allowed. Marks in brackets. ★ = harder question. Bold letters are vectors; $\vert\mathbf{a}\vert$ is the magnitude (length) of $\mathbf{a}$.</p>
+
+<ol class="q">
+<li><span class="marks">[5]</span>$\mathbf{p}=\begin{pmatrix}3\\-1\end{pmatrix}$, $\mathbf{q}=\begin{pmatrix}-2\\4\end{pmatrix}$, $\mathbf{r}=\begin{pmatrix}1\\5\end{pmatrix}$ and $2\mathbf{p}+\mathbf{r}=\mathbf{q}-\mathbf{s}$.
+<div class="row"><span><b>a</b> Work out $\mathbf{s}$ as a column vector.</span><span><b>b</b> Calculate $\vert\mathbf{s}\vert$ to 1 d.p.</span></div>
+<div class="sol"><p><b>a</b> $\mathbf{s}=\mathbf{q}-2\mathbf{p}-\mathbf{r}=\begin{pmatrix}-2-6-1\\4+2-5\end{pmatrix}=\begin{pmatrix}-9\\1\end{pmatrix}$. &nbsp;<b>b</b> $\vert\mathbf{s}\vert=\sqrt{(-9)^2+1^2}=\sqrt{82}=9.1$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[8]</span>Points A and B have position vectors $\overrightarrow{OA}=\begin{pmatrix}4\\7\end{pmatrix}$ and $\overrightarrow{OB}=\begin{pmatrix}16\\12\end{pmatrix}$.
+<div class="row"><span><b>a</b> Write down $\overrightarrow{AB}$.</span><span><b>b</b> Calculate $\vert\overrightarrow{AB}\vert$.</span><span><b>c</b> Find the angle $\overrightarrow{AB}$ makes with the $x$-axis, to 1 d.p.</span><span><b>d</b> X is the mid-point of AB. Write $\overrightarrow{OX}$ as a column vector.</span></div>
+<div class="sol"><p><b>a</b> $\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}=\begin{pmatrix}12\\5\end{pmatrix}$. &nbsp;<b>b</b> $\sqrt{12^2+5^2}=\sqrt{169}=13$. &nbsp;<b>c</b> $\tan\theta=\dfrac{5}{12}\Rightarrow\theta=22.6^\circ$. &nbsp;<b>d</b> $\overrightarrow{OX}=\overrightarrow{OA}+\tfrac12\overrightarrow{AB}=\begin{pmatrix}4+6\\7+2.5\end{pmatrix}=\begin{pmatrix}10\\9.5\end{pmatrix}$ (the mean of the two position vectors).</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[9]</span>OACB is a parallelogram with $\overrightarrow{OA}=2\mathbf{a}$ and $\overrightarrow{OB}=2\mathbf{b}$. M is the mid-point of AC and N is the mid-point of BC.
+<figure class="d" style="display:inline-block;vertical-align:top;margin:4px 14px 4px 0"><svg width="300" height="150" viewBox="0 0 300 150" font-family="Helvetica,Arial" font-size="11"><polygon points="30,120 110,120 190,40 110,40" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="150" cy="80" r="2.5"/><circle cx="150" cy="40" r="2.5"/><line x1="150" y1="40" x2="150" y2="80" stroke="#c00" stroke-width="1.5"/><text x="22" y="134">O</text><text x="112" y="134">A</text><text x="194" y="38">C</text><text x="100" y="34">B</text><text x="156" y="84">M</text><text x="144" y="34">N</text><text x="70" y="134" font-weight="bold">2a</text><text x="52" y="78" font-weight="bold">2b</text></svg></figure>
+<div class="row"><span>Express in terms of $\mathbf{a}$ and $\mathbf{b}$: <b>a</b> $\overrightarrow{OC}$ &nbsp;<b>b</b> $\overrightarrow{OM}$ &nbsp;<b>c</b> $\overrightarrow{ON}$ &nbsp;<b>d</b> $\overrightarrow{NM}$</span><span><b>e</b> What do your answers tell you about NM and BA?</span></div>
+<div class="sol"><p><b>a</b> $\overrightarrow{OC}=\overrightarrow{OA}+\overrightarrow{AC}=2\mathbf{a}+2\mathbf{b}$ (opposite sides of a parallelogram are equal vectors, $\overrightarrow{AC}=\overrightarrow{OB}$).</p>
+<p><b>b</b> $\overrightarrow{OM}=\overrightarrow{OA}+\tfrac12\overrightarrow{AC}=2\mathbf{a}+\mathbf{b}$. &nbsp;<b>c</b> $\overrightarrow{ON}=\overrightarrow{OB}+\tfrac12\overrightarrow{BC}=2\mathbf{b}+\mathbf{a}$.</p>
+<p><b>d</b> $\overrightarrow{NM}=\overrightarrow{OM}-\overrightarrow{ON}=(2\mathbf{a}+\mathbf{b})-(\mathbf{a}+2\mathbf{b})=\mathbf{a}-\mathbf{b}$.</p>
+<p><b>e</b> $\overrightarrow{BA}=\overrightarrow{OA}-\overrightarrow{OB}=2\mathbf{a}-2\mathbf{b}=2(\mathbf{a}-\mathbf{b})=2\,\overrightarrow{NM}$. So NM is parallel to BA and half its length.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li class="star"><span class="marks">[3]</span>PQRS is a trapezium with PQ parallel to SR. $\overrightarrow{PQ}=4\mathbf{a}+2\mathbf{b}$, $\overrightarrow{QR}=\mathbf{a}-3\mathbf{b}$ and $\overrightarrow{SR}=6\mathbf{a}+k\mathbf{b}$, where $k$ is a constant. Find $k$, showing your working.
+<figure class="d" style="display:inline-block;vertical-align:top;margin:4px 14px 4px 0"><svg width="300" height="130" viewBox="0 0 300 130" font-family="Helvetica,Arial" font-size="11"><polygon points="40,100 230,100 190,30 90,30" fill="none" stroke="#000" stroke-width="1.2"/><text x="30" y="114">P</text><text x="234" y="114">Q</text><text x="194" y="26">R</text><text x="80" y="26">S</text><text x="135" y="116" font-weight="bold">4a + 2b</text><text x="215" y="70" font-weight="bold">a − 3b</text><text x="118" y="22" font-weight="bold">6a + kb</text><text x="248" y="50" font-size="9">Not drawn</text><text x="248" y="61" font-size="9">accurately</text></svg></figure>
+<div class="sol"><p>Parallel vectors are multiples of each other: $\overrightarrow{SR}=\lambda\,\overrightarrow{PQ}$, so $6\mathbf{a}+k\mathbf{b}=\lambda(4\mathbf{a}+2\mathbf{b})$. Comparing $\mathbf{a}$ parts: $4\lambda=6\Rightarrow\lambda=1.5$. Comparing $\mathbf{b}$ parts: $k=2\lambda=3$.</p></div>
+<div class="space" style="--h:3.4em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: add vectors component by component · $\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}$ (end minus start) · magnitude by Pythagoras · a route around a shape: go along known vectors, backwards means a minus sign · parallel ⇔ one vector is a multiple of the other; same multiple through a shared point ⇔ collinear.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Shape and Space 8</span></footer>
+</body></html>
