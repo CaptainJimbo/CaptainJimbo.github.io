@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Graphs 9 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+<style>table.t{border-collapse:collapse;margin:4px 0 6px;font-size:0.95em} table.t td,table.t th{border:1px solid #999;padding:2px 9px;text-align:center} table.t th{background:#eef3fa;font-weight:600}</style>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 10</div><h1>Graphs 9 — Gradient of a function · Differentiation · Stationary points · Motion in a straight line</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Calculator allowed. Marks in brackets. ★ = harder question. If $y=kx^n$ then $\dfrac{dy}{dx}=nkx^{n-1}$.</p>
+
+<ol class="q">
+<li><span class="marks">[7]</span>Find the gradient of the tangent to each curve at $x=1$. <div class="row"><span><b>a</b> $y=2x^3+5x-1$</span><span><b>b</b> $y=(x-1)(4x+3)$</span><span><b>c</b> $y=3-\dfrac{4}{x^2}$</span></div>
+<div class="sol"><p><b>a</b> $\dfrac{dy}{dx}=6x^2+5$; at $x=1$: $11$. &nbsp;<b>b</b> Expand first: $y=4x^2-x-3$, $\dfrac{dy}{dx}=8x-1$; at $x=1$: $7$. &nbsp;<b>c</b> $y=3-4x^{-2}$, $\dfrac{dy}{dx}=8x^{-3}=\dfrac{8}{x^3}$; at $x=1$: $8$.</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li><span class="marks">[6]</span>Find the stationary points of the curve $y=x^3-6x^2+9x+1$ and say whether each is a maximum or a minimum.
+<div class="sol"><p>$\dfrac{dy}{dx}=3x^2-12x+9=3(x^2-4x+3)=3(x-1)(x-3)=0\Rightarrow x=1$ or $x=3$.</p>
+<p>$x=1$: $y=1-6+9+1=5$. $x=3$: $y=27-54+27+1=1$. Stationary points $(1,5)$ and $(3,1)$.</p>
+<p>Classify by the gradient either side: at $x=0$ the gradient is $9>0$, at $x=2$ it is $-3<0$, at $x=4$ it is $9>0$. So $(1,5)$ is a <b>maximum</b> (gradient goes $+\,0\,-$) and $(3,1)$ a <b>minimum</b> ($-\,0\,+$) — the usual shape of a positive cubic.</p></div>
+<div class="space" style="--h:5.5em"></div></li>
+
+<li><span class="marks">[6]</span>The fuel consumption $y$ km per litre of a car travelling at $x$ km/h is modelled by $y=60-\dfrac{x}{4}-\dfrac{1600}{x}$ for $40\le x\le120$. <b>a</b> Find an expression for $\dfrac{dy}{dx}$. <b>b</b> Find the most economical speed and the fuel consumption at that speed.
+<div class="sol"><p><b>a</b> $y=60-\tfrac14x-1600x^{-1}$, so $\dfrac{dy}{dx}=-\dfrac14+1600x^{-2}=-\dfrac14+\dfrac{1600}{x^2}$.</p>
+<p><b>b</b> Maximum where $\dfrac{dy}{dx}=0$: $\dfrac{1600}{x^2}=\dfrac14\Rightarrow x^2=6400\Rightarrow x=80$ km/h (the positive root in range). Consumption $y=60-20-20=20$ km per litre. (It is a maximum: for $x<80$ the gradient is positive, for $x>80$ negative.)</p></div>
+<div class="space" style="--h:5em"></div></li>
+
+<li class="star"><span class="marks">[6]</span>The displacement $s$ metres of a particle from a fixed point O after $t$ seconds is $s=6\sqrt t+2t+5$ for $0\le t\le4$. Find, when $t=1$, the particle's <b>a</b> velocity in m/s &nbsp;<b>b</b> acceleration in m/s².
+<div class="sol"><p><b>a</b> Velocity $=\dfrac{ds}{dt}$. Write $s=6t^{\frac12}+2t+5$: $v=3t^{-\frac12}+2=\dfrac{3}{\sqrt t}+2$. At $t=1$: $v=5$ m/s.</p>
+<p><b>b</b> Acceleration $=\dfrac{dv}{dt}=-\dfrac32t^{-\frac32}=-\dfrac{3}{2\sqrt{t^3}}$. At $t=1$: $a=-1.5$ m/s² (slowing down).</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: multiply by the power, then reduce the power by 1; constants vanish · expand brackets or rewrite $\frac{a}{x^n}$ as $ax^{-n}$ and $\sqrt x$ as $x^{\frac12}$ before differentiating · stationary point: $\frac{dy}{dx}=0$; classify by gradient either side · velocity $=\frac{ds}{dt}$, acceleration $=\frac{dv}{dt}$.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Graphs 9</span></footer>
+</body></html>

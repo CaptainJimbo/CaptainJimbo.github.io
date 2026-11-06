@@ -26,7 +26,7 @@ nav: false
 
 Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tier** (spec 4MA1, Papers 3H & 4H), plus the **Year 8** course that prepares for it. Each chapter page gives the **key points and formulas** you must know, and two downloads: an **exercise sheet** <span class="pdf-chip">PDF</span> to print or work through, and the same sheet with **full worked solutions**. In English; the exercises are original.
 
-> The chapter list follows the order of the standard two-year course. Chapters marked *soon* are being written — the order is the order they'll appear.
+> The chapter list follows the order of the standard two-year course: Units 1–5 in Year 10, Units 6–10 in Year 11.
 
 <div class="ig-grid">
 <div class="ig-theme">
@@ -105,7 +105,15 @@ Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tie
   <a href="{{ '/teaching/igcse-maths/shape-space-9/' | relative_url }}">Shape & Space 9 — 3D trigonometry</a>
   <a href="{{ '/teaching/igcse-maths/handling-data-6/' | relative_url }}">Handling Data 6 — Histograms</a>
 </div>
-<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Unit 10 follows.</p>
+<p class="ig-unit">Unit 10</p>
+<div class="ig-sub">
+  <a href="{{ '/teaching/igcse-maths/number-10/' | relative_url }}">Number 10 — Surds</a>
+  <a href="{{ '/teaching/igcse-maths/algebra-10/' | relative_url }}">Algebra 10 — Algebraic fractions</a>
+  <a href="{{ '/teaching/igcse-maths/graphs-9/' | relative_url }}">Graphs 9 — Differentiation</a>
+  <a href="{{ '/teaching/igcse-maths/shape-space-10/' | relative_url }}">Shape & Space 10 — Sine & cosine rules</a>
+  <a href="{{ '/teaching/igcse-maths/handling-data-7/' | relative_url }}">Handling Data 7 — Compound probability</a>
+</div>
+<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). That completes the two-year course.</p>
 </div>
 </div>
 
