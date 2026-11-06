@@ -47,21 +47,21 @@ Money maths from everyday life: deciding which deal is **better value**, working
 
 <h4>Foreign currency</h4>
 
-- A rate such as £1 $=€1.17$ means multiply pounds by 1.17 to get euros, divide euros by 1.17 to get pounds.
+- A rate such as £1 $=\text{€}1.17$ means multiply pounds by 1.17 to get euros, divide euros by 1.17 to get pounds.
 - Between two foreign currencies, go **through** the common one: dollars → pounds → euros.
 - Rates change: a "stronger" pound buys more foreign currency, so a fixed foreign price costs fewer pounds.
 </div>
 
 <div class="ex" markdown="1">
-<b class="lbl">Worked example.</b> Tax-free allowance $10\,000$, then 20% up to $40\,000$, then 40%. Tax on a salary of $52\,000$?
+<b class="lbl">Worked example.</b> Tax-free allowance 10 000 dollars, then 20% up to 40 000, then 40%. Tax on a salary of 52 000 dollars?
 
-$20\%\times30\,000=6000$ and $40\%\times12\,000=4800$: total $\$10\,800$ a year, i.e. $\$900$ a month.
+$20\%\times30\,000=6000$ and $40\%\times12\,000=4800$: total 10 800 dollars a year, i.e. 900 dollars a month.
 </div>
 
 <div class="ex" markdown="1">
-<b class="lbl">Worked example.</b> A jacket costs €96 including 20% tax. Find the price without tax, then convert it to pounds at £1 $=€1.20$.
+<b class="lbl">Worked example.</b> A jacket costs €96 including 20% tax. Find the price without tax, then convert it to pounds at £1 $=\text{€}1.20$.
 
-$96\div1.2=€80$; $80\div1.20=£66.67$.
+$96\div1.2=\text{€}80$; $80\div1.20=£66.67$.
 </div>
 
 **Common slips:** comparing totals instead of unit prices · subtracting the tax percentage from the tax-inclusive price · taxing the whole salary at the top rate · multiplying when you should divide in a currency conversion.
