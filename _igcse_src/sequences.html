@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Sequences · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 6</div><h1>Sequences — $n$th terms · The difference method · Arithmetic sequences and series</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Calculator allowed. Marks in brackets. ★ = harder question. $S_n=\dfrac{n}{2}\,[\,2a+(n-1)d\,]$.</p>
+
+<ol class="q">
+<li><span class="marks">[3]</span>Write down the first three terms of the sequence whose $n$th term is
+<div class="row"><span><b>a</b> $5n+2$</span><span><b>b</b> $n^2-n$</span><span><b>c</b> $\dfrac{2n+1}{n+2}$</span></div>
+<div class="sol"><p>Substitute $n=1,2,3$. <b>a</b> $7,\ 12,\ 17$. &nbsp;<b>b</b> $0,\ 2,\ 6$. &nbsp;<b>c</b> $1,\ \tfrac{5}{4},\ \tfrac{7}{5}$.</p></div>
+<div class="space" style="--h:2.8em"></div></li>
+
+<li><span class="marks">[3]</span>Use the difference method to find the next three terms of each sequence.
+<div class="row"><span><b>a</b> $3,\ 7,\ 15,\ 27,\ 43,\ \dots$</span><span><b>b</b> $20,\ 17,\ 14,\ 11,\ \dots$</span><span><b>c</b> $1,\ 2,\ 4,\ 7,\ 11,\ \dots$</span></div>
+<div class="sol"><p><b>a</b> Differences $4,8,12,16$ — they go up by 4, so the next differences are $20,24,28$: $63,\ 87,\ 115$. &nbsp;<b>b</b> Constant difference $-3$: $8,\ 5,\ 2$. &nbsp;<b>c</b> Differences $1,2,3,4$, next $5,6,7$: $16,\ 22,\ 29$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[4]</span>Find a formula for the $n$th term of each sequence.
+<div class="row"><span><b>a</b> $6,\ 10,\ 14,\ 18,\ \dots$</span><span><b>b</b> $93,\ 86,\ 79,\ 72,\ \dots$</span></div>
+<div class="sol"><p><b>a</b> The difference is constant, $4$, so the formula is $4n+b$. When $n=1$ it must equal 6: $4+b=6\Rightarrow b=2$. $n$th term $=4n+2$.</p>
+<p><b>b</b> Constant difference $-7$, so $-7n+b$; $n=1$: $-7+b=93\Rightarrow b=100$. $n$th term $=100-7n$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li><span class="marks">[4]</span>The 3rd term of an arithmetic sequence is 11 and the 8th term is 31. Find the first term $a$ and the common difference $d$.
+<div class="sol"><p>$n$th term $=a+(n-1)d$. So $a+2d=11$ and $a+7d=31$. Subtracting: $5d=20\Rightarrow d=4$. Then $a=11-8=3$.</p></div>
+<div class="space" style="--h:3.4em"></div></li>
+
+<li><span class="marks">[5]</span>The 6th term of an arithmetic sequence is 23 and the 15th term is 50. Find the sum of the first 30 terms.
+<div class="sol"><p>$a+5d=23$ and $a+14d=50$. Subtracting: $9d=27\Rightarrow d=3$, so $a=23-15=8$.</p>
+<p>$S_{30}=\dfrac{30}{2}\,[\,2\times8+29\times3\,]=15\times(16+87)=15\times103=1545$.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li><span class="marks">[3]</span>The sum of the first 24 terms of an arithmetic sequence is 1080. The common difference is 2. Find the first term.
+<div class="sol"><p>$S_{24}=\dfrac{24}{2}\,[\,2a+23\times2\,]=12\,(2a+46)=1080\Rightarrow 2a+46=90\Rightarrow a=22$.</p></div>
+<div class="space" style="--h:3.2em"></div></li>
+
+<li class="star"><span class="marks">[3]</span>Logs are stacked in rows. The bottom row has 30 logs, each row above has one log fewer than the row below, and the top row has 6 logs. How many logs are in the stack?
+<div class="sol"><p>The rows form an arithmetic sequence $30,29,\dots,6$: $a=30$, $d=-1$. Number of rows: $30-6+1=25$. Sum $=\dfrac{25}{2}\,(30+6)=25\times18=450$ logs. (Using the first-and-last form $S_n=\dfrac{n}{2}(a+l)$; the formula with $d$ gives the same: $\dfrac{25}{2}[60-24]=450$.)</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: a constant first difference $a$ means the $n$th term is $an+b$ — find $b$ from the first term · arithmetic sequence: $n$th term $a+(n-1)d$ · two given terms → two equations, subtract to find $d$ · $S_n=\dfrac{n}{2}[2a+(n-1)d]=\dfrac{n}{2}(a+l)$ · count the number of terms carefully (last − first + 1 when $d=\pm1$).</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Sequences</span></footer>
+</body></html>

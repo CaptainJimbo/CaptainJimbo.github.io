@@ -73,7 +73,15 @@ Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tie
   <a href="{{ '/teaching/igcse-maths/shape-space-5/' | relative_url }}">Shape & Space 5 — Transformations</a>
   <a href="{{ '/teaching/igcse-maths/handling-data-4/' | relative_url }}">Handling Data 4 — Probability</a>
 </div>
-<p class="ig-meta" style="margin-top:0.9rem">That completes Year 10 (Student Book 1). Units 6–10 (Year 11, Student Book 2) follow.</p>
+<p class="ig-unit">Unit 6</p>
+<div class="ig-sub">
+  <a href="{{ '/teaching/igcse-maths/number-6/' | relative_url }}">Number 6 — Proportion, fractional & negative indices</a>
+  <a href="{{ '/teaching/igcse-maths/algebra-6/' | relative_url }}">Algebra 6 — Proportion with k, indices</a>
+  <a href="{{ '/teaching/igcse-maths/sequences/' | relative_url }}">Sequences — nth terms, arithmetic series</a>
+  <a href="{{ '/teaching/igcse-maths/shape-space-6/' | relative_url }}">Shape & Space 6 — Alternate segment, chords</a>
+  <a href="{{ '/teaching/igcse-maths/sets-2/' | relative_url }}">Sets 2 — Three sets, set-builder notation</a>
+</div>
+<p class="ig-meta" style="margin-top:0.9rem">Units 1–5 are Year 10 (Student Book 1); Units 6–10 are Year 11 (Student Book 2). Units 7–10 follow.</p>
 </div>
 </div>
 

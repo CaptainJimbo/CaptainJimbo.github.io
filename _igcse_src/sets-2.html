@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Sets 2 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+<style>.venn{display:inline-block;margin:0 10px 4px 0;vertical-align:top}</style>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 6</div><h1>Sets 2 — Practical problems · Three sets · Shading · Set-builder notation</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Marks in brackets. ★ = harder question. $\mathscr{E}$ is the universal set; $A'$ is the complement of $A$.</p>
+
+<ol class="q">
+<li><span class="marks">[5]</span>In a class of 30 students, 18 study French, 15 study Spanish and 5 study neither language.
+<div class="row"><span><b>a</b> Draw a Venn diagram, using $x$ for the number who study both.</span><span><b>b</b> Find $x$.</span><span><b>c</b> How many students study exactly one of the two languages?</span></div>
+<div class="sol"><p><b>a</b> Two overlapping circles F and S inside $\mathscr{E}$: $x$ in the overlap, $18-x$ in F only, $15-x$ in S only, 5 outside both.</p>
+<p><b>b</b> The regions add up to 30: $(18-x)+x+(15-x)+5=30\Rightarrow 38-x=30\Rightarrow x=8$.</p>
+<p><b>c</b> F only $=10$, S only $=7$: $17$ students.</p></div>
+<div class="space" style="--h:5.5em"></div></li>
+
+<li><span class="marks">[4]</span>On two copies of the diagram, shade the sets <b>a</b> $A\cap B'$ and <b>b</b> $(A\cup B)'$.
+<figure class="d"><svg width="200" height="120" viewBox="0 0 200 120" font-family="Helvetica,Arial" font-size="11"><rect x="10" y="10" width="180" height="100" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="80" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="122" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><text x="14" y="22" font-style="italic">ℰ</text><text x="50" y="30">A</text><text x="148" y="30">B</text></svg></figure>
+<div class="sol"><p><b>a</b> $A\cap B'$ is "in A and not in B": the part of A outside the overlap. &nbsp;<b>b</b> $(A\cup B)'$ is "not in A or B": everything outside both circles.</p>
+<div><svg class="venn" width="200" height="120" viewBox="0 0 200 120" font-family="Helvetica,Arial" font-size="11"><rect x="10" y="10" width="180" height="100" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="80" cy="60" r="38" fill="#9fd37a"/><circle cx="122" cy="60" r="38" fill="#fff"/><circle cx="80" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="122" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><text x="14" y="22" font-style="italic">ℰ</text><text x="50" y="30">A</text><text x="148" y="30">B</text><text x="100" y="117" text-anchor="middle" font-size="10">a  A ∩ B′</text></svg><svg class="venn" width="200" height="120" viewBox="0 0 200 120" font-family="Helvetica,Arial" font-size="11"><rect x="10" y="10" width="180" height="100" fill="#9fd37a" stroke="#000" stroke-width="1.2"/><circle cx="80" cy="60" r="38" fill="#fff"/><circle cx="122" cy="60" r="38" fill="#fff"/><circle cx="80" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="122" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><text x="14" y="22" font-style="italic">ℰ</text><text x="50" y="30">A</text><text x="148" y="30">B</text><text x="100" y="117" text-anchor="middle" font-size="10">b  (A ∪ B)′</text></svg></div></div>
+<div class="space" style="--h:1em"></div></li>
+
+<li><span class="marks">[3]</span>Describe the shaded set using set notation.
+<figure class="d"><svg width="200" height="120" viewBox="0 0 200 120" font-family="Helvetica,Arial" font-size="11"><rect x="10" y="10" width="180" height="100" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="122" cy="60" r="38" fill="#9fd37a"/><circle cx="80" cy="60" r="38" fill="#fff"/><circle cx="80" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="122" cy="60" r="38" fill="none" stroke="#000" stroke-width="1.2"/><text x="14" y="22" font-style="italic">ℰ</text><text x="50" y="30">A</text><text x="148" y="30">B</text></svg></figure>
+<div class="sol"><p>The shaded region is inside B but outside A: $A'\cap B$ (also written $B\cap A'$).</p></div>
+<div class="space" style="--h:2em"></div></li>
+
+<li><span class="marks">[3]</span>$C=\{x:\ -3\le x<3,\ x\in\mathbb{Z}\}$. List the members of $C$ and write down $n(C)$.
+<div class="sol"><p>Integers from $-3$ up to but not including 3: $C=\{-3,-2,-1,0,1,2\}$, so $n(C)=6$.</p></div>
+<div class="space" style="--h:2.4em"></div></li>
+
+<li><span class="marks">[2]</span>Write in set-builder notation the set of positive multiples of 7.
+<div class="sol"><p>$\{x:\ x=7n,\ n\in\mathbb{N}\}$, i.e. $\{7,14,21,\dots\}$.</p></div>
+<div class="space" style="--h:2.4em"></div></li>
+
+<li class="star"><span class="marks">[8]</span>In a sports club of 120 members, 50 play basketball, 60 play volleyball and 45 play handball. 15 play basketball and volleyball, 20 play volleyball and handball, 12 play basketball and handball, and 6 members play none of the three sports. Use a Venn diagram to find how many members
+<div class="row"><span><b>a</b> play all three sports</span><span><b>b</b> play only volleyball.</span></div>
+<div class="sol"><p>Let $x$ play all three and fill the diagram from the middle outwards. The three "pairs" regions are $15-x$ (B∩V only), $20-x$ (V∩H only), $12-x$ (B∩H only). Then B only $=50-(15-x)-(12-x)-x=23+x$, V only $=60-(15-x)-(20-x)-x=25+x$, H only $=45-(20-x)-(12-x)-x=13+x$.</p>
+<p><b>a</b> All seven regions plus the 6 outside make 120: $(23+x)+(25+x)+(13+x)+(15-x)+(20-x)+(12-x)+x+6=120$, which simplifies to $114+x=120$, so $x=6$.</p>
+<p><b>b</b> Only volleyball $=25+x=31$. (Check: B only 29, V only 31, H only 19, pairs 9, 14, 6, all three 6 — total 114, plus 6 none $=120$ ✓.)</p></div>
+<div class="space" style="--h:7em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: put $x$ in the overlap and work outwards, then add every region to the total · "neither" goes outside the circles · $A\cap B'$ = in A but not B; $(A\cup B)'$ = outside both · $\mathbb{N}$ natural numbers, $\mathbb{Z}$ integers, $\mathbb{Q}$ rationals, $\mathbb{R}$ reals · $\{x:\ \text{condition},\ x\in\text{set}\}$ reads "the set of $x$ such that…".</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Sets 2</span></footer>
+</body></html>
