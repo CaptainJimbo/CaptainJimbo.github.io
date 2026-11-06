@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>IGCSE Maths · Sets 3 · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+<style>table.t{border-collapse:collapse;margin:4px 0 6px;font-size:0.95em} table.t td,table.t th{border:1px solid #999;padding:2px 9px;text-align:center} table.t th{background:#eef3fa;font-weight:600}</style>
+</head>
+<body>
+<header><div><div class="course">IGCSE Mathematics · Edexcel 4MA1 Higher · Unit 7</div><h1>Sets 3 — Probability from Venn diagrams · Conditional probability</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Marks in brackets. ★ = harder question. $P(A)=\dfrac{n(A)}{n(\mathscr{E})}$; $P(A\mid B)$ = probability of $A$ <em>given</em> $B$. Give probabilities as fractions in simplest form.</p>
+
+<ol class="q">
+<li><span class="marks">[5]</span>In a class of 30 students, 21 passed a Physics test (P) and 24 passed a Chemistry test (C). 2 students failed both.
+<div class="row"><span><b>a</b> Draw a Venn diagram.</span><span><b>b</b> A student is chosen at random. Find <b>i</b> $P(\text{P})$ &nbsp;<b>ii</b> $P(\text{P}\cap\text{C})$ &nbsp;<b>iii</b> $P(\text{P}\cup\text{C})$ &nbsp;<b>iv</b> $P(\text{P}'\cap\text{C})$.</span></div>
+<div class="sol"><p><b>a</b> Both $=x$: $(21-x)+x+(24-x)+2=30\Rightarrow x=17$. Regions: P only 4, both 17, C only 7, neither 2.</p>
+<p><b>b</b> <b>i</b> $\dfrac{21}{30}=\dfrac{7}{10}$ &nbsp;<b>ii</b> $\dfrac{17}{30}$ &nbsp;<b>iii</b> $\dfrac{4+17+7}{30}=\dfrac{28}{30}=\dfrac{14}{15}$ &nbsp;<b>iv</b> C but not P: $\dfrac{7}{30}$.</p></div>
+<div class="space" style="--h:6em"></div></li>
+
+<li><span class="marks">[5]</span>A café records what 150 customers buy one morning: 120 buy a coffee, 70 buy a cake, and every customer buys at least one of the two. A customer is picked at random. Find the probability that they bought
+<div class="row"><span><b>a</b> a coffee and a cake</span><span><b>b</b> a coffee or a cake but not both.</span></div>
+<div class="sol"><p>Both $=120+70-150=40$ (nobody is outside). Coffee only $80$, cake only $30$. <b>a</b> $\dfrac{40}{150}=\dfrac{4}{15}$. &nbsp;<b>b</b> $\dfrac{80+30}{150}=\dfrac{110}{150}=\dfrac{11}{15}$.</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li><span class="marks">[5]</span>In a survey, 80% of students own a bike (B), 30% own a skateboard (S) and 15% own neither. A student is chosen at random. Find the probability that the student
+<div class="row"><span><b>a</b> owns a bike or a skateboard but not both</span><span><b>b</b> owns a skateboard, given that they own a bike.</span></div>
+<div class="sol"><p>Work in percentages: both $=80+30-(100-15)=25\%$. Bike only $55\%$, skateboard only $5\%$, neither $15\%$. <b>a</b> $\dfrac{55+5}{100}=\dfrac{3}{5}$. &nbsp;<b>b</b> Restrict to bike owners (80%): $P(\text{S}\mid\text{B})=\dfrac{25}{80}=\dfrac{5}{16}$.</p></div>
+<div class="space" style="--h:4.5em"></div></li>
+
+<li><span class="marks">[5]</span>The Venn diagram shows which of football (F), hockey (H) and tennis (T) the students in a year group play.
+<figure class="d"><svg width="230" height="170" viewBox="0 0 230 170" font-family="Helvetica,Arial" font-size="11"><rect x="8" y="8" width="214" height="154" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="85" cy="65" r="45" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="145" cy="65" r="45" fill="none" stroke="#000" stroke-width="1.2"/><circle cx="115" cy="108" r="45" fill="none" stroke="#000" stroke-width="1.2"/><text x="14" y="22" font-style="italic">ℰ</text><text x="42" y="28">F</text><text x="182" y="28">H</text><text x="60" y="150">T</text><g text-anchor="middle"><text x="65" y="58">18</text><text x="115" y="50">6</text><text x="168" y="58">10</text><text x="88" y="98">7</text><text x="115" y="80">4</text><text x="142" y="98">3</text><text x="115" y="135">5</text><text x="200" y="152">7</text></g></svg></figure>
+<div class="row"><span><b>a</b> How many students are in the year group?</span><span><b>b</b> A student is chosen at random. Find <b>i</b> $P(\text{H})$ &nbsp;<b>ii</b> $P(\text{F}\cap\text{H}\cap\text{T})$ &nbsp;<b>iii</b> $P(\text{T}\mid\text{H})$.</span></div>
+<div class="sol"><p><b>a</b> $18+6+10+7+4+3+5+7=60$. &nbsp;<b>b</b> <b>i</b> $n(\text{H})=6+10+4+3=23$: $\dfrac{23}{60}$. &nbsp;<b>ii</b> $\dfrac{4}{60}=\dfrac{1}{15}$. &nbsp;<b>iii</b> Given H, only the 23 hockey players count; of them $4+3=7$ play tennis: $\dfrac{7}{23}$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li class="star"><span class="marks">[5]</span>A music club has 40 members, each of whom plays at least one of piano (P), guitar (G) and drums (D). 24 play piano, 20 play guitar and 15 play drums; 9 play piano and guitar, 7 play guitar and drums, 8 play piano and drums. A member is chosen at random. Find
+<div class="row"><span><b>a</b> $P(\text{P}\cap\text{G}\cap\text{D})$</span><span><b>b</b> $P(\text{D}\mid\text{G})$.</span></div>
+<div class="sol"><p>Let $x$ play all three. Pairs only: $9-x$, $7-x$, $8-x$. Singles: P only $24-(9-x)-(8-x)-x=7+x$, G only $20-(9-x)-(7-x)-x=4+x$, D only $15-(7-x)-(8-x)-x=x$. Total: $(7+x)+(4+x)+x+(9-x)+(7-x)+(8-x)+x=35+x=40\Rightarrow x=5$.</p>
+<p><b>a</b> $\dfrac{5}{40}=\dfrac{1}{8}$. &nbsp;<b>b</b> Among the 20 guitarists, those who also play drums are $(7-x)+x=7$: $P(\text{D}\mid\text{G})=\dfrac{7}{20}$.</p></div>
+<div class="space" style="--h:6.5em"></div></li>
+</ol>
+<p class="total">Total: 25 marks</p>
+<p class="note">Check: $P(A\cup B)$ counts the overlap once · "but not both" = the two outer parts · $P(A\mid B)=\dfrac{{n(A\cap B)}}{{n(B)}}$ — the denominator is the <em>given</em> set, not the whole universal set · percentages work like counts out of 100 · simplify every fraction.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>IGCSE Maths · Sets 3</span></footer>
+</body></html>
