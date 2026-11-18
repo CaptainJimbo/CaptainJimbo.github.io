@@ -35,17 +35,17 @@ A **set** is just a collection of things, and the notation is a compact language
 
 | Symbol | Meaning | Example |
 |---|---|---|
-| $A=\{1,3,5\}$ | a set, listed or described by a rule | $B=\{\text{even numbers less than 10}\}$ |
+| $A=\lbrace 1,3,5\rbrace $ | a set, listed or described by a rule | $B=\lbrace \text{even numbers less than 10}\rbrace $ |
 | $x\in A$, $x\notin A$ | is / is not a member (element) of | $1\in A$, $\;2\notin A$ |
 | $n(A)$ | the number of elements | $n(A)=3$ |
-| $\varnothing$ or $\{\}$ | the empty set | $\{\text{even primes above 2}\}=\varnothing$ |
-| $\mathscr{E}$ | the universal set — everything under consideration | $\mathscr{E}=\{\text{integers 1 to 20}\}$ |
+| $\varnothing$ or $\lbrace \rbrace $ | the empty set | $\lbrace \text{even primes above 2}\rbrace =\varnothing$ |
+| $\mathscr{E}$ | the universal set — everything under consideration | $\mathscr{E}=\lbrace \text{integers 1 to 20}\rbrace $ |
 | $A'$ | the complement — everything in $\mathscr{E}$ not in $A$ | $n(A')=n(\mathscr{E})-n(A)$ |
-| $A\cap B$ | intersection — in **both** ("and") | $\{2,4,6\}\cap\{4,6,8\}=\{4,6\}$ |
-| $A\cup B$ | union — in **either or both** ("or") | $\{2,4,6\}\cup\{4,6,8\}=\{2,4,6,8\}$ |
-| $B\subset A$ | $B$ is a subset of $A$ — every member of $B$ is in $A$ | $\{\text{squares}\}\subset\{\text{rectangles}\}$ |
+| $A\cap B$ | intersection — in **both** ("and") | $\lbrace 2,4,6\rbrace \cap\lbrace 4,6,8\rbrace =\lbrace 4,6\rbrace $ |
+| $A\cup B$ | union — in **either or both** ("or") | $\lbrace 2,4,6\rbrace \cup\lbrace 4,6,8\rbrace =\lbrace 2,4,6,8\rbrace $ |
+| $B\subset A$ | $B$ is a subset of $A$ — every member of $B$ is in $A$ | $\lbrace \text{squares}\rbrace \subset\lbrace \text{rectangles}\rbrace $ |
 
-- Two sets are **equal** if they have exactly the same elements, whatever the order: $\{5,3,1\}=\{1,3,5\}$.
+- Two sets are **equal** if they have exactly the same elements, whatever the order: $\lbrace 5,3,1\rbrace =\lbrace 1,3,5\rbrace $.
 
 <h4>Venn diagrams</h4>
 

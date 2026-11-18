@@ -33,7 +33,7 @@ Vectors have **magnitude and direction**. Column vectors for the arithmetic, bol
 <div class="kp" markdown="1">
 <h4>Notation</h4>
 
-- A vector is written $\mathbf{a}$ (bold; underline it by hand), $\overrightarrow{AB}$, or as a column vector $\begin{pmatrix}3\\-1\end{pmatrix}$ ($3$ across, $1$ down).
+- A vector is written $\mathbf{a}$ (bold; underline it by hand), $\overrightarrow{AB}$, or as a column vector $\begin{pmatrix}3\cr -1\end{pmatrix}$ ($3$ across, $1$ down).
 - **Magnitude** $\vert\mathbf{a}\vert$ = length $=\sqrt{x^2+y^2}$. Equal vectors have the same magnitude and direction, wherever they start.
 
 <h4>Adding, subtracting, scalars</h4>

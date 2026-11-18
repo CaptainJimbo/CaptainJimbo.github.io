@@ -38,8 +38,8 @@ Two skills: estimating the **gradient of a curve** at a point with a tangent (ra
 
 <h4>Translating</h4>
 
-- $y=\text{f}(x)+a$: translate by $\begin{pmatrix}0\\a\end{pmatrix}$ (up for $a>0$).
-- $y=\text{f}(x+a)$: translate by $\begin{pmatrix}-a\\0\end{pmatrix}$ — **left** for $a>0$; $\text{f}(x-a)$ moves right.
+- $y=\text{f}(x)+a$: translate by $\begin{pmatrix}0\cr a\end{pmatrix}$ (up for $a>0$).
+- $y=\text{f}(x+a)$: translate by $\begin{pmatrix}-a\cr 0\end{pmatrix}$ — **left** for $a>0$; $\text{f}(x-a)$ moves right.
 
 <h4>Reflecting</h4>
 
@@ -53,7 +53,7 @@ Two skills: estimating the **gradient of a curve** at a point with a tangent (ra
 
 <h4>Describing a transformation</h4>
 
-- Say the **type** and the **detail**: "translation by $\begin{pmatrix}0\\3\end{pmatrix}$", "reflection in the $y$-axis", "stretch parallel to the $y$-axis, scale factor 2".
+- Say the **type** and the **detail**: "translation by $\begin{pmatrix}0\cr 3\end{pmatrix}$", "reflection in the $y$-axis", "stretch parallel to the $y$-axis, scale factor 2".
 </div>
 
 <div class="ex" markdown="1">

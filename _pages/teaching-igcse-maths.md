@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/igcse-maths/
 title: IGCSE Maths & Pre-IGCSE
-description: Key points per chapter and downloadable exercise sheets with full solutions — Edexcel International GCSE (9–1) Mathematics A, Higher Tier, and the Year 8 course that leads into it.
+description: Key points per chapter and downloadable exercise sheets with full solutions — Edexcel International GCSE (9–1) Mathematics A, Higher Tier, and the Year 8 and Year 9 courses that lead into it.
 nav: false
 ---
 
@@ -24,7 +24,7 @@ nav: false
   @media (max-width: 700px) { .ig-grid { grid-template-columns:1fr; } }
 </style>
 
-Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tier** (spec 4MA1, Papers 3H & 4H), plus the **Year 8** course that prepares for it. Each chapter page gives the **key points and formulas** you must know, and two downloads: an **exercise sheet** <span class="pdf-chip">PDF</span> to print or work through, and the same sheet with **full worked solutions**. In English; the exercises are original.
+Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tier** (spec 4MA1, Papers 3H & 4H), plus the **Year 8 and Year 9** courses that prepare for it. Each chapter page gives the **key points and formulas** you must know, and two downloads: an **exercise sheet** <span class="pdf-chip">PDF</span> to print or work through, and the same sheet with **full worked solutions**. In English; the exercises are original.
 
 > The chapter list follows the order of the standard two-year course: Units 1–5 in Year 10, Units 6–10 in Year 11.
 
@@ -134,6 +134,28 @@ Maths for the **Edexcel International GCSE (9–1), Mathematics A — Higher Tie
   <a href="{{ '/teaching/igcse-maths/y8-unit-9/' | relative_url }}">9 · Shapes and angles</a>
   <a href="{{ '/teaching/igcse-maths/y8-unit-10/' | relative_url }}">10 · Charts and diagrams</a>
   <a href="{{ '/teaching/igcse-maths/y8-unit-11/' | relative_url }}">11 · Straight-line graphs</a>
+</div>
+</div>
+</div>
+
+<div class="ig-theme">
+<div class="ig-body">
+<h3>Pre-IGCSE · Year 9</h3>
+<p class="ig-meta">The bridge year (ages 13–14): the last step before IGCSE. Twelve units.</p>
+<p class="ig-unit">Units</p>
+<div class="ig-sub">
+  <a href="{{ '/teaching/igcse-maths/y9-unit-1/' | relative_url }}">1 · Significant figures, powers and standard form</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-2/' | relative_url }}">2 · 2D shapes and 3D solids</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-3/' | relative_url }}">3 · Quadratics</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-4/' | relative_url }}">4 · Constructions</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-5/' | relative_url }}">5 · Inequalities, equations and formulae</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-6/' | relative_url }}">6 · Collecting and analysing data</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-7/' | relative_url }}">7 · Multiplicative reasoning</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-8/' | relative_url }}">8 · Scale drawings and measures</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-9/' | relative_url }}">9 · Accuracy and measures</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-10/' | relative_url }}">10 · Graphical solutions</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-11/' | relative_url }}">11 · Trigonometry</a>
+  <a href="{{ '/teaching/igcse-maths/y9-unit-12/' | relative_url }}">12 · Probability</a>
 </div>
 </div>
 </div>

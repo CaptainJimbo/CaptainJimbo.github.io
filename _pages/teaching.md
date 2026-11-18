@@ -43,7 +43,7 @@ nav_order: 6
 
 <h2 class="teach-group">IGCSE · Pre-IGCSE</h2>
 <div class="teach-rows">
-<a class="teach-row" href="{{ '/teaching/igcse-maths/' | relative_url }}"><img class="teach-thumb" src="{{ '/assets/img/teach-igcse.svg' | relative_url }}" alt="IGCSE Maths & Pre-IGCSE" loading="lazy"><div><h3>IGCSE Maths <span class="teach-chip">Edexcel</span></h3><p>Key points per chapter &amp; downloadable exercise sheets with full solutions — Higher Tier, plus the Year 8 course before it (English).</p></div></a>
+<a class="teach-row" href="{{ '/teaching/igcse-maths/' | relative_url }}"><img class="teach-thumb" src="{{ '/assets/img/teach-igcse.svg' | relative_url }}" alt="IGCSE Maths & Pre-IGCSE" loading="lazy"><div><h3>IGCSE Maths <span class="teach-chip">Edexcel</span></h3><p>Key points per chapter &amp; downloadable exercise sheets with full solutions — Higher Tier, plus the Year 8 and Year 9 courses before it (English).</p></div></a>
 </div>
 
 <h2 class="teach-group">International Baccalaureate</h2>

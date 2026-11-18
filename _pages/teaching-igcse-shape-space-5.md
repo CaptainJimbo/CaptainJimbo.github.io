@@ -35,7 +35,7 @@ The four ways of moving a shape on a grid. Each has a precise **description** th
 
 | transformation | describe it with | coordinate rule |
 |---|---|---|
-| **Translation** | the column vector $\begin{pmatrix}x\\y\end{pmatrix}$ | add $x$ to every $x$-coordinate, $y$ to every $y$ |
+| **Translation** | the column vector $\begin{pmatrix}x\cr y\end{pmatrix}$ | add $x$ to every $x$-coordinate, $y$ to every $y$ |
 | **Reflection** | the mirror line ($y=x$, $x=-3$, …) | in $y=x$: $(x,y)\to(y,x)$ · in $y=-x$: $(x,y)\to(-y,-x)$ · in $x=a$: $x\to2a-x$ |
 | **Rotation** | angle, direction, **centre** | $90^\circ$ clockwise about $O$: $(x,y)\to(y,-x)$ · $90^\circ$ anticlockwise: $(x,y)\to(-y,x)$ · $180^\circ$: $(x,y)\to(-x,-y)$ |
 | **Enlargement** | scale factor, **centre** | image $=$ centre $+$ SF $\times$ (point $-$ centre) |

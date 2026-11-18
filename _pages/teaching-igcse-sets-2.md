@@ -49,9 +49,9 @@ Venn diagrams as a problem-solving tool: an unknown $x$ in the overlap, three ov
 
 <h4>Set-builder notation</h4>
 
-- $\{x:\ \text{condition},\ x\in\text{set}\}$ reads "the set of $x$ such that…". $\{x:\ x\ge5,\ x\in\mathbb{N}\}=\{5,6,7,\dots\}$; $\{x:\ x=2y,\ y\in\mathbb{N}\}$ is the even numbers.
-- Number sets: $\mathbb{N}$ natural numbers $\{1,2,3,\dots\}$ · $\mathbb{Z}$ integers · $\mathbb{Q}$ rationals (terminating or recurring decimals) · $\mathbb{R}$ reals (including $\sqrt2$, $\pi$).
-- Two conditions joined by "or" use $\cup$: $\{x:\ x<2\}\cup\{x:\ x>7\}$.
+- $\lbrace x:\ \text{condition},\ x\in\text{set}\rbrace $ reads "the set of $x$ such that…". $\lbrace x:\ x\ge5,\ x\in\mathbb{N}\rbrace =\lbrace 5,6,7,\dots\rbrace $; $\lbrace x:\ x=2y,\ y\in\mathbb{N}\rbrace $ is the even numbers.
+- Number sets: $\mathbb{N}$ natural numbers $\lbrace 1,2,3,\dots\rbrace $ · $\mathbb{Z}$ integers · $\mathbb{Q}$ rationals (terminating or recurring decimals) · $\mathbb{R}$ reals (including $\sqrt2$, $\pi$).
+- Two conditions joined by "or" use $\cup$: $\lbrace x:\ x<2\rbrace \cup\lbrace x:\ x>7\rbrace $.
 </div>
 
 <div class="ex" markdown="1">
@@ -61,9 +61,9 @@ Both $=x$: $(22-x)+x+(25-x)+3=40\Rightarrow 50-x=40\Rightarrow x=10$.
 </div>
 
 <div class="ex" markdown="1">
-<b class="lbl">Worked example.</b> List $\{x:\ -2\lt x\le3,\ x\in\mathbb{Z}\}$.
+<b class="lbl">Worked example.</b> List $\lbrace x:\ -2\lt x\le3,\ x\in\mathbb{Z}\rbrace $.
 
-$\{-1,0,1,2,3\}$ — strict on the left, inclusive on the right.
+$\lbrace -1,0,1,2,3\rbrace $ — strict on the left, inclusive on the right.
 </div>
 
 **Common slips:** writing $n(A)$ in the "A only" region instead of $n(A)-x$ · forgetting the people outside all sets · $\mathbb{N}$ does not contain 0 or negatives · reading $<$ as $\le$ when listing.

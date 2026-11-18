@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Pre-IGCSE Maths · Year 9 · Unit 12 Probability · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>table.t{border-collapse:collapse;margin:6px 0;font-size:0.95em} table.t th,table.t td{border:1px solid #999;padding:3px 10px;text-align:center} table.t th{background:#e8eef8} figure.d{margin:4px 0;display:inline-block;vertical-align:top}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">Pre-IGCSE Mathematics · Year 9 · Unit 12</div><h1>Probability — Sets and Venn diagrams · Sample spaces · Tree diagrams · Experimental probability</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Give probabilities as fractions in their simplest form, or as decimals. ★ = challenge question.</p>
+
+<ol class="q">
+<li>$A$ is the set of the first six even numbers. $B$ is the set of the factors of 12.
+<ul class="parts"><li><b>a</b> List the elements of $A$ and of $B$, using set notation.</li><li><b>b</b> List the elements of $A\cap B$.</li><li><b>c</b> List the elements of $A\cup B$ and write down $n(A\cup B)$.</li><li><b>d</b> List the elements that are in $A$ but not in $B$.</li></ul>
+<div class="sol"><p><b>a</b> $A=\{2,4,6,8,10,12\}$, $B=\{1,2,3,4,6,12\}$.</p><p><b>b</b> $A\cap B=\{2,4,6,12\}$ (in both). &nbsp; <b>c</b> $A\cup B=\{1,2,3,4,6,8,10,12\}$ (in either), so $n(A\cup B)=8$.</p><p><b>d</b> $\{8,10\}$.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>50 students are asked which sports they play. 28 play football (F), 19 play tennis (T), 9 play both, and the rest play neither.
+<ul class="parts"><li><b>a</b> Draw a Venn diagram to show this information.</li><li><b>b</b> A student is chosen at random. Work out the probability that the student plays &nbsp; <b>i</b> football only &nbsp; <b>ii</b> at least one of the sports &nbsp; <b>iii</b> neither sport.</li></ul>
+<div class="sol"><p><figure class="d"><svg xmlns="http://www.w3.org/2000/svg" width="230" height="130" viewBox="0 0 230 130" font-family="Helvetica,Arial,sans-serif" font-size="11"><rect x="5" y="5" width="220" height="120" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="90" cy="65" r="45" fill="none" stroke="#222" stroke-width="1.3"/><circle cx="140" cy="65" r="45" fill="none" stroke="#222" stroke-width="1.3"/><text x="62" y="20" text-anchor="middle" font-size="11" fill="#222">F</text><text x="168" y="20" text-anchor="middle" font-size="11" fill="#222">T</text><text x="68" y="69" text-anchor="middle" font-size="11" fill="#222">19</text><text x="115" y="69" text-anchor="middle" font-size="11" fill="#222">9</text><text x="162" y="69" text-anchor="middle" font-size="11" fill="#222">10</text><text x="208" y="116" text-anchor="middle" font-size="11" fill="#222">12</text></svg></figure></p><p><b>a</b> Football only $28-9=19$; tennis only $19-9=10$; neither $50-19-9-10=12$.</p><p><b>b</b> <b>i</b> $\dfrac{19}{50}$ &nbsp; <b>ii</b> $\dfrac{19+9+10}{50}=\dfrac{38}{50}=\dfrac{19}{25}$ &nbsp; <b>iii</b> $\dfrac{12}{50}=\dfrac{6}{25}$</p></div>
+<div class="space" style="--h:4.4em"></div></li>
+
+<li>A fair spinner numbered 1 to 4 is spun and a fair coin is thrown.
+<ul class="parts"><li><b>a</b> List all the possible outcomes.</li><li><b>b</b> Work out the probability of getting &nbsp; <b>i</b> a head and an even number &nbsp; <b>ii</b> a tail and a number greater than 1.</li></ul>
+<div class="sol"><p><b>a</b> $1H,\ 2H,\ 3H,\ 4H,\ 1T,\ 2T,\ 3T,\ 4T$ — 8 equally likely outcomes.</p><p><b>b</b> <b>i</b> $2H$ and $4H$: $\dfrac28=\dfrac14$ &nbsp; <b>ii</b> $2T,\ 3T,\ 4T$: $\dfrac38$</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>Two fair dice are rolled and the scores are added. There are 36 equally likely outcomes. Work out the probability that
+<ul class="parts"><li><b>a</b> the total is 9</li><li><b>b</b> both dice show the same number</li><li><b>c</b> the total is less than 5.</li></ul>
+<div class="sol"><p><b>a</b> $(3,6),(4,5),(5,4),(6,3)$: $\dfrac{4}{36}=\dfrac19$</p><p><b>b</b> Six doubles: $\dfrac{6}{36}=\dfrac16$</p><p><b>c</b> Totals 2, 3 and 4 come from $(1,1),(1,2),(2,1),(1,3),(2,2),(3,1)$: $\dfrac{6}{36}=\dfrac16$</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>A bag contains only red, blue and green counters. $P(\text{red})=0.35$ and $P(\text{blue})=0.4$.
+<ul class="parts"><li><b>a</b> Work out $P(\text{green})$.</li><li><b>b</b> Work out $P(\text{red or green})$.</li><li><b>c</b> A fair dice is rolled. Are the events “even number” and “prime number” mutually exclusive? Explain.</li></ul>
+<div class="sol"><p><b>a</b> The probabilities add to 1: $1-0.35-0.4=0.25$.</p><p><b>b</b> The events are mutually exclusive, so add: $0.35+0.25=0.6$.</p><p><b>c</b> No — 2 is both even and prime, so the two events can happen together.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>The probability that Jo's bus is on time is 0.9. The probability that her train is on time is 0.7. The two events are independent. Work out the probability that
+<ul class="parts"><li><b>a</b> both are on time</li><li><b>b</b> the bus is on time and the train is late</li><li><b>c</b> both are late</li><li><b>d</b> at least one of them is late.</li></ul>
+<div class="sol"><p><b>a</b> $0.9\times0.7=0.63$</p><p><b>b</b> $0.9\times0.3=0.27$</p><p><b>c</b> $0.1\times0.3=0.03$</p><p><b>d</b> $1-P(\text{both on time})=1-0.63=0.37$</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>A bag contains 3 red counters and 2 blue counters. A counter is taken at random, its colour is noted and it is <b>put back</b>. A second counter is then taken.
+<ul class="parts"><li><b>a</b> Draw a tree diagram to show all the outcomes and their probabilities.</li><li><b>b</b> Work out the probability of getting &nbsp; <b>i</b> two reds &nbsp; <b>ii</b> two blues &nbsp; <b>iii</b> one of each colour.</li></ul>
+<div class="sol"><p><figure class="d"><svg xmlns="http://www.w3.org/2000/svg" width="330" height="156" viewBox="0 0 330 156" font-family="Helvetica,Arial,sans-serif" font-size="11"><line x1="20" y1="80" x2="95" y2="40" stroke="#222" stroke-width="1.3"/><line x1="20" y1="80" x2="95" y2="120" stroke="#222" stroke-width="1.3"/><text x="52" y="50" text-anchor="middle" font-size="10" fill="#222">3/5</text><text x="52" y="114" text-anchor="middle" font-size="10" fill="#222">2/5</text><text x="104" y="44" text-anchor="start" font-size="11" fill="#222">R</text><text x="104" y="124" text-anchor="start" font-size="11" fill="#222">B</text><line x1="122" y1="40" x2="195" y2="20" stroke="#222" stroke-width="1.3"/><line x1="122" y1="40" x2="195" y2="60" stroke="#222" stroke-width="1.3"/><text x="156" y="23" text-anchor="middle" font-size="10" fill="#222">3/5</text><text x="156" y="63" text-anchor="middle" font-size="10" fill="#222">2/5</text><text x="203" y="24" text-anchor="start" font-size="11" fill="#222">R</text><text x="203" y="64" text-anchor="start" font-size="11" fill="#222">B</text><line x1="122" y1="120" x2="195" y2="100" stroke="#222" stroke-width="1.3"/><line x1="122" y1="120" x2="195" y2="140" stroke="#222" stroke-width="1.3"/><text x="156" y="103" text-anchor="middle" font-size="10" fill="#222">3/5</text><text x="156" y="143" text-anchor="middle" font-size="10" fill="#222">2/5</text><text x="203" y="104" text-anchor="start" font-size="11" fill="#222">R</text><text x="203" y="144" text-anchor="start" font-size="11" fill="#222">B</text><text x="232" y="24" text-anchor="start" font-size="10" fill="#1c4aa8">RR: 3/5 × 3/5 = 9/25</text><text x="232" y="64" text-anchor="start" font-size="10" fill="#1c4aa8">RB: 3/5 × 2/5 = 6/25</text><text x="232" y="104" text-anchor="start" font-size="10" fill="#1c4aa8">BR: 2/5 × 3/5 = 6/25</text><text x="232" y="144" text-anchor="start" font-size="10" fill="#1c4aa8">BB: 2/5 × 2/5 = 4/25</text></svg></figure></p><p><b>b</b> <b>i</b> $\dfrac{9}{25}$ &nbsp; <b>ii</b> $\dfrac{4}{25}$ &nbsp; <b>iii</b> $RB$ or $BR$: $\dfrac{6}{25}+\dfrac{6}{25}=\dfrac{12}{25}$. (Check: $\dfrac{9}{25}+\dfrac{12}{25}+\dfrac{4}{25}=1$.)</p></div>
+<div class="space" style="--h:4.4em"></div></li>
+
+<li>A biased coin has $P(\text{head})=0.6$. It is thrown twice.
+<ul class="parts"><li><b>a</b> Work out the probability of exactly one head.</li><li><b>b</b> Work out the probability of at least one head.</li></ul>
+<div class="sol"><p><figure class="d"><svg xmlns="http://www.w3.org/2000/svg" width="330" height="156" viewBox="0 0 330 156" font-family="Helvetica,Arial,sans-serif" font-size="11"><line x1="20" y1="80" x2="95" y2="40" stroke="#222" stroke-width="1.3"/><line x1="20" y1="80" x2="95" y2="120" stroke="#222" stroke-width="1.3"/><text x="52" y="50" text-anchor="middle" font-size="10" fill="#222">0.6</text><text x="52" y="114" text-anchor="middle" font-size="10" fill="#222">0.4</text><text x="104" y="44" text-anchor="start" font-size="11" fill="#222">H</text><text x="104" y="124" text-anchor="start" font-size="11" fill="#222">T</text><line x1="122" y1="40" x2="195" y2="20" stroke="#222" stroke-width="1.3"/><line x1="122" y1="40" x2="195" y2="60" stroke="#222" stroke-width="1.3"/><text x="156" y="23" text-anchor="middle" font-size="10" fill="#222">0.6</text><text x="156" y="63" text-anchor="middle" font-size="10" fill="#222">0.4</text><text x="203" y="24" text-anchor="start" font-size="11" fill="#222">H</text><text x="203" y="64" text-anchor="start" font-size="11" fill="#222">T</text><line x1="122" y1="120" x2="195" y2="100" stroke="#222" stroke-width="1.3"/><line x1="122" y1="120" x2="195" y2="140" stroke="#222" stroke-width="1.3"/><text x="156" y="103" text-anchor="middle" font-size="10" fill="#222">0.6</text><text x="156" y="143" text-anchor="middle" font-size="10" fill="#222">0.4</text><text x="203" y="104" text-anchor="start" font-size="11" fill="#222">H</text><text x="203" y="144" text-anchor="start" font-size="11" fill="#222">T</text><text x="232" y="24" text-anchor="start" font-size="10" fill="#1c4aa8">HH: 0.36</text><text x="232" y="64" text-anchor="start" font-size="10" fill="#1c4aa8">HT: 0.24</text><text x="232" y="104" text-anchor="start" font-size="10" fill="#1c4aa8">TH: 0.24</text><text x="232" y="144" text-anchor="start" font-size="10" fill="#1c4aa8">TT: 0.16</text></svg></figure></p><p><b>a</b> $HT$ or $TH$: $0.24+0.24=0.48$</p><p><b>b</b> $1-P(TT)=1-0.16=0.84$</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li>A spinner has five equal sectors labelled A to E. It is spun 200 times.<table class="t"><tr><td>Sector</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr><tr><td>Frequency</td><td>38</td><td>44</td><td>36</td><td>43</td><td>39</td></tr></table>
+<ul class="parts"><li><b>a</b> Write down the theoretical probability of landing on B.</li><li><b>b</b> Work out the experimental probability (relative frequency) of landing on B.</li><li><b>c</b> How many times would you expect a fair spinner to land on each sector?</li><li><b>d</b> Do the results suggest the spinner is fair? Explain.</li></ul>
+<div class="sol"><p><b>a</b> $\dfrac15=0.2$ &nbsp; <b>b</b> $\dfrac{44}{200}=0.22$ &nbsp; <b>c</b> $0.2\times200=40$ times</p><p><b>d</b> Yes, probably. Every frequency is close to the expected 40 (between 36 and 44), and with 200 spins small differences like these are what chance produces.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li class="star">A box contains 5 red pens and 3 green pens. Two pens are taken at random <b>without replacement</b>. Work out the probability that
+<ul class="parts"><li><b>a</b> both pens are red</li><li><b>b</b> the pens are different colours.</li></ul>
+<div class="sol"><p><b>a</b> After one red is taken, 4 of the remaining 7 are red: $\dfrac58\times\dfrac47=\dfrac{20}{56}=\dfrac{5}{14}$</p><p><b>b</b> Red then green, or green then red: $\dfrac58\times\dfrac37+\dfrac38\times\dfrac57=\dfrac{30}{56}=\dfrac{15}{28}$</p></div>
+<div class="space" style="--h:4.4em"></div></li>
+
+<li class="star">A bag contains $n$ red counters and 4 blue counters. The probability of picking a red counter is $\dfrac35$.
+<ul class="parts"><li><b>a</b> Work out the value of $n$.</li><li><b>b</b> A counter is picked, replaced, and a second counter is picked. Work out the probability that both are blue.</li></ul>
+<div class="sol"><p><b>a</b> $\dfrac{n}{n+4}=\dfrac35$, so $5n=3n+12$ and $n=6$.</p><p><b>b</b> $P(\text{blue})=\dfrac{4}{10}=\dfrac25$. With replacement the picks are independent: $\dfrac25\times\dfrac25=\dfrac{4}{25}$.</p></div>
+<div class="space" style="--h:4em"></div></li>
+</ol>
+<p class="note">Check: $\cap$ means “and” (both), $\cup$ means “or” (either) · mutually exclusive: add · independent: multiply · multiply <em>along</em> the branches of a tree, add <em>between</em> the outcomes you want · P(at least one) = 1 − P(none).</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>Pre-IGCSE Maths · Year 9 · Unit 12</span></footer>
+</body></html>

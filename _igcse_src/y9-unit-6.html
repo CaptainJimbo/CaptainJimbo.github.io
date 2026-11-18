@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Pre-IGCSE Maths · Year 9 · Unit 6 Collecting and analysing data · Exercises</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'none'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<link rel="stylesheet" href="pdf.css">
+<style>table.t{border-collapse:collapse;margin:6px 0;font-size:0.95em} table.t th,table.t td{border:1px solid #999;padding:3px 10px;text-align:center} table.t th{background:#e8eef8} figure.d{margin:4px 0;display:inline-block;vertical-align:top}</style>
+<script>if(location.search.includes('mode=solutions')){document.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('solutions');document.getElementById('mode').textContent='Solutions';});}</script>
+</head>
+<body>
+<header><div><div class="course">Pre-IGCSE Mathematics · Year 9 · Unit 6</div><h1>Collecting and analysing data — Surveys · Sampling · Two-way tables · Averages from grouped data · Scatter graphs</h1></div><div class="mode" id="mode">Exercises</div></header>
+<p class="intro">Questions marked <span class="calc">calc</span> may be done with a calculator. ★ = challenge question.</p>
+
+<ol class="q">
+<li>A school wants to find out what students think of its new canteen. Two of the survey questions are:<br><b>A</b> &nbsp;“Do you agree that the new, improved canteen is much better?”<br><b>B</b> &nbsp;“How much do you spend on lunch?” &nbsp; ☐ €0–€2 &nbsp; ☐ €2–€4 &nbsp; ☐ €4–€6
+<ul class="parts"><li><b>a</b> Explain what is wrong with each question.</li><li><b>b</b> Write a better version of each question.</li></ul>
+<div class="sol"><p><b>a</b> A is a leading question — “new, improved” and “do you agree” push people towards yes. B has overlapping classes (€2 and €4 are each in two boxes), no box for more than €6, and no time period (per day? per week?).</p><p><b>b</b> For example: “How would you rate the canteen?” ☐ poor ☐ OK ☐ good ☐ excellent. “How much do you spend on lunch on a typical school day?” ☐ less than €2 ☐ €2 to €3.99 ☐ €4 to €5.99 ☐ €6 or more.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li>A school has 1200 students. Maya wants to survey a 10% sample about homework.
+<ul class="parts"><li><b>a</b> How many students should she ask?</li><li><b>b</b> Maya plans to ask her friends in Year 9. Explain why this is not a good sample.</li><li><b>c</b> Describe a better way to choose the sample.</li><li><b>d</b> Is her data primary or secondary?</li></ul>
+<div class="sol"><p><b>a</b> $10\%$ of $1200=120$ students.</p><p><b>b</b> It is biased: her friends are all the same age and likely to have similar views, so they do not represent the whole school.</p><p><b>c</b> For example: number every student from 1 to 1200 and use a random number generator to pick 120, so every student has an equal chance of being chosen.</p><p><b>d</b> Primary — she collects it herself.</p></div>
+<div class="space" style="--h:4em"></div></li>
+
+<li>Leo measures the reaction times of his classmates. Most are between 0.2 and 0.5 seconds.
+<ul class="parts"><li><b>a</b> How accurately should he record the times? &nbsp; <b>A</b> nearest second &nbsp; <b>B</b> nearest 0.1 s &nbsp; <b>C</b> nearest 0.01 s. Give a reason.</li><li><b>b</b> Design a grouped frequency table for his data.</li></ul>
+<div class="sol"><p><b>a</b> C — to the nearest 0.01 s. The other two would round almost every result to the same value.</p><p><b>b</b> For example, equal classes with no gaps or overlaps: $0.1\le t\lt0.2$, $0.2\le t\lt0.3$, $0.3\le t\lt0.4$, $0.4\le t\lt0.5$, $0.5\le t\lt0.6$, with a tally column and a frequency column.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>The two-way table shows how 60 students travel to school.<table class="t"><tr><th></th><th>Walk</th><th>Bus</th><th>Car</th><th>Total</th></tr><tr><td>Boys</td><td>12</td><td>9</td><td></td><td>28</td></tr><tr><td>Girls</td><td></td><td>14</td><td>8</td><td></td></tr><tr><td>Total</td><td>22</td><td></td><td></td><td>60</td></tr></table>
+<ul class="parts"><li><b>a</b> Copy and complete the table.</li><li><b>b</b> What fraction of the students walk? Give your answer in its simplest form.</li><li><b>c</b> What percentage of the girls travel by bus?</li></ul>
+<div class="sol"><p><table class="t"><tr><th></th><th>Walk</th><th>Bus</th><th>Car</th><th>Total</th></tr><tr><td>Boys</td><td>12</td><td>9</td><td><b>7</b></td><td>28</td></tr><tr><td>Girls</td><td><b>10</b></td><td>14</td><td>8</td><td><b>32</b></td></tr><tr><td>Total</td><td>22</td><td><b>23</b></td><td><b>15</b></td><td>60</td></tr></table></p><p><b>a</b> Boys by car $28-12-9=7$; girls who walk $22-12=10$; girls total $60-28=32$; bus total $23$; car total $15$.</p><p><b>b</b> $\dfrac{22}{60}=\dfrac{11}{30}$ &nbsp; <b>c</b> $\dfrac{14}{32}\times100=43.75\%$</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li style="break-inside:auto"><span class="calc">calc</span> The table shows the times taken by 40 students to travel to school.<table class="t"><tr><th>Time, $t$ (minutes)</th><th>Frequency</th></tr><tr><td>$0\lt t\le10$</td><td>5</td></tr><tr><td>$10\lt t\le20$</td><td>13</td></tr><tr><td>$20\lt t\le30$</td><td>14</td></tr><tr><td>$30\lt t\le40$</td><td>8</td></tr></table>
+<ul class="parts"><li><b>a</b> Write down the modal class.</li><li><b>b</b> Calculate an estimate of the mean.</li><li><b>c</b> Which class contains the median?</li><li><b>d</b> Estimate the range.</li><li><b>e</b> Describe how to draw a frequency polygon for this data.</li></ul>
+<div class="sol"><p><table class="t"><tr><th>Class</th><th>Midpoint</th><th>Frequency</th><th>Midpoint × frequency</th></tr><tr><td>$0\lt t\le10$</td><td>5</td><td>5</td><td>25</td></tr><tr><td>$10\lt t\le20$</td><td>15</td><td>13</td><td>195</td></tr><tr><td>$20\lt t\le30$</td><td>25</td><td>14</td><td>350</td></tr><tr><td>$30\lt t\le40$</td><td>35</td><td>8</td><td>280</td></tr><tr><td>Total</td><td></td><td>40</td><td>850</td></tr></table></p><p><b>a</b> $20\lt t\le30$ (highest frequency). &nbsp; <b>b</b> Estimated mean $=\dfrac{850}{40}=21.25$ minutes.</p><p><b>c</b> The median is between the 20th and 21st values. The first two classes hold $5+13=18$ values, so both are in $20\lt t\le30$.</p><p><b>d</b> Largest possible $-$ smallest possible $=40-0=40$ minutes.</p><p><b>e</b> Plot frequency against the <em>midpoint</em> of each class — $(5,5)$, $(15,13)$, $(25,14)$, $(35,8)$ — and join the points with straight lines.</p></div>
+<div class="space" style="--h:5em"></div></li>
+
+<li>The amounts, in euros, that six friends spent at a fair were &nbsp; $12,\ 15,\ 14,\ 16,\ 13,\ 48$.
+<ul class="parts"><li><b>a</b> Work out the mean and the median.</li><li><b>b</b> Which average represents the data better? Explain.</li></ul>
+<div class="sol"><p><b>a</b> Mean $=\dfrac{118}{6}=19.67$ (2 d.p.). In order: $12,13,14,15,16,48$; median $=\dfrac{14+15}{2}=14.5$.</p><p><b>b</b> The median. The outlier 48 pulls the mean above five of the six values, so the mean is not typical.</p></div>
+<div class="space" style="--h:3.6em"></div></li>
+
+<li>Class A has a mean test score of 62 with a range of 45. Class B has a mean of 58 with a range of 20. Write two sentences comparing the classes.
+
+<div class="sol"><p>On average class A scored higher (mean 62 against 58). Class B's scores were more consistent, because its range is much smaller (20 against 45).</p></div>
+<div class="space" style="--h:2.6em"></div></li>
+
+<li>The table shows the hours of revision and the test scores of seven students.<table class="t"><tr><td>Hours of revision</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><td>Test score</td><td>35</td><td>42</td><td>50</td><td>55</td><td>64</td><td>70</td><td>40</td></tr></table>
+<ul class="parts"><li><b>a</b> Describe the correlation.</li><li><b>b</b> Write down the coordinates of the outlier.</li><li><b>c</b> A line of best fit is drawn, ignoring the outlier. Estimate the score of a student who revises for 4.5 hours.</li><li><b>d</b> Explain why the line should not be used to predict the score of a student who revises for 15 hours.</li></ul>
+<div class="sol"><p><b>a</b> Positive correlation — more revision generally goes with a higher score.</p><p><b>b</b> $(7,40)$: a lot of revision but a low score.</p><p><b>c</b> Ignoring the outlier, the scores rise by about 7 marks per hour; a line of best fit gives about 60 marks.</p><p><b>d</b> 15 hours is far outside the range of the data (extrapolation). The pattern may not continue, and the line would predict a score of over 100.</p></div>
+<div class="space" style="--h:4.4em"></div></li>
+
+<li class="star">The mean of five numbers is 12. A sixth number is added and the mean becomes 13. Work out the sixth number.
+
+<div class="sol"><p>Total of five numbers $=5\times12=60$. Total of six numbers $=6\times13=78$. Sixth number $=78-60=18$.</p></div>
+<div class="space" style="--h:2.6em"></div></li>
+
+<li class="star"><span class="calc">calc</span> Two companies each record the delivery times of 50 parcels.<table class="t"><tr><th>Time, $t$ (minutes)</th><th>Company A</th><th>Company B</th></tr><tr><td>$0\le t\lt20$</td><td>4</td><td>10</td></tr><tr><td>$20\le t\lt40$</td><td>18</td><td>25</td></tr><tr><td>$40\le t\lt60$</td><td>22</td><td>10</td></tr><tr><td>$60\le t\lt80$</td><td>6</td><td>5</td></tr></table>
+<ul class="parts"><li><b>a</b> Write down the modal class for each company.</li><li><b>b</b> Calculate an estimate of the mean delivery time for each company.</li><li><b>c</b> Write two sentences comparing the companies.</li></ul>
+<div class="sol"><p><b>a</b> A: $40\le t\lt60$. B: $20\le t\lt40$.</p><p><b>b</b> Midpoints $10,30,50,70$. A: $\dfrac{40+540+1100+420}{50}=\dfrac{2100}{50}=42$ minutes. B: $\dfrac{100+750+500+350}{50}=\dfrac{1700}{50}=34$ minutes.</p><p><b>c</b> Company B is faster on average (estimated mean 34 minutes against 42, and a lower modal class). Both have the same estimated range (80 minutes), so their spread is similar.</p></div>
+<div class="space" style="--h:4.4em"></div></li>
+</ol>
+<p class="note">Check: classes must not overlap or leave gaps · estimated mean = total of (midpoint × frequency) ÷ total frequency · compare with one average <em>and</em> one measure of spread · never predict far outside the range of the data.</p>
+<footer><span>captainjimbo.github.io/teaching/igcse-maths/ · © Dimitris Kogias · CC BY-NC-SA 4.0</span><span>Pre-IGCSE Maths · Year 9 · Unit 6</span></footer>
+</body></html>
